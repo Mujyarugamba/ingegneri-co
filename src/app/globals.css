@@ -1,1 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-anthracite: #1a2332;
+  --color-anthracite-soft: #2a3548;
+  --color-tech-blue: #1a4d7c;
+  --color-tech-blue-light: #2563a8;
+  --color-tech-blue-pale: #e8f0f8;
+  --color-gray-light: #f4f6f9;
+  --color-gray-muted: #8b95a5;
+  --color-gray-border: #e2e6ed;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-anthracite);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
