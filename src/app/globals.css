@@ -24,3 +24,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] text-tech-blue uppercase;
+  }
+
+  .section-title {
+    @apply mt-3 text-2xl font-bold tracking-tight text-anthracite sm:text-3xl lg:text-4xl;
+  }
+
+  .card-elegant {
+    @apply rounded-2xl border border-gray-border bg-white transition-all duration-300 ease-out;
+  }
+
+  .card-elegant:hover {
+    @apply border-tech-blue/20 shadow-lg shadow-tech-blue/5 -translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-tech-blue px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-tech-blue-light hover:shadow-md hover:shadow-tech-blue/20;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/5;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center rounded-lg border border-gray-border px-5 py-2.5 text-sm font-medium text-anthracite transition-all duration-200 hover:border-tech-blue/40 hover:text-tech-blue hover:bg-tech-blue-pale/50;
+  }
+}
