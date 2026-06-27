@@ -44,8 +44,12 @@ const areeCompetenza = [
       "Progettazione architettonica, interventi edilizi, conformità normativa e sostenibilità ambientale, con gestione integrata di pratiche e documentazione tecnica.",
     items: [
       "Pratiche edilizie",
+      "CILA",
+      "SCIA",
+      "Permessi di Costruire",
+      "Sanatorie",
       "Direzione lavori",
-      "Sicurezza",
+      "Sicurezza cantieri",
       "Conformità urbanistica",
       "APE",
       "Legge 10",
@@ -116,7 +120,7 @@ const serviziEvidenza = [
   {
     title: "Pratiche edilizie",
     description:
-      "Gestione completa di permessi, SCIA, CILA e documentazione tecnica per privati e imprese.",
+      "Gestione completa di pratiche edilizie, CILA, SCIA, Permessi di Costruire, sanatorie e documentazione tecnica per privati, imprese e professionisti.",
   },
   {
     title: "Efficientamento energetico",
@@ -201,18 +205,17 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:gap-16 lg:px-10 lg:py-36">
-            <div>
-              <p className="section-label text-tech-blue-light">Ingegneri &amp; Co</p>
+          <div className="relative mx-auto grid max-w-7xl items-start gap-10 px-6 py-24 lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)] lg:gap-12 lg:px-10 lg:py-36">
+            <div className="pt-0">
               <h1
                 id="hero-title"
-                className="mt-4 text-3xl leading-[1.15] font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]"
+                className="text-3xl leading-[1.15] font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]"
               >
                 Ingegneria, energia e innovazione
                 <br />
                 <span className="text-white/90">per edifici e imprese</span>
               </h1>
-              <p className="mt-7 max-w-xl text-base leading-relaxed text-gray-muted lg:text-lg">
+              <p className="mt-7 max-w-md text-base leading-relaxed text-gray-muted lg:text-lg">
                 Ingegneri &amp; Co è una rete tecnica multidisciplinare di
                 ingegneri, architetti e geometri che affianca imprese,
                 professionisti e privati integrando edilizia, energia, impianti,
@@ -375,8 +378,6 @@ export default function Home() {
           </div>
         </section>
 
-        <ProjectsSection />
-
         {/* Perché affidarsi a noi */}
         <section id="chi-siamo" aria-labelledby="affidarsi-title" className="section-padding bg-anthracite">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -410,6 +411,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ProjectsSection className="section-padding bg-white" />
 
         {/* Contatti */}
         <section id="contatti" aria-labelledby="contatti-title" className="section-padding bg-gray-light">

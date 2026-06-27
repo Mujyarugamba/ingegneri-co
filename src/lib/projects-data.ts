@@ -5,17 +5,26 @@ export type Project = {
   title: string;
   subtitle: string;
   description: string;
+  fullDescription?: string;
   skills: string[];
+  features?: string[];
   cta: {
     label: string;
     href?: string;
     comingSoon?: boolean;
+  };
+  detail?: {
+    visitLabel: string;
+    visitHref: string;
   };
   icon: ProjectIcon;
 };
 
 export const projectsIntro =
   "Ogni progetto rappresenta un'opportunità per integrare competenze di ingegneria, energia, automazione, sviluppo software e innovazione tecnologica, offrendo soluzioni concrete per imprese e professionisti.";
+
+export const portfolioPageIntro =
+  "Una selezione di progetti che rappresentano il nostro approccio multidisciplinare all'ingegneria, all'energia, all'innovazione e allo sviluppo di soluzioni digitali.";
 
 export const projects: Project[] = [
   {
@@ -24,6 +33,8 @@ export const projects: Project[] = [
     subtitle: "Piattaforma digitale per i lavori in quota",
     description:
       "Progetto dedicato alla digitalizzazione dei lavori in quota, sviluppato per mettere in contatto committenti, imprese e professionisti attraverso una piattaforma moderna, sicura e scalabile.",
+    fullDescription:
+      "Inquotus nasce per digitalizzare il settore dei lavori in quota, mettendo in relazione committenti, imprese specializzate e professionisti qualificati. La piattaforma integra gestione profili, richieste di intervento, documentazione tecnica e strumenti di matching tra domanda e offerta, con un'architettura pensata per scalabilità, sicurezza e usabilità.",
     skills: [
       "Analisi e progettazione",
       "Architettura software",
@@ -34,7 +45,16 @@ export const projects: Project[] = [
       "Automazione",
       "Intelligenza Artificiale",
     ],
-    cta: { label: "Scopri il progetto", href: "#" },
+    features: [
+      "Registrazione e gestione profili per committenti, imprese e professionisti",
+      "Pubblicazione e gestione delle richieste di intervento",
+      "Sistema di preventivazione e comparazione delle offerte",
+      "Archivio documentale e gestione certificazioni",
+      "Dashboard operative e notifiche in tempo reale",
+      "Ottimizzazione SEO e visibilità online della piattaforma",
+    ],
+    cta: { label: "Scopri il progetto", href: "/progetti/inquotus" },
+    detail: { visitLabel: "Visita Inquotus", visitHref: "#" },
     icon: "platform",
   },
   {
@@ -42,14 +62,15 @@ export const projects: Project[] = [
     title: "Consorzio ISEC",
     subtitle: "Portale istituzionale",
     description:
-      "Sviluppo, evoluzione e manutenzione del portale istituzionale dedicato al settore edilizio e della sicurezza, con particolare attenzione all'organizzazione dei contenuti e alla gestione dei servizi.",
+      "Il Consorzio ISEC riunisce imprese, artigiani e professionisti nei settori delle costruzioni, dell'efficientamento energetico, del facility management e dei lavori civili. Grazie a una struttura flessibile e qualificata, organizza squadre operative adeguate alla complessità degli interventi, garantendo qualità, affidabilità e competitività nell'esecuzione degli appalti.",
     skills: [
       "Sviluppo web",
       "Gestione contenuti",
       "SEO",
       "Assistenza tecnica",
     ],
-    cta: { label: "Scopri il progetto", href: "#" },
+    cta: { label: "Scopri il progetto", href: "/progetti/consorzio-isec" },
+    detail: { visitLabel: "Visita il sito", visitHref: "#" },
     icon: "portal",
   },
   {
@@ -63,3 +84,18 @@ export const projects: Project[] = [
     icon: "innovation",
   },
 ];
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.id === slug);
+}
+
+export function getProjectDetailSlugs(): string[] {
+  return projects
+    .filter((project) => !project.cta.comingSoon && project.cta.href)
+    .map((project) => project.id);
+}
+
+export function getProjectCardHref(project: Project): string | undefined {
+  if (project.cta.comingSoon) return undefined;
+  return project.cta.href;
+}

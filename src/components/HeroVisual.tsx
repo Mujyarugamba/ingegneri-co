@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { siteImages } from "@/lib/site-config";
 
 export default function HeroVisual() {
   return (
-    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 lg:aspect-square">
+    <div className="w-full rounded-2xl border border-white/10 bg-anthracite-soft p-3 lg:p-3.5">
       <Image
-        src={siteImages.hero}
+        src="/imagine.png"
         alt="Ingegneria, energia e innovazione per edifici e imprese"
-        fill
-        className="object-cover"
+        width={1536}
+        height={1024}
+        className="h-auto w-full object-contain"
         sizes="(max-width: 1024px) 100vw, 560px"
         priority
       />

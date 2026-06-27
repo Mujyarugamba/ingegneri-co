@@ -22,6 +22,7 @@ export const mainNav = [
   { label: "Chi siamo", href: "/#chi-siamo" },
   { label: "Servizi", href: "/#servizi" },
   { label: "Aree di competenza", href: "/#competenze" },
+  { label: "Progetti", href: "/progetti" },
   { label: "Blog", href: "#" },
   { label: "Contatti", href: "/#contatti" },
 ] as const;
