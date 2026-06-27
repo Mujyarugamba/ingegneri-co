@@ -65,15 +65,20 @@ const areeCompetenza = [
   {
     title: "Dell'Informazione",
     description:
-      "Integrazione di automazione, digitalizzazione e intelligenza artificiale per edifici intelligenti, processi industriali evoluti e presenza digitale professionale.",
+      "Progettiamo e integriamo soluzioni tecnologiche per automazione, monitoraggio, digitalizzazione dei processi e sviluppo di piattaforme software, supportando imprese e professionisti nell'innovazione.",
     items: [
       "Automazione industriale",
-      "IoT",
+      "PLC e sistemi di supervisione",
+      "Internet of Things (IoT)",
       "Building Automation",
       "Smart Building",
-      "Intelligenza Artificiale",
-      "Siti web e portali professionali",
-      "Industria 4.0 e 5.0",
+      "Monitoraggio energetico",
+      "Sistemi di acquisizione dati",
+      "Controllo remoto degli impianti",
+      "Integrazione hardware e software",
+      "Intelligenza Artificiale applicata ai processi",
+      "Sviluppo di siti web e portali professionali",
+      "Industria 4.0 e Transizione 5.0",
     ],
   },
 ];
