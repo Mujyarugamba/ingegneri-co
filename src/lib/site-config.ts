@@ -45,6 +45,6 @@ export const footerServizi = [
 ] as const;
 
 export const footerLegal = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Cookie Policy", href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
 ] as const;

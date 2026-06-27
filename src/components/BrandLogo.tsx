@@ -17,9 +17,9 @@ export default function BrandLogo({ variant = "header" }: BrandLogoProps) {
       <Image
         src={siteImages.logo}
         alt="Ingegneri & Co"
-        width={170}
-        height={70}
-        className="object-contain transition-opacity group-hover:opacity-90"
+        width={255}
+        height={105}
+        className="h-auto w-[255px] max-w-none object-contain transition-opacity group-hover:opacity-90"
         priority={!isFooter}
       />
       <span
