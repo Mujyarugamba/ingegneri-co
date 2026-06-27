@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import {
   footerAree,
   footerLegal,
@@ -31,14 +32,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           <FooterColumn>
-            <Link href="/" className="group inline-flex flex-col leading-tight">
-              <span className="text-xl font-bold tracking-tight text-white transition-colors group-hover:text-tech-blue-light">
-                {siteConfig.name}
-              </span>
-              <span className="mt-1.5 text-[0.62rem] font-medium tracking-[0.12em] text-tech-blue-light uppercase">
-                {siteConfig.tagline}
-              </span>
-            </Link>
+            <BrandLogo variant="footer" />
             <p className="mt-5 text-sm leading-relaxed text-white/60">
               {siteConfig.description}
             </p>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { mainNav, siteConfig } from "@/lib/site-config";
+import BrandLogo from "@/components/BrandLogo";
+import { mainNav } from "@/lib/site-config";
 
 function MenuIcon() {
   return (
@@ -43,14 +44,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-border/70 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10 lg:py-5">
-        <Link href="/" className="group shrink-0 flex flex-col leading-tight">
-          <span className="text-lg font-bold tracking-tight text-anthracite transition-colors group-hover:text-tech-blue">
-            {siteConfig.name}
-          </span>
-          <span className="mt-0.5 text-[0.62rem] font-medium tracking-[0.12em] text-tech-blue uppercase">
-            {siteConfig.tagline}
-          </span>
-        </Link>
+        <BrandLogo variant="header" />
 
         <nav
           className="hidden items-center gap-1 xl:gap-2 lg:flex"

@@ -12,6 +12,11 @@ export const siteConfig = {
   copyrightYear: 2026,
 } as const;
 
+export const siteImages = {
+  logo: "/logo/logo.png",
+  hero: "/images/hero/hero-engineering.webp",
+} as const;
+
 export const mainNav = [
   { label: "Home", href: "/" },
   { label: "Chi siamo", href: "/#chi-siamo" },
