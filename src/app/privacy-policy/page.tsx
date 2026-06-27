@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
           >
             {siteConfig.email}
           </a>{" "}
-          o il numero di telefono pubblicato.
+          o il contatto WhatsApp pubblicato.
         </p>
       </LegalSection>
 

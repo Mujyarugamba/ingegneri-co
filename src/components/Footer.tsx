@@ -80,10 +80,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={siteConfig.phoneHref}
+                  href={siteConfig.whatsAppHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-white/75 transition-colors hover:text-white"
                 >
-                  {siteConfig.phone}
+                  WhatsApp: {siteConfig.whatsApp}
                 </a>
               </li>
               <li>

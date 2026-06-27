@@ -446,19 +446,26 @@ export default function Home() {
                 </div>
                 <div className="hidden h-10 w-px bg-gray-border sm:block" aria-hidden="true" />
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Telefono</p>
+                  <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">WhatsApp</p>
                   <a
-                    href={siteConfig.phoneHref}
+                    href={siteConfig.whatsAppHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
                   >
-                    {siteConfig.phone}
+                    {siteConfig.whatsApp}
                   </a>
                 </div>
               </div>
 
-              <Link href="#contatti" className="btn-primary mt-10 px-8 py-3.5">
-                Contattaci
-              </Link>
+              <a
+                href={siteConfig.whatsAppHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary mt-10 px-8 py-3.5"
+              >
+                Contattaci su WhatsApp
+              </a>
             </div>
           </div>
         </section>
