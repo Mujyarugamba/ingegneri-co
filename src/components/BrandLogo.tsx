@@ -13,33 +13,29 @@ export default function BrandLogo({ variant = "header" }: BrandLogoProps) {
   return (
     <Link
       href="/"
-      className={`group inline-flex max-w-full flex-col leading-tight ${
+      className={`group inline-flex max-w-full leading-tight ${
         isFooter
-          ? "gap-1.5"
-          : "w-full items-center gap-2 md:w-auto md:items-start md:gap-1.5"
+          ? "flex-col gap-1.5"
+          : "w-full items-center justify-center md:w-auto md:justify-start"
       }`}
     >
       <Image
         src={siteImages.logo}
         alt="Ingegneri & Co"
-        width={255}
-        height={105}
+        width={280}
+        height={115}
         className={`h-auto object-contain transition-opacity group-hover:opacity-90 ${
           isFooter
             ? "w-full max-w-[180px] sm:max-w-[220px] lg:max-w-[255px]"
-            : "w-[min(280px,90vw)] max-w-full md:w-full md:max-w-[210px] lg:max-w-[255px]"
+            : "w-[min(300px,92vw)] max-w-full md:w-full md:max-w-[240px] lg:max-w-[280px]"
         }`}
         priority={isHeader}
       />
-      <span
-        className={`font-medium text-tech-blue ${
-          isFooter
-            ? "text-[0.62rem] tracking-[0.12em] uppercase text-tech-blue-light"
-            : "max-w-[90vw] text-center text-xs leading-snug tracking-normal md:max-w-none md:text-left md:text-[0.62rem] md:tracking-[0.12em] md:uppercase"
-        }`}
-      >
-        {siteConfig.tagline}
-      </span>
+      {isFooter && (
+        <span className="text-[0.62rem] font-medium tracking-[0.12em] text-tech-blue-light uppercase">
+          {siteConfig.tagline}
+        </span>
+      )}
     </Link>
   );
 }
