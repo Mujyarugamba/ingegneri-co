@@ -57,4 +57,12 @@ body {
   .btn-outline-dark {
     @apply inline-flex items-center justify-center rounded-lg border border-gray-border px-5 py-2.5 text-sm font-medium text-anthracite transition-all duration-200 hover:border-tech-blue/40 hover:text-tech-blue hover:bg-tech-blue-pale/50;
   }
+
+  .mobile-nav[open] .mobile-nav-open {
+    display: none;
+  }
+
+  .mobile-nav[open] .mobile-nav-close {
+    display: block;
+  }
 }

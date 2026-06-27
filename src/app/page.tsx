@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Ingegneri & Co | Ingegneria, energia e innovazione per edifici e imprese",
@@ -24,10 +25,6 @@ export const metadata: Metadata = {
     locale: "it_IT",
   },
 };
-
-const EMAIL = "info@ingegnerieco.it";
-const PHONE = "339 434 0891";
-const PHONE_HREF = "tel:+393394340891";
 
 const percheScegliere = [
   { value: "26+", label: "Anni di esperienza" },
@@ -146,15 +143,6 @@ const percheAffidarsi = [
   "Supporto tecnico personalizzato",
 ];
 
-const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "Servizi", href: "#servizi" },
-  { label: "Chi siamo", href: "#chi-siamo" },
-  { label: "Contatti", href: "#contatti" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Cookie Policy", href: "#" },
-];
-
 function IconBuilding() {
   return (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
@@ -192,38 +180,7 @@ const areaIcons = [IconBuilding, IconFactory, IconChip];
 
 export default function Home() {
   return (
-    <>
-      <header className="sticky top-0 z-50 border-b border-gray-border/60 bg-white/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <Link href="/" className="flex flex-col leading-tight">
-            <span className="text-lg font-bold tracking-tight text-anthracite">
-              Ingegneri &amp; Co
-            </span>
-            <span className="text-[0.65rem] font-semibold tracking-[0.18em] text-tech-blue uppercase">
-              Studio di ingegneria
-            </span>
-          </Link>
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Navigazione principale">
-            <Link href="#competenze" className="text-sm font-medium text-anthracite-soft transition-colors hover:text-tech-blue">
-              Competenze
-            </Link>
-            <Link href="#servizi" className="text-sm font-medium text-anthracite-soft transition-colors hover:text-tech-blue">
-              Servizi
-            </Link>
-            <Link href="#chi-siamo" className="text-sm font-medium text-anthracite-soft transition-colors hover:text-tech-blue">
-              Chi siamo
-            </Link>
-            <Link href="#contatti" className="btn-primary px-5 py-2.5">
-              Contattaci
-            </Link>
-          </nav>
-          <Link href="#contatti" className="btn-primary px-4 py-2 text-sm md:hidden">
-            Contattaci
-          </Link>
-        </div>
-      </header>
-
-      <main>
+    <main>
         {/* Hero */}
         <section aria-labelledby="hero-title" className="relative overflow-hidden bg-anthracite">
           <div
@@ -474,20 +431,20 @@ export default function Home() {
                 <div>
                   <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Email</p>
                   <a
-                    href={`mailto:${EMAIL}`}
+                    href={`mailto:${siteConfig.email}`}
                     className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
                   >
-                    {EMAIL}
+                    {siteConfig.email}
                   </a>
                 </div>
                 <div className="hidden h-10 w-px bg-gray-border sm:block" aria-hidden="true" />
                 <div>
                   <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Telefono</p>
                   <a
-                    href={PHONE_HREF}
+                    href={siteConfig.phoneHref}
                     className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
                   >
-                    {PHONE}
+                    {siteConfig.phone}
                   </a>
                 </div>
               </div>
@@ -498,73 +455,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-border bg-anthracite">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="sm:col-span-2 lg:col-span-1">
-              <Link href="/" className="inline-flex flex-col leading-tight">
-                <span className="text-lg font-bold tracking-tight text-white">
-                  Ingegneri &amp; Co
-                </span>
-                <span className="mt-1 text-xs font-semibold tracking-[0.15em] text-tech-blue-light uppercase">
-                  Studio di Ingegneria
-                </span>
-              </Link>
-            </div>
-
-            <div>
-              <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
-                Contatti
-              </p>
-              <ul className="mt-4 flex flex-col gap-3">
-                <li>
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="text-sm text-white/80 transition-colors hover:text-white"
-                  >
-                    {EMAIL}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={PHONE_HREF}
-                    className="text-sm text-white/80 transition-colors hover:text-white"
-                  >
-                    {PHONE}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="sm:col-span-2 lg:col-span-2">
-              <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
-                Link utili
-              </p>
-              <ul className="mt-4 grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3">
-                {footerLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-white/80 transition-colors hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-14 border-t border-white/10 pt-8">
-            <p className="text-center text-xs text-gray-muted">
-              &copy; {new Date().getFullYear()} Ingegneri &amp; Co. Tutti i diritti riservati.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </>
+    </main>
   );
 }
