@@ -28,7 +28,7 @@ export default function ProjectsSection({
       aria-labelledby={`${id}-title`}
       className={className}
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="page-container">
         <div className="max-w-3xl">
           <p className="section-label">{label}</p>
           <h2 id={`${id}-title`} className="section-title">
@@ -39,7 +39,7 @@ export default function ProjectsSection({
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:gap-8 lg:grid-cols-3">
           {items.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

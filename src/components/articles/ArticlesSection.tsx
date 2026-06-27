@@ -35,12 +35,12 @@ export default function ArticlesSection({
   const displayItems = items ?? articles;
   const gridClass =
     columns === 2
-      ? "mt-16 grid gap-8 sm:grid-cols-2"
-      : "mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3";
+      ? "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8"
+      : "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-3";
 
   return (
     <section id={id} aria-labelledby={`${id}-title`} className={className}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="page-container">
         <div className="max-w-3xl">
           <p className="section-label">{label}</p>
           <h2 id={`${id}-title`} className="section-title">

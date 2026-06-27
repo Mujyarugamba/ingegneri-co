@@ -206,23 +206,23 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
-          <div className="relative mx-auto grid max-w-7xl items-start gap-10 px-6 py-24 lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)] lg:gap-12 lg:px-10 lg:py-36">
-            <div className="pt-0">
+          <div className="page-container relative grid min-w-0 items-start gap-8 py-16 md:gap-10 md:py-24 lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)] lg:gap-12 lg:py-36">
+            <div className="order-1 min-w-0 pt-0">
               <h1
                 id="hero-title"
-                className="text-3xl leading-[1.15] font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem]"
+                className="text-2xl leading-[1.2] font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
               >
                 Ingegneria, energia e innovazione
                 <br />
                 <span className="text-white/90">per edifici e imprese</span>
               </h1>
-              <p className="mt-7 max-w-md text-base leading-relaxed text-gray-muted lg:text-lg">
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-gray-muted sm:mt-7 sm:text-base lg:text-lg">
                 Ingegneri &amp; Co è una rete tecnica multidisciplinare di
                 ingegneri, architetti e geometri che affianca imprese,
                 professionisti e privati integrando edilizia, energia, impianti,
                 automazione e innovazione tecnologica.
               </p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
                 <Link href="#contatti" className="btn-primary">
                   Richiedi una consulenza
                 </Link>
@@ -232,24 +232,26 @@ export default function Home() {
               </div>
             </div>
 
-            <HeroVisual />
+            <div className="order-2 min-w-0 w-full">
+              <HeroVisual />
+            </div>
           </div>
         </section>
 
         {/* Perché scegliere */}
-        <section aria-labelledby="perche-scegliere-title" className="border-b border-gray-border bg-white py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <section aria-labelledby="perche-scegliere-title" className="border-b border-gray-border bg-white py-12 md:py-16 lg:py-20">
+          <div className="page-container">
             <div className="mb-10 text-center">
               <p className="section-label">Il nostro valore</p>
               <h2 id="perche-scegliere-title" className="section-title">
                 Perché scegliere Ingegneri &amp; Co
               </h2>
             </div>
-            <div className="grid grid-cols-2 divide-x divide-y divide-gray-border overflow-hidden rounded-2xl border border-gray-border lg:grid-cols-4 lg:divide-y-0">
+            <div className="grid grid-cols-1 divide-y divide-gray-border overflow-hidden rounded-2xl border border-gray-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
               {percheScegliere.map((item) => (
                 <div
                   key={item.label}
-                  className="flex flex-col items-center justify-center px-6 py-10 text-center transition-colors duration-200 hover:bg-gray-light/60 lg:py-14"
+                  className="flex flex-col items-center justify-center px-4 py-8 text-center transition-colors duration-200 hover:bg-gray-light/60 sm:px-6 sm:py-10 lg:py-14"
                 >
                   <p
                     className={`font-bold tracking-tight text-tech-blue ${
@@ -271,7 +273,7 @@ export default function Home() {
 
         {/* Aree di competenza */}
         <section id="competenze" aria-labelledby="competenze-title" className="section-padding bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="page-container">
             <div className="max-w-2xl">
               <p className="section-label">Expertise</p>
               <h2 id="competenze-title" className="section-title">
@@ -288,7 +290,7 @@ export default function Home() {
               {areeCompetenza.map((area, index) => {
                 const Icon = areaIcons[index];
                 return (
-                  <article key={area.title} className="card-elegant group flex flex-col p-9">
+                  <article key={area.title} className="card-elegant group flex flex-col">
                     <div className="mb-6 inline-flex rounded-xl bg-tech-blue-pale p-3.5 text-tech-blue transition-all duration-300 group-hover:bg-tech-blue group-hover:text-white">
                       <Icon />
                     </div>
@@ -320,7 +322,7 @@ export default function Home() {
 
         {/* Come lavoriamo */}
         <section aria-labelledby="come-lavoriamo-title" className="section-padding bg-gray-light">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="page-container">
             <div className="mx-auto max-w-2xl text-center">
               <p className="section-label">Metodo</p>
               <h2 id="come-lavoriamo-title" className="section-title">
@@ -332,10 +334,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="relative mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
               <div className="absolute top-10 right-[12.5%] left-[12.5%] hidden h-px bg-gray-border lg:block" aria-hidden="true" />
               {comeLavoriamo.map((fase) => (
-                <article key={fase.step} className="card-elegant relative p-8 text-center">
+                <article key={fase.step} className="card-elegant relative text-center">
                   <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border-2 border-tech-blue bg-white text-lg font-bold text-tech-blue">
                     {fase.step}
                   </div>
@@ -351,7 +353,7 @@ export default function Home() {
 
         {/* Servizi in evidenza */}
         <section id="servizi" aria-labelledby="servizi-title" className="section-padding bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="page-container">
             <div className="max-w-2xl">
               <p className="section-label">Servizi</p>
               <h2 id="servizi-title" className="section-title">
@@ -363,9 +365,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
               {serviziEvidenza.map((servizio) => (
-                <article key={servizio.title} className="card-elegant group p-8">
+                <article key={servizio.title} className="card-elegant group">
                   <div className="mb-5 h-0.5 w-12 rounded-full bg-tech-blue transition-all duration-300 group-hover:w-16" />
                   <h3 className="text-lg font-bold tracking-tight text-anthracite">
                     {servizio.title}
@@ -381,7 +383,7 @@ export default function Home() {
 
         {/* Perché affidarsi a noi */}
         <section id="chi-siamo" aria-labelledby="affidarsi-title" className="section-padding bg-anthracite">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="page-container">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <div>
                 <p className="section-label text-tech-blue-light">Chi siamo</p>
@@ -419,8 +421,8 @@ export default function Home() {
 
         {/* Contatti */}
         <section id="contatti" aria-labelledby="contatti-title" className="section-padding bg-gray-light">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="mx-auto max-w-3xl rounded-2xl border border-gray-border bg-white p-10 text-center shadow-sm lg:p-14">
+          <div className="page-container">
+            <div className="mx-auto max-w-3xl rounded-2xl border border-gray-border bg-white p-6 text-center shadow-sm sm:p-10 lg:p-14">
               <p className="section-label">Contatti</p>
               <h2 id="contatti-title" className="section-title">
                 Parliamo del tuo progetto

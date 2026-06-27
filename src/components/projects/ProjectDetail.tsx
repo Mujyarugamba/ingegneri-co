@@ -21,7 +21,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+        <div className="relative page-container py-12 md:py-16 lg:py-24">
           <Link
             href="/progetti"
             className="inline-flex items-center gap-2 text-sm font-medium text-tech-blue-light transition-colors hover:text-white"
@@ -34,7 +34,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             <div className="mb-6 inline-flex rounded-xl border border-white/10 bg-white/5 p-4 text-tech-blue-light">
               <ProjectIconDisplay icon={project.icon} className="h-7 w-7" />
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {project.title}
             </h1>
             <p className="mt-4 text-lg font-medium text-tech-blue-light">
@@ -45,8 +45,8 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
       </section>
 
       <section className="section-padding bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
+        <div className="page-container">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
             <div>
               <p className="section-label">Il progetto</p>
               <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
@@ -75,7 +75,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
 
             <div>
               {project.skills.length > 0 && (
-                <div className="card-elegant p-8">
+                <div className="card-elegant">
                   <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
                     Competenze utilizzate
                   </p>

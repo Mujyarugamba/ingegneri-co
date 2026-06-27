@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     return (
       <Link
         href={href}
-        className="card-elegant group flex flex-col p-8 transition-all duration-300"
+        className="card-elegant group flex flex-col transition-all duration-300"
       >
         <ProjectCardContent project={project} />
       </Link>
@@ -73,7 +73,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   }
 
   return (
-    <article className="card-elegant group flex flex-col p-8">
+    <article className="card-elegant group flex flex-col">
       <ProjectCardContent project={project} />
     </article>
   );

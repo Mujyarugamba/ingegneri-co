@@ -28,9 +28,9 @@ function FooterColumn({
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-anthracite">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+    <footer className="border-t border-white/5 bg-anthracite overflow-x-hidden">
+      <div className="page-container py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-10">
           <FooterColumn>
             <BrandLogo variant="footer" />
             <p className="mt-5 text-sm leading-relaxed text-white/60">

@@ -23,9 +23,9 @@ export default function LegalPageLayout({
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
-        <div className="relative mx-auto max-w-[900px] px-6 py-16 lg:px-10 lg:py-24">
+        <div className="relative page-container max-w-[900px] py-12 md:py-16 lg:py-24">
           <p className="section-label text-tech-blue-light">{label}</p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
             {title}
           </h1>
           {intro && (
@@ -37,7 +37,7 @@ export default function LegalPageLayout({
       </section>
 
       <section className="section-padding bg-white">
-        <div className="mx-auto max-w-[900px] px-6 lg:px-10">
+        <div className="mx-auto w-full max-w-[900px] min-w-0 px-4 sm:px-6 lg:px-10">
           <div className="prose-legal flex flex-col gap-6">{children}</div>
         </div>
       </section>

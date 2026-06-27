@@ -28,7 +28,7 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+        <div className="relative page-container py-12 md:py-16 lg:py-24">
           <Link
             href="/approfondimenti"
             className="inline-flex items-center gap-2 text-sm font-medium text-tech-blue-light transition-colors hover:text-white"
@@ -51,7 +51,7 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
                 {formatArticleDate(article.publishedAt)}
               </time>
             </div>
-            <h1 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="mt-6 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {article.title}
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-gray-muted">
@@ -62,7 +62,7 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
       </section>
 
       <section className="section-padding bg-white">
-        <div className="mx-auto max-w-3xl px-6 lg:px-10">
+        <div className="mx-auto w-full max-w-3xl min-w-0 px-4 sm:px-6 lg:px-10">
           <div className="flex flex-col gap-6">
             {article.content.map((paragraph) => (
               <p

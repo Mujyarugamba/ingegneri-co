@@ -19,7 +19,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
   return (
     <Link
       href={`/approfondimenti/${article.slug}`}
-      className="card-elegant group flex h-full flex-col p-8 transition-all duration-300"
+      className="card-elegant group flex h-full flex-col transition-all duration-300"
     >
       <div className="flex items-center justify-between gap-4">
         <span
