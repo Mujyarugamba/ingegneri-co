@@ -13,8 +13,8 @@ export const siteConfig = {
 } as const;
 
 export const siteImages = {
-  logo: "/logo/logo.png",
-  hero: "/images/hero/hero-engineering.webp",
+  logo: "/logo.png",
+  hero: "/imagine.png",
 } as const;
 
 export const mainNav = [

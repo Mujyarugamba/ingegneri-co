@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroVisual from "@/components/HeroVisual";
+import ProjectsSection from "@/components/projects/ProjectsSection";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -373,6 +374,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ProjectsSection />
 
         {/* Perché affidarsi a noi */}
         <section id="chi-siamo" aria-labelledby="affidarsi-title" className="section-padding bg-anthracite">
