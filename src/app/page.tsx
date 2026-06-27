@@ -5,9 +5,11 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Ingegneri & Co | Ingegneria, energia e innovazione per edifici e imprese",
   description:
-    "Studio di ingegneria che affianca imprese, professionisti e privati con un approccio multidisciplinare: edilizia, energia, impianti, automazione e innovazione tecnologica.",
+    "Rete tecnica multidisciplinare di ingegneri, architetti e geometri. Affianchiamo imprese, professionisti e privati in edilizia, energia, impianti, automazione e innovazione tecnologica.",
   keywords: [
     "ingegneria",
+    "architettura",
+    "geometri",
     "efficientamento energetico",
     "fotovoltaico",
     "pratiche edilizie",
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ingegneri & Co | Ingegneria, energia e innovazione",
     description:
-      "Consulenze tecniche, pratiche edilizie, efficientamento energetico e soluzioni per la transizione digitale ed energetica.",
+      "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per consulenze tecniche, edilizia, energia e innovazione digitale.",
     type: "website",
     locale: "it_IT",
   },
@@ -28,16 +30,16 @@ export const metadata: Metadata = {
 
 const percheScegliere = [
   { value: "26+", label: "Anni di esperienza" },
-  { value: "3", label: "Aree dell'ingegneria" },
+  { value: "3", label: "Aree di competenza" },
   { value: "Approccio", label: "Multidisciplinare" },
-  { value: "Ordine degli", label: "Ingegneri" },
+  { value: "Ingegneri • Architetti • Geometri", label: "Rete professionale", compact: true },
 ];
 
 const areeCompetenza = [
   {
-    title: "Civile e Ambientale",
+    title: "Civile, Ambientale e Architettonica",
     description:
-      "Supporto tecnico completo per interventi edilizi, conformità normativa e sostenibilità ambientale, con gestione integrata di pratiche e documentazione.",
+      "Progettazione architettonica, interventi edilizi, conformità normativa e sostenibilità ambientale, con gestione integrata di pratiche e documentazione tecnica.",
     items: [
       "Pratiche edilizie",
       "Direzione lavori",
@@ -137,8 +139,8 @@ const serviziEvidenza = [
 ];
 
 const percheAffidarsi = [
-  "Competenze multidisciplinari",
-  "Soluzioni integrate",
+  "Rete di ingegneri, architetti e geometri",
+  "Competenze multidisciplinari integrate",
   "Esperienza maturata in oltre 26 anni",
   "Supporto tecnico personalizzato",
 ];
@@ -204,9 +206,10 @@ export default function Home() {
                 <span className="text-white/90">per edifici e imprese</span>
               </h1>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-gray-muted lg:text-lg">
-                Ingegneri &amp; Co affianca imprese, professionisti e privati con
-                un approccio multidisciplinare che integra edilizia, energia,
-                impianti, automazione e innovazione tecnologica.
+                Ingegneri &amp; Co è una rete tecnica multidisciplinare di
+                ingegneri, architetti e geometri che affianca imprese,
+                professionisti e privati integrando edilizia, energia, impianti,
+                automazione e innovazione tecnologica.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link href="#contatti" className="btn-primary">
@@ -261,7 +264,13 @@ export default function Home() {
                   key={item.label}
                   className="flex flex-col items-center justify-center px-6 py-10 text-center transition-colors duration-200 hover:bg-gray-light/60 lg:py-14"
                 >
-                  <p className="text-2xl font-bold tracking-tight text-tech-blue lg:text-3xl">
+                  <p
+                    className={`font-bold tracking-tight text-tech-blue ${
+                      "compact" in item && item.compact
+                        ? "text-base leading-snug lg:text-lg"
+                        : "text-2xl lg:text-3xl"
+                    }`}
+                  >
                     {item.value}
                   </p>
                   <p className="mt-2 text-sm font-medium text-anthracite-soft leading-snug">
@@ -282,8 +291,9 @@ export default function Home() {
                 Aree di competenza
               </h2>
               <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-                Tre discipline integrate per rispondere con precisione alle
-                esigenze tecniche, normative e digitali di ogni committente.
+                Tre aree tecniche integrate, coordinate da una rete di
+                professionisti qualificati, per rispondere con precisione alle
+                esigenze normative, progettuali e digitali di ogni committente.
               </p>
             </div>
 
@@ -392,9 +402,13 @@ export default function Home() {
                   Perché affidarsi a noi
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-muted lg:text-lg">
-                  Uno studio di ingegneria con radici solide e visione contemporanea,
-                  capace di unire competenza tecnica, rigore normativo e
-                  innovazione applicata.
+                  Una rete tecnica multidisciplinare con radici solide e visione
+                  contemporanea, che unisce ingegneri, architetti e geometri in
+                  un unico approccio integrato: competenza tecnica, rigore
+                  normativo e innovazione applicata.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-white/50 italic">
+                  {siteConfig.institutionalPhrase}
                 </p>
               </div>
               <ul className="flex flex-col gap-5">

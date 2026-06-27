@@ -93,7 +93,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-sm text-white/75">Ordine degli Ingegneri</span>
+                <span className="text-sm text-white/75">
+                  {siteConfig.professionals}
+                </span>
+              </li>
+              <li>
+                <span className="mt-1 block text-xs leading-relaxed text-white/50">
+                  {siteConfig.institutionalPhrase}
+                </span>
               </li>
             </ul>
           </FooterColumn>

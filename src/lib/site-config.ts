@@ -2,7 +2,10 @@ export const siteConfig = {
   name: "Ingegneri & Co",
   tagline: "Engineering • Energy • Innovation",
   description:
-    "Studio di ingegneria multidisciplinare per edilizia, energia, impianti, automazione e innovazione tecnologica.",
+    "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione e innovazione tecnologica.",
+  institutionalPhrase:
+    "Una rete di professionisti tecnici iscritti ai rispettivi Ordini e Collegi professionali.",
+  professionals: "Ingegneri • Architetti • Geometri",
   email: "info@ingegnerieco.it",
   phone: "339 434 0891",
   phoneHref: "tel:+393394340891",
@@ -19,7 +22,7 @@ export const mainNav = [
 ] as const;
 
 export const footerAree = [
-  { label: "Civile e Ambientale", href: "/#competenze" },
+  { label: "Civile, Ambientale e Architettonica", href: "/#competenze" },
   { label: "Industriale", href: "/#competenze" },
   { label: "Dell'Informazione", href: "/#competenze" },
 ] as const;
