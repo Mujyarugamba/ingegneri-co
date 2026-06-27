@@ -95,12 +95,30 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
 
               {project.detail && (
                 <div className="mt-6">
-                  <Link
-                    href={project.detail.visitHref}
-                    className="btn-primary w-full sm:w-auto"
-                  >
-                    {project.detail.visitLabel}
-                  </Link>
+                  {project.detail.external ? (
+                    <>
+                      <a
+                        href={project.detail.visitHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary w-full sm:w-auto"
+                      >
+                        {project.detail.visitLabel}
+                      </a>
+                      {project.detail.externalNote && (
+                        <p className="mt-3 text-xs leading-relaxed text-gray-muted">
+                          {project.detail.externalNote}
+                        </p>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={project.detail.visitHref}
+                      className="btn-primary w-full sm:w-auto"
+                    >
+                      {project.detail.visitLabel}
+                    </Link>
+                  )}
                 </div>
               )}
             </div>

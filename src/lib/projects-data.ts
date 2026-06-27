@@ -16,6 +16,8 @@ export type Project = {
   detail?: {
     visitLabel: string;
     visitHref: string;
+    external?: boolean;
+    externalNote?: string;
   };
   icon: ProjectIcon;
 };
@@ -54,7 +56,12 @@ export const projects: Project[] = [
       "Ottimizzazione SEO e visibilità online della piattaforma",
     ],
     cta: { label: "Scopri il progetto", href: "/progetti/inquotus" },
-    detail: { visitLabel: "Visita Inquotus", visitHref: "#" },
+    detail: {
+      visitLabel: "Visita il sito",
+      visitHref: "https://www.inquotus.it",
+      external: true,
+      externalNote: "Il sito si aprirà in una nuova finestra.",
+    },
     icon: "platform",
   },
   {
@@ -70,6 +77,7 @@ export const projects: Project[] = [
       "Assistenza tecnica",
     ],
     cta: { label: "Scopri il progetto", href: "/progetti/consorzio-isec" },
+    // TODO: aggiornare visitHref con il dominio ufficiale del Consorzio ISEC
     detail: { visitLabel: "Visita il sito", visitHref: "#" },
     icon: "portal",
   },

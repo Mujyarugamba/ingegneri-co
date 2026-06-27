@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroVisual from "@/components/HeroVisual";
+import { LatestArticlesSection } from "@/components/articles/ArticlesSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import { siteConfig } from "@/lib/site-config";
 
@@ -413,6 +414,8 @@ export default function Home() {
         </section>
 
         <ProjectsSection className="section-padding bg-white" />
+
+        <LatestArticlesSection />
 
         {/* Contatti */}
         <section id="contatti" aria-labelledby="contatti-title" className="section-padding bg-gray-light">

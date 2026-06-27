@@ -10,6 +10,8 @@ export const siteConfig = {
   phone: "339 434 0891",
   phoneHref: "tel:+393394340891",
   copyrightYear: 2026,
+  // Aggiornare con l'URL definitivo del profilo LinkedIn
+  linkedinUrl: "#",
 } as const;
 
 export const siteImages = {
@@ -23,7 +25,7 @@ export const mainNav = [
   { label: "Servizi", href: "/#servizi" },
   { label: "Aree di competenza", href: "/#competenze" },
   { label: "Progetti", href: "/progetti" },
-  { label: "Blog", href: "#" },
+  { label: "Approfondimenti", href: "/approfondimenti" },
   { label: "Contatti", href: "/#contatti" },
 ] as const;
 
@@ -45,5 +47,4 @@ export const footerServizi = [
 export const footerLegal = [
   { label: "Privacy Policy", href: "#" },
   { label: "Cookie Policy", href: "#" },
-  { label: "LinkedIn", href: "#" },
 ] as const;

@@ -116,6 +116,17 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={siteConfig.linkedinUrl}
+                className="text-xs text-white/60 transition-colors hover:text-white"
+                {...(siteConfig.linkedinUrl.startsWith("http")
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
       </div>
