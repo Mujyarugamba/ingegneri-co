@@ -7,8 +7,8 @@ export const siteConfig = {
     "Una rete di professionisti tecnici iscritti ai rispettivi Ordini e Collegi professionali.",
   professionals: "Ingegneri • Architetti • Geometri",
   email: "info@ingegnerieco.it",
-  phone: "339 434 0891",
-  phoneHref: "tel:+393394340891",
+  phone: "371 754 0625",
+  phoneHref: "tel:+393717540625",
   copyrightYear: 2026,
   // Aggiornare con l'URL definitivo del profilo LinkedIn
   linkedinUrl: "#",
