@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 
+const canonicalUrl = `${siteConfig.url}/contatti`;
+
 export const metadata: Metadata = {
   title: "Contatti | Ingegneri & Co",
   description:
     "Contatta Ingegneri & Co per consulenze tecniche, informazioni sui servizi e supporto per i tuoi progetti.",
+  alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Contatti | Ingegneri & Co",
     description:
       "Contatta Ingegneri & Co per consulenze tecniche e informazioni sui servizi.",
     type: "website",
     locale: "it_IT",
+    url: canonicalUrl,
   },
 };
 
@@ -49,41 +53,21 @@ export default function ContattiPage() {
 
             <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12">
               <div>
-                <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
-                  Email
-                </p>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
-                >
+                <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Email</p>
+                <a href={`mailto:${siteConfig.email}`} className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">
                   {siteConfig.email}
                 </a>
               </div>
-              <div
-                className="hidden h-10 w-px bg-gray-border sm:block"
-                aria-hidden="true"
-              />
+              <div className="hidden h-10 w-px bg-gray-border sm:block" aria-hidden="true" />
               <div>
-                <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
-                  WhatsApp
-                </p>
-                <a
-                  href={siteConfig.whatsAppHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
-                >
+                <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">WhatsApp</p>
+                <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">
                   {siteConfig.whatsApp}
                 </a>
               </div>
             </div>
 
-            <a
-              href={siteConfig.whatsAppHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-10 px-8 py-3.5"
-            >
+            <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-10 px-8 py-3.5">
               Contattaci su WhatsApp
             </a>
           </div>

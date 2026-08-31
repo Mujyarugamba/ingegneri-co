@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroVisual from "@/components/HeroVisual";
+import HomeServiceEcosystems from "@/components/HomeServiceEcosystems";
 import { LatestArticlesSection } from "@/components/articles/ArticlesSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import { siteConfig } from "@/lib/site-config";
+
+const canonicalUrl = `${siteConfig.url}/`;
 
 export const metadata: Metadata = {
   title: "Ingegneri & Co | Ingegneria, energia e innovazione per edifici e imprese",
   description:
     "Rete tecnica multidisciplinare di ingegneri, architetti e geometri. Affianchiamo imprese, professionisti e privati in edilizia, energia, impianti, automazione e innovazione tecnologica.",
+  alternates: { canonical: canonicalUrl },
   keywords: [
     "ingegneria",
     "architettura",
@@ -28,6 +32,7 @@ export const metadata: Metadata = {
       "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per consulenze tecniche, edilizia, energia e innovazione digitale.",
     type: "website",
     locale: "it_IT",
+    url: canonicalUrl,
   },
 };
 
@@ -59,7 +64,7 @@ const areeCompetenza = [
   {
     title: "Industriale",
     description:
-      "Soluzioni per impianti, efficienza energetica e innovazione industriale, con competenze certificate per audit, diagnosi e accesso agli incentivi.",
+      "Soluzioni per impianti, efficienza energetica e innovazione industriale, con competenze per audit, diagnosi e supporto ai percorsi di investimento.",
     items: [
       "Impianti elettrici",
       "Fotovoltaico",
@@ -94,59 +99,22 @@ const comeLavoriamo = [
   {
     step: "1",
     title: "Analisi tecnica",
-    description:
-      "Valutiamo esigenze, vincoli normativi e obiettivi per definire la soluzione più efficace.",
+    description: "Valutiamo esigenze, vincoli normativi e obiettivi per definire la soluzione più efficace.",
   },
   {
     step: "2",
     title: "Progettazione",
-    description:
-      "Elaboriamo la documentazione tecnica e progettuale con rigore professionale e attenzione al dettaglio.",
+    description: "Elaboriamo la documentazione tecnica e progettuale con rigore professionale e attenzione al dettaglio.",
   },
   {
     step: "3",
     title: "Gestione della pratica",
-    description:
-      "Coordiniamo iter autorizzativi, adempimenti e rapporti con enti e stakeholder coinvolti.",
+    description: "Coordiniamo iter autorizzativi, adempimenti e rapporti con enti e stakeholder coinvolti.",
   },
   {
     step: "4",
     title: "Assistenza fino alla conclusione",
-    description:
-      "Vi affianchiamo in ogni fase, fino al completamento dell'intervento e alla verifica dei risultati.",
-  },
-];
-
-const serviziEvidenza = [
-  {
-    title: "Pratiche edilizie",
-    description:
-      "Gestione completa di pratiche edilizie, CILA, SCIA, Permessi di Costruire, sanatorie e documentazione tecnica per privati, imprese e professionisti.",
-  },
-  {
-    title: "Efficientamento energetico",
-    description:
-      "Interventi mirati per ridurre i consumi e ottimizzare le prestazioni di edifici e impianti.",
-  },
-  {
-    title: "Fotovoltaico",
-    description:
-      "Progettazione, dimensionamento e pratiche per impianti solari e sistemi di accumulo.",
-  },
-  {
-    title: "Diagnosi energetiche",
-    description:
-      "Analisi certificate per individuare criticità e opportunità di miglioramento energetico.",
-  },
-  {
-    title: "Transizione 5.0",
-    description:
-      "Consulenza su digitalizzazione, innovazione tecnologica e accesso agli incentivi di settore.",
-  },
-  {
-    title: "Automazione e Smart Building",
-    description:
-      "Sistemi intelligenti per il controllo, il monitoraggio e la gestione efficiente degli edifici.",
+    description: "Vi affianchiamo in ogni fase, fino al completamento dell'intervento e alla verifica dei risultati.",
   },
 ];
 
@@ -195,280 +163,155 @@ const areaIcons = [IconBuilding, IconFactory, IconChip];
 export default function Home() {
   return (
     <main>
-        {/* Hero */}
-        <section aria-labelledby="hero-title" className="relative overflow-hidden bg-anthracite">
-          <div
-            className="absolute inset-0 opacity-25"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 15% 60%, #2563a8 0%, transparent 45%), radial-gradient(circle at 85% 15%, #1a4d7c 0%, transparent 35%)",
-            }}
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
+      <section aria-labelledby="hero-title" className="relative overflow-hidden bg-anthracite">
+        <div
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 15% 60%, #2563a8 0%, transparent 45%), radial-gradient(circle at 85% 15%, #1a4d7c 0%, transparent 35%)",
+          }}
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
-          <div className="page-container relative grid min-w-0 items-start gap-8 py-16 md:gap-10 md:py-24 lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)] lg:gap-12 lg:py-36">
-            <div className="order-1 min-w-0 pt-0">
-              <h1
-                id="hero-title"
-                className="text-2xl leading-[1.2] font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
-              >
-                Ingegneria, energia e innovazione
-                <br />
-                <span className="text-white/90">per edifici e imprese</span>
-              </h1>
-              <p className="mt-5 max-w-md text-sm leading-relaxed text-gray-muted sm:mt-7 sm:text-base lg:text-lg">
-                Ingegneri &amp; Co è una rete tecnica multidisciplinare di
-                ingegneri, architetti e geometri che affianca imprese,
-                professionisti e privati integrando edilizia, energia, impianti,
-                automazione e innovazione tecnologica.
-              </p>
-              <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
-                <Link href="#contatti" className="btn-primary">
-                  Richiedi una consulenza
-                </Link>
-                <Link href="#servizi" className="btn-outline-light">
-                  Scopri i servizi
-                </Link>
+        <div className="page-container relative grid min-w-0 items-start gap-8 py-16 md:gap-10 md:py-24 lg:grid-cols-[minmax(0,45fr)_minmax(0,55fr)] lg:gap-12 lg:py-36">
+          <div className="order-1 min-w-0 pt-0">
+            <h1 id="hero-title" className="text-2xl leading-[1.2] font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
+              Ingegneria, energia e innovazione
+              <br />
+              <span className="text-white/90">per edifici e imprese</span>
+            </h1>
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-gray-muted sm:mt-7 sm:text-base lg:text-lg">
+              Ingegneri &amp; Co è una rete tecnica multidisciplinare di ingegneri, architetti e geometri che affianca imprese, professionisti e privati integrando edilizia, energia, impianti, automazione e innovazione tecnologica.
+            </p>
+            <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+              <Link href="#contatti" className="btn-primary">Richiedi una consulenza</Link>
+              <Link href="#servizi" className="btn-outline-light">Scopri i servizi</Link>
+            </div>
+          </div>
+          <div className="order-2 min-w-0 w-full"><HeroVisual /></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="perche-scegliere-title" className="border-b border-gray-border bg-white py-12 md:py-16 lg:py-20">
+        <div className="page-container">
+          <div className="mb-10 text-center">
+            <p className="section-label">Il nostro valore</p>
+            <h2 id="perche-scegliere-title" className="section-title">Perché scegliere Ingegneri &amp; Co</h2>
+          </div>
+          <div className="grid grid-cols-1 divide-y divide-gray-border overflow-hidden rounded-2xl border border-gray-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+            {percheScegliere.map((item) => (
+              <div key={item.label} className="flex flex-col items-center justify-center px-4 py-8 text-center transition-colors duration-200 hover:bg-gray-light/60 sm:px-6 sm:py-10 lg:py-14">
+                <p className={`font-bold tracking-tight text-tech-blue ${"compact" in item && item.compact ? "text-base leading-snug lg:text-lg" : "text-2xl lg:text-3xl"}`}>{item.value}</p>
+                <p className="mt-2 text-sm font-medium text-anthracite-soft leading-snug">{item.label}</p>
               </div>
-            </div>
-
-            <div className="order-2 min-w-0 w-full">
-              <HeroVisual />
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Perché scegliere */}
-        <section aria-labelledby="perche-scegliere-title" className="border-b border-gray-border bg-white py-12 md:py-16 lg:py-20">
-          <div className="page-container">
-            <div className="mb-10 text-center">
-              <p className="section-label">Il nostro valore</p>
-              <h2 id="perche-scegliere-title" className="section-title">
-                Perché scegliere Ingegneri &amp; Co
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 divide-y divide-gray-border overflow-hidden rounded-2xl border border-gray-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
-              {percheScegliere.map((item) => (
-                <div
-                  key={item.label}
-                  className="flex flex-col items-center justify-center px-4 py-8 text-center transition-colors duration-200 hover:bg-gray-light/60 sm:px-6 sm:py-10 lg:py-14"
-                >
-                  <p
-                    className={`font-bold tracking-tight text-tech-blue ${
-                      "compact" in item && item.compact
-                        ? "text-base leading-snug lg:text-lg"
-                        : "text-2xl lg:text-3xl"
-                    }`}
-                  >
-                    {item.value}
-                  </p>
-                  <p className="mt-2 text-sm font-medium text-anthracite-soft leading-snug">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+      <section id="competenze" aria-labelledby="competenze-title" className="section-padding bg-white">
+        <div className="page-container">
+          <div className="max-w-2xl">
+            <p className="section-label">Expertise</p>
+            <h2 id="competenze-title" className="section-title">Aree di competenza</h2>
+            <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
+              Tre aree tecniche integrate, coordinate da una rete di professionisti qualificati, per rispondere con precisione alle esigenze normative, progettuali e digitali di ogni committente.
+            </p>
           </div>
-        </section>
 
-        {/* Aree di competenza */}
-        <section id="competenze" aria-labelledby="competenze-title" className="section-padding bg-white">
-          <div className="page-container">
-            <div className="max-w-2xl">
-              <p className="section-label">Expertise</p>
-              <h2 id="competenze-title" className="section-title">
-                Aree di competenza
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-                Tre aree tecniche integrate, coordinate da una rete di
-                professionisti qualificati, per rispondere con precisione alle
-                esigenze normative, progettuali e digitali di ogni committente.
-              </p>
-            </div>
-
-            <div className="mt-16 grid gap-8 lg:grid-cols-3">
-              {areeCompetenza.map((area, index) => {
-                const Icon = areaIcons[index];
-                return (
-                  <article key={area.title} className="card-elegant group flex flex-col">
-                    <div className="mb-6 inline-flex rounded-xl bg-tech-blue-pale p-3.5 text-tech-blue transition-all duration-300 group-hover:bg-tech-blue group-hover:text-white">
-                      <Icon />
-                    </div>
-                    <h3 className="text-xl font-bold tracking-tight text-anthracite">
-                      {area.title}
-                    </h3>
-                    <p className="mt-4 text-sm leading-relaxed text-gray-muted">
-                      {area.description}
-                    </p>
-                    <ul className="mt-6 flex flex-col gap-2.5 border-t border-gray-border pt-6">
-                      {area.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-sm text-anthracite-soft">
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-tech-blue" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-8 pt-2">
-                      <Link href="#contatti" className="btn-outline-dark">
-                        Scopri di più
-                      </Link>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Come lavoriamo */}
-        <section aria-labelledby="come-lavoriamo-title" className="section-padding bg-gray-light">
-          <div className="page-container">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="section-label">Metodo</p>
-              <h2 id="come-lavoriamo-title" className="section-title">
-                Come lavoriamo
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-                Un percorso strutturato e trasparente, dalla prima analisi fino
-                al completamento del progetto.
-              </p>
-            </div>
-
-            <div className="relative mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
-              <div className="absolute top-10 right-[12.5%] left-[12.5%] hidden h-px bg-gray-border lg:block" aria-hidden="true" />
-              {comeLavoriamo.map((fase) => (
-                <article key={fase.step} className="card-elegant relative text-center">
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border-2 border-tech-blue bg-white text-lg font-bold text-tech-blue">
-                    {fase.step}
-                  </div>
-                  <h3 className="text-base font-bold text-anthracite">{fase.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-muted">
-                    {fase.description}
-                  </p>
+          <div className="mt-16 grid gap-8 lg:grid-cols-3">
+            {areeCompetenza.map((area, index) => {
+              const Icon = areaIcons[index];
+              return (
+                <article key={area.title} className="card-elegant group flex flex-col">
+                  <div className="mb-6 inline-flex rounded-xl bg-tech-blue-pale p-3.5 text-tech-blue transition-all duration-300 group-hover:bg-tech-blue group-hover:text-white"><Icon /></div>
+                  <h3 className="text-xl font-bold tracking-tight text-anthracite">{area.title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-gray-muted">{area.description}</p>
+                  <ul className="mt-6 flex flex-col gap-2.5 border-t border-gray-border pt-6">
+                    {area.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-anthracite-soft">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-tech-blue" />{item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8 pt-2"><Link href="/servizi" className="btn-outline-dark">Scopri di più</Link></div>
                 </article>
-              ))}
-            </div>
+              );
+            })}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Servizi in evidenza */}
-        <section id="servizi" aria-labelledby="servizi-title" className="section-padding bg-white">
-          <div className="page-container">
-            <div className="max-w-2xl">
-              <p className="section-label">Servizi</p>
-              <h2 id="servizi-title" className="section-title">
-                Servizi in evidenza
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-                Le soluzioni più richieste dai nostri clienti, con un approccio
-                tecnico rigoroso e orientato ai risultati.
+      <HomeServiceEcosystems />
+
+      <section aria-labelledby="come-lavoriamo-title" className="section-padding bg-gray-light">
+        <div className="page-container">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="section-label">Metodo</p>
+            <h2 id="come-lavoriamo-title" className="section-title">Come lavoriamo</h2>
+            <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">Un percorso strutturato e trasparente, dalla prima analisi fino al completamento del progetto.</p>
+          </div>
+          <div className="relative mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+            <div className="absolute top-10 right-[12.5%] left-[12.5%] hidden h-px bg-gray-border lg:block" aria-hidden="true" />
+            {comeLavoriamo.map((fase) => (
+              <article key={fase.step} className="card-elegant relative text-center">
+                <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border-2 border-tech-blue bg-white text-lg font-bold text-tech-blue">{fase.step}</div>
+                <h3 className="text-base font-bold text-anthracite">{fase.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-muted">{fase.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="chi-siamo" aria-labelledby="affidarsi-title" className="section-padding bg-anthracite">
+        <div className="page-container">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            <div>
+              <p className="section-label text-tech-blue-light">Chi siamo</p>
+              <h2 id="affidarsi-title" className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">Perché affidarsi a noi</h2>
+              <p className="mt-6 text-base leading-relaxed text-gray-muted lg:text-lg">
+                Una rete tecnica multidisciplinare con radici solide e visione contemporanea, che unisce ingegneri, architetti e geometri in un unico approccio integrato: competenza tecnica, rigore normativo e innovazione applicata.
               </p>
+              <p className="mt-4 text-sm leading-relaxed text-white/50 italic">{siteConfig.institutionalPhrase}</p>
             </div>
-
-            <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-              {serviziEvidenza.map((servizio) => (
-                <article key={servizio.title} className="card-elegant group">
-                  <div className="mb-5 h-0.5 w-12 rounded-full bg-tech-blue transition-all duration-300 group-hover:w-16" />
-                  <h3 className="text-lg font-bold tracking-tight text-anthracite">
-                    {servizio.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-muted">
-                    {servizio.description}
-                  </p>
-                </article>
+            <ul className="flex flex-col gap-5">
+              {percheAffidarsi.map((punto) => (
+                <li key={punto} className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-200 hover:border-white/20 hover:bg-white/10">
+                  <IconCheck /><span className="text-base font-medium text-white">{punto}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Perché affidarsi a noi */}
-        <section id="chi-siamo" aria-labelledby="affidarsi-title" className="section-padding bg-anthracite">
-          <div className="page-container">
-            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <ProjectsSection className="section-padding bg-white" />
+      <LatestArticlesSection />
+
+      <section id="contatti" aria-labelledby="contatti-title" className="section-padding bg-gray-light">
+        <div className="page-container">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-gray-border bg-white p-6 text-center shadow-sm sm:p-10 lg:p-14">
+            <p className="section-label">Contatti</p>
+            <h2 id="contatti-title" className="section-title">Parliamo del tuo progetto</h2>
+            <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
+              Che tu sia un privato, un&apos;impresa o un professionista del settore, siamo a disposizione per una consulenza personalizzata. Raccontaci le tue esigenze: ti aiuteremo a trovare la soluzione tecnica più adatta.
+            </p>
+            <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12">
               <div>
-                <p className="section-label text-tech-blue-light">Chi siamo</p>
-                <h2 id="affidarsi-title" className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-                  Perché affidarsi a noi
-                </h2>
-                <p className="mt-6 text-base leading-relaxed text-gray-muted lg:text-lg">
-                  Una rete tecnica multidisciplinare con radici solide e visione
-                  contemporanea, che unisce ingegneri, architetti e geometri in
-                  un unico approccio integrato: competenza tecnica, rigore
-                  normativo e innovazione applicata.
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-white/50 italic">
-                  {siteConfig.institutionalPhrase}
-                </p>
+                <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Email</p>
+                <a href={`mailto:${siteConfig.email}`} className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">{siteConfig.email}</a>
               </div>
-              <ul className="flex flex-col gap-5">
-                {percheAffidarsi.map((punto) => (
-                  <li
-                    key={punto}
-                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-200 hover:border-white/20 hover:bg-white/10"
-                  >
-                    <IconCheck />
-                    <span className="text-base font-medium text-white">{punto}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <ProjectsSection className="section-padding bg-white" />
-
-        <LatestArticlesSection />
-
-        {/* Contatti */}
-        <section id="contatti" aria-labelledby="contatti-title" className="section-padding bg-gray-light">
-          <div className="page-container">
-            <div className="mx-auto max-w-3xl rounded-2xl border border-gray-border bg-white p-6 text-center shadow-sm sm:p-10 lg:p-14">
-              <p className="section-label">Contatti</p>
-              <h2 id="contatti-title" className="section-title">
-                Parliamo del tuo progetto
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-                Che tu sia un privato, un&apos;impresa o un professionista del
-                settore, siamo a disposizione per una consulenza personalizzata.
-                Raccontaci le tue esigenze: ti aiuteremo a trovare la soluzione
-                tecnica più adatta.
-              </p>
-
-              <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12">
-                <div>
-                  <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Email</p>
-                  <a
-                    href={`mailto:${siteConfig.email}`}
-                    className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
-                  >
-                    {siteConfig.email}
-                  </a>
-                </div>
-                <div className="hidden h-10 w-px bg-gray-border sm:block" aria-hidden="true" />
-                <div>
-                  <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">WhatsApp</p>
-                  <a
-                    href={siteConfig.whatsAppHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light"
-                  >
-                    {siteConfig.whatsApp}
-                  </a>
-                </div>
+              <div className="hidden h-10 w-px bg-gray-border sm:block" aria-hidden="true" />
+              <div>
+                <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">WhatsApp</p>
+                <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">{siteConfig.whatsApp}</a>
               </div>
-
-              <a
-                href={siteConfig.whatsAppHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary mt-10 px-8 py-3.5"
-              >
-                Contattaci su WhatsApp
-              </a>
             </div>
+            <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-10 px-8 py-3.5">Contattaci su WhatsApp</a>
           </div>
-        </section>
+        </div>
+      </section>
     </main>
   );
 }

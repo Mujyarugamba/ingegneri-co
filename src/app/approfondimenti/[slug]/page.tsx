@@ -5,6 +5,7 @@ import {
   getAllArticleSlugs,
   getArticleBySlug,
 } from "@/lib/articles-data";
+import { siteConfig } from "@/lib/site-config";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -21,17 +22,23 @@ export async function generateMetadata({
   const article = getArticleBySlug(slug);
 
   if (!article) {
-    return { title: "Approfondimento non trovato | Ingegneri & Co" };
+    return { title: "Approfondimento non trovato | Ingegneri & Co", robots: { index: false } };
   }
+
+  const canonicalUrl = `${siteConfig.url}/approfondimenti/${slug}`;
 
   return {
     title: `${article.title} | Ingegneri & Co`,
     description: article.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: `${article.title} | Ingegneri & Co`,
       description: article.description,
       type: "article",
       locale: "it_IT",
+      url: canonicalUrl,
       publishedTime: article.publishedAt,
     },
   };
@@ -45,5 +52,29 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  return <ArticleDetail article={article} />;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    datePublished: article.publishedAt,
+    inLanguage: "it-IT",
+    mainEntityOfPage: `${siteConfig.url}/approfondimenti/${slug}`,
+    author: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
+    publisher: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <ArticleDetail article={article} />
+    </>
+  );
 }
