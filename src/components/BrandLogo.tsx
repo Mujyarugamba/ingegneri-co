@@ -37,7 +37,7 @@ export default function BrandLogo({ variant = "header" }: BrandLogoProps) {
         </span>
       )}
       {isFooter && (
-        <span className="text-[0.62rem] font-medium tracking-[0.12em] text-tech-blue-light uppercase">
+        <span className="text-[0.62rem] font-medium tracking-[0.12em] text-white/80 uppercase">
           {siteConfig.tagline}
         </span>
       )}
