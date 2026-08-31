@@ -3,7 +3,7 @@ import { serviceEcosystems } from "@/lib/site-config";
 
 export default function HomeServiceEcosystems() {
   return (
-    <section aria-labelledby="ecosistemi-title" className="section-padding bg-gray-light">
+    <section id="servizi" aria-labelledby="ecosistemi-title" className="section-padding bg-gray-light">
       <div className="page-container">
         <div className="max-w-3xl">
           <p className="section-label">Due ecosistemi</p>
