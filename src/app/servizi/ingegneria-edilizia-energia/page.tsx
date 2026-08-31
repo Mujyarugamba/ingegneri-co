@@ -20,13 +20,31 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  ["Pratiche edilizie", "CILA, SCIA, Permessi di Costruire, sanatorie, conformità e documentazione tecnica."],
-  ["Legge 10", "Relazioni tecniche energetiche e verifiche previste dalla normativa per nuovi edifici e interventi rilevanti."],
-  ["Efficientamento energetico", "Analisi e interventi per ridurre consumi e migliorare le prestazioni di edifici e impianti."],
-  ["Fotovoltaico", "Dimensionamento, progettazione e supporto tecnico per impianti fotovoltaici e sistemi di accumulo."],
-  ["Diagnosi energetiche", "Analisi dei consumi e individuazione delle opportunità di miglioramento energetico."],
-  ["Impianti", "Supporto tecnico per impianti elettrici, integrazione impiantistica e verifica delle prestazioni."],
-  ["Direzione lavori e supporto tecnico", "Coordinamento tecnico, assistenza in cantiere e supporto lungo le fasi dell'intervento."],
+  {
+    title: "Pratiche edilizie",
+    description: "CILA, SCIA, Permessi di Costruire, sanatorie, conformità e documentazione tecnica.",
+    href: "/servizi/pratiche-edilizie",
+  },
+  {
+    title: "Legge 10",
+    description: "Relazioni tecniche energetiche e verifiche previste dalla normativa per nuovi edifici e interventi rilevanti.",
+    href: "/servizi/legge-10",
+  },
+  {
+    title: "Efficientamento energetico",
+    description: "Analisi e interventi per ridurre consumi e migliorare le prestazioni di edifici e impianti.",
+    href: "/servizi/efficientamento-energetico",
+  },
+  {
+    title: "Fotovoltaico",
+    description: "Dimensionamento, progettazione e supporto tecnico per impianti fotovoltaici e sistemi di accumulo.",
+    href: "/servizi/fotovoltaico",
+  },
+  {
+    title: "Diagnosi energetiche",
+    description: "Analisi dei consumi e individuazione delle opportunità di miglioramento energetico.",
+    href: "/servizi/diagnosi-energetiche",
+  },
 ] as const;
 
 export default function EngineeringServicesPage() {
@@ -46,11 +64,18 @@ export default function EngineeringServicesPage() {
 
       <section className="section-padding bg-gray-light">
         <div className="page-container grid gap-5 md:grid-cols-2">
-          {services.map(([title, description]) => (
-            <article key={title} className="rounded-2xl border border-gray-border bg-white p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-anthracite">{title}</h2>
-              <p className="mt-3 leading-relaxed text-gray-muted">{description}</p>
-            </article>
+          {services.map((service) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="group rounded-2xl border border-gray-border bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <article>
+                <h2 className="text-xl font-bold text-anthracite group-hover:text-tech-blue">{service.title}</h2>
+                <p className="mt-3 leading-relaxed text-gray-muted">{service.description}</p>
+                <p className="mt-5 text-sm font-semibold text-tech-blue">Scopri il servizio →</p>
+              </article>
+            </Link>
           ))}
         </div>
         <div className="page-container mt-10">
