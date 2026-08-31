@@ -42,6 +42,11 @@ export function ServiceLanding({
         name: ecosystemLabel,
         item: `${siteConfig.url}${ecosystemHref}`,
       },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: title,
+      },
     ],
   };
 
@@ -60,6 +65,8 @@ export function ServiceLanding({
             <Link href="/servizi" className="hover:text-slate-950">Servizi</Link>
             <span aria-hidden="true" className="mx-2">/</span>
             <Link href={ecosystemHref} className="hover:text-slate-950">{ecosystemLabel}</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span aria-current="page" className="text-slate-900">{title}</span>
           </nav>
 
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">{eyebrow}</p>
