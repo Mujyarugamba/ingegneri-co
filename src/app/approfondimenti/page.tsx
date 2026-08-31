@@ -27,6 +27,7 @@ export default function ApprofondimentiPage() {
       intro={approfondimentiIntro}
       className="section-padding bg-gray-light"
       columns={3}
+      headingLevel="h1"
     />
   );
 }

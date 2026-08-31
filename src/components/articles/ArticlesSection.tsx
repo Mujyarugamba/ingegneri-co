@@ -18,6 +18,7 @@ export type ArticlesSectionProps = {
   viewAllHref?: string;
   viewAllLabel?: string;
   columns?: 2 | 3;
+  headingLevel?: "h1" | "h2";
 };
 
 export default function ArticlesSection({
@@ -31,21 +32,23 @@ export default function ArticlesSection({
   viewAllHref = "/approfondimenti",
   viewAllLabel = "Tutti gli approfondimenti",
   columns = 3,
+  headingLevel = "h2",
 }: ArticlesSectionProps) {
   const displayItems = items ?? articles;
   const gridClass =
     columns === 2
       ? "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8"
       : "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-3";
+  const Heading = headingLevel;
 
   return (
     <section id={id} aria-labelledby={`${id}-title`} className={className}>
       <div className="page-container">
         <div className="max-w-3xl">
           <p className="section-label">{label}</p>
-          <h2 id={`${id}-title`} className="section-title">
+          <Heading id={`${id}-title`} className="section-title">
             {title}
-          </h2>
+          </Heading>
           <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
             {intro}
           </p>

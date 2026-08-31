@@ -26,6 +26,7 @@ export default function ProgettiPage() {
       label="Portfolio"
       intro={portfolioPageIntro}
       className="section-padding bg-gray-light"
+      headingLevel="h1"
     />
   );
 }
