@@ -7,7 +7,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/ingegneria-edilizia-energia`;
 export const metadata: Metadata = {
   title: "Ingegneria, Edilizia ed Energia | Ingegneri & Co",
   description:
-    "Pratiche edilizie, Legge 10, efficientamento energetico, fotovoltaico, diagnosi energetiche, impianti e supporto tecnico per edifici e imprese.",
+    "Pratiche edilizie, Legge 10, efficientamento energetico, fotovoltaico, diagnosi energetiche, impianti elettrici e direzione lavori.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Ingegneria, Edilizia ed Energia | Ingegneri & Co",
@@ -44,6 +44,16 @@ const services = [
     title: "Diagnosi energetiche",
     description: "Analisi dei consumi e individuazione delle opportunità di miglioramento energetico.",
     href: "/servizi/diagnosi-energetiche",
+  },
+  {
+    title: "Impianti elettrici",
+    description: "Progettazione, verifica, adeguamento e integrazione di impianti elettrici civili e per attività.",
+    href: "/servizi/impianti-elettrici",
+  },
+  {
+    title: "Direzione lavori e supporto tecnico",
+    description: "Coordinamento tecnico e assistenza durante le fasi esecutive dell'intervento.",
+    href: "/servizi/direzione-lavori",
   },
 ] as const;
 

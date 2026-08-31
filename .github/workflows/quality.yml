@@ -1,12 +1,7 @@
 name: Quality
 
 on:
-  push:
-    branches:
-      - seo/two-ecosystems
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   contents: read

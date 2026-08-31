@@ -7,7 +7,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/digitalizzazione-automazione-ai`
 export const metadata: Metadata = {
   title: "Digitalizzazione, Automazione e AI per PMI | Ingegneri & Co",
   description:
-    "Automazione dei processi, Transizione 5.0, portali web, integrazione software e dati, analisi documentale e intelligenza artificiale per PMI.",
+    "Automazione dei processi, Transizione 5.0, portali web, integrazione software e dati, Smart Building, analisi documentale e AI per PMI.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Digitalizzazione, Automazione e AI per PMI | Ingegneri & Co",
@@ -41,9 +41,24 @@ const services = [
     href: "/servizi/portali-applicazioni-web",
   },
   {
+    title: "Integrazione software e dati",
+    description: "Collegamento tra sistemi, database e applicazioni per evitare duplicazioni e rendere i dati più utilizzabili.",
+    href: "/servizi/integrazione-software-dati",
+  },
+  {
     title: "Intelligenza artificiale per PMI",
     description: "Introduzione dell'AI nei processi aziendali con casi d'uso concreti, sostenibili e misurabili.",
     href: "/servizi/intelligenza-artificiale-pmi",
+  },
+  {
+    title: "Analisi documentale e assistenti AI",
+    description: "Classificazione, estrazione dati, ricerca interna e assistenti dedicati a procedure e conoscenza aziendale.",
+    href: "/servizi/analisi-documentale-assistenti-ai",
+  },
+  {
+    title: "Smart Building, IoT e monitoraggio",
+    description: "Building Automation, sensori, acquisizione dati e monitoraggio energetico per edifici e attività.",
+    href: "/servizi/smart-building-iot",
   },
 ] as const;
 
