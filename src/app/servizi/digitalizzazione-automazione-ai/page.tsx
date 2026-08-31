@@ -105,7 +105,7 @@ export default function DigitalServicesPage() {
             <span aria-hidden="true" className="mx-2">/</span>
             <span aria-current="page" className="text-white">Digitalizzazione, Automazione &amp; AI</span>
           </nav>
-          <p className="section-label text-tech-blue-light">Ecosistema 2</p>
+          <p className="section-label text-white/80">Ecosistema 2</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-5xl">
             Digitalizzazione, Automazione &amp; AI
           </h1>
