@@ -17,7 +17,7 @@ function FooterColumn({
   return (
     <div>
       {title ? (
-        <p className="text-xs font-semibold tracking-[0.18em] text-tech-blue-light uppercase">
+        <p className="text-xs font-semibold tracking-[0.18em] text-white/80 uppercase">
           {title}
         </p>
       ) : null}
