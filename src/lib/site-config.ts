@@ -27,7 +27,7 @@ export const mainNav = [
   { label: "Aree di competenza", href: "/#competenze" },
   { label: "Progetti", href: "/progetti" },
   { label: "Approfondimenti", href: "/approfondimenti" },
-  { label: "Contatti", href: "/#contatti" },
+  { label: "Contatti", href: "/contatti" },
 ] as const;
 
 export const serviceEcosystems = [
@@ -78,4 +78,5 @@ export const footerServizi = [
 export const footerLegal = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Cookie Policy", href: "/cookie-policy" },
+  { label: "Policy sul luogo di lavoro", href: "/policy-lavoro" },
 ] as const;
