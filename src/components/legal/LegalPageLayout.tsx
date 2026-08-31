@@ -24,7 +24,7 @@ export default function LegalPageLayout({
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
         <div className="relative page-container max-w-[900px] py-12 md:py-16 lg:py-24">
-          <p className="section-label text-tech-blue-light">{label}</p>
+          <p className="section-label text-white/80">{label}</p>
           <h1 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
             {title}
           </h1>
