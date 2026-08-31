@@ -12,6 +12,7 @@ export type ProjectsSectionProps = {
   intro?: string;
   items?: Project[];
   className?: string;
+  headingLevel?: "h1" | "h2";
 };
 
 export default function ProjectsSection({
@@ -21,7 +22,10 @@ export default function ProjectsSection({
   intro = projectsIntro,
   items = projects,
   className = "section-padding bg-gray-light",
+  headingLevel = "h2",
 }: ProjectsSectionProps) {
+  const Heading = headingLevel;
+
   return (
     <section
       id={id}
@@ -31,9 +35,9 @@ export default function ProjectsSection({
       <div className="page-container">
         <div className="max-w-3xl">
           <p className="section-label">{label}</p>
-          <h2 id={`${id}-title`} className="section-title">
+          <Heading id={`${id}-title`} className="section-title">
             {title}
-          </h2>
+          </Heading>
           <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
             {intro}
           </p>
