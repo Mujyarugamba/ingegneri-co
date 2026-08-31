@@ -27,6 +27,8 @@ function FooterColumn({
 }
 
 export default function Footer() {
+  const hasLinkedIn = siteConfig.linkedinUrl.startsWith("http");
+
   return (
     <footer className="border-t border-white/5 bg-anthracite overflow-x-hidden">
       <div className="page-container py-12 md:py-16 lg:py-20">
@@ -118,17 +120,18 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href={siteConfig.linkedinUrl}
-                className="text-xs text-white/60 transition-colors hover:text-white"
-                {...(siteConfig.linkedinUrl.startsWith("http")
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
-              >
-                LinkedIn
-              </a>
-            </li>
+            {hasLinkedIn ? (
+              <li>
+                <a
+                  href={siteConfig.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-white/60 transition-colors hover:text-white"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>

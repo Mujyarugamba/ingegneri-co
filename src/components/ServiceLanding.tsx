@@ -20,10 +20,48 @@ export function ServiceLanding({
   ecosystemHref,
   ecosystemLabel,
 }: ServiceLandingProps) {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Servizi",
+        item: `${siteConfig.url}/servizi`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: ecosystemLabel,
+        item: `${siteConfig.url}${ecosystemHref}`,
+      },
+    ],
+  };
+
   return (
     <main className="bg-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <section className="border-b border-slate-200 bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
+          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-slate-600">
+            <Link href="/" className="hover:text-slate-950">Home</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <Link href="/servizi" className="hover:text-slate-950">Servizi</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <Link href={ecosystemHref} className="hover:text-slate-950">{ecosystemLabel}</Link>
+          </nav>
+
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">{eyebrow}</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight sm:text-5xl">{title}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">{intro}</p>
@@ -52,6 +90,8 @@ export function ServiceLanding({
           <div className="mt-8 flex flex-col gap-3">
             <a
               href={siteConfig.whatsAppHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white px-5 py-3 text-center font-semibold text-slate-950"
             >
               Parla con noi su WhatsApp
