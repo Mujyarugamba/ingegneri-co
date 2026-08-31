@@ -58,10 +58,48 @@ const services = [
 ] as const;
 
 export default function EngineeringServicesPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Servizi", item: `${siteConfig.url}/servizi` },
+      { "@type": "ListItem", position: 3, name: "Ingegneria, Edilizia & Energia", item: canonicalUrl },
+    ],
+  };
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Servizi Ingegneria, Edilizia & Energia",
+    itemListElement: services.map((service, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: service.title,
+      url: `${siteConfig.url}${service.href}`,
+    })),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+
       <section className="bg-anthracite py-14 md:py-20 lg:py-24">
         <div className="page-container">
+          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-white/60">
+            <Link href="/" className="transition hover:text-white">Home</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <Link href="/servizi" className="transition hover:text-white">Servizi</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span aria-current="page" className="text-white">Ingegneria, Edilizia &amp; Energia</span>
+          </nav>
           <p className="section-label text-tech-blue-light">Ecosistema 1</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-5xl">
             Ingegneria, Edilizia &amp; Energia
