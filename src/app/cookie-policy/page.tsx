@@ -2,17 +2,22 @@ import type { Metadata } from "next";
 import LegalPageLayout, {
   LegalSection,
 } from "@/components/legal/LegalPageLayout";
+import { siteConfig } from "@/lib/site-config";
+
+const canonicalUrl = `${siteConfig.url}/cookie-policy`;
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Ingegneri & Co",
   description:
     "Cookie Policy del sito Ingegneri & Co. Informazioni sull'utilizzo di cookie tecnici e sull'assenza di cookie di profilazione.",
+  alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Cookie Policy | Ingegneri & Co",
     description:
       "Informazioni sui cookie utilizzati dal sito web Ingegneri & Co.",
     type: "website",
     locale: "it_IT",
+    url: canonicalUrl,
   },
 };
 

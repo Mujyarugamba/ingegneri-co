@@ -4,16 +4,20 @@ import LegalPageLayout, {
 } from "@/components/legal/LegalPageLayout";
 import { siteConfig } from "@/lib/site-config";
 
+const canonicalUrl = `${siteConfig.url}/privacy-policy`;
+
 export const metadata: Metadata = {
   title: "Privacy Policy | Ingegneri & Co",
   description:
     "Informativa sulla privacy del sito web Ingegneri & Co. Tutela dei dati personali nel rispetto del Regolamento (UE) 2016/679 (GDPR).",
+  alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Privacy Policy | Ingegneri & Co",
     description:
       "Informativa sulla privacy del sito web Ingegneri & Co nel rispetto del GDPR.",
     type: "website",
     locale: "it_IT",
+    url: canonicalUrl,
   },
 };
 
