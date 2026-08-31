@@ -23,11 +23,40 @@ export const siteImages = {
 export const mainNav = [
   { label: "Home", href: "/" },
   { label: "Chi siamo", href: "/#chi-siamo" },
-  { label: "Servizi", href: "/#servizi" },
+  { label: "Servizi", href: "/servizi" },
   { label: "Aree di competenza", href: "/#competenze" },
   { label: "Progetti", href: "/progetti" },
   { label: "Approfondimenti", href: "/approfondimenti" },
   { label: "Contatti", href: "/#contatti" },
+] as const;
+
+export const serviceEcosystems = [
+  {
+    label: "Ingegneria, Edilizia & Energia",
+    href: "/servizi/ingegneria-edilizia-energia",
+    services: [
+      "Pratiche edilizie",
+      "Legge 10",
+      "Efficientamento energetico",
+      "Fotovoltaico",
+      "Diagnosi energetiche",
+      "Impianti",
+      "Direzione lavori e supporto tecnico",
+    ],
+  },
+  {
+    label: "Digitalizzazione, Automazione & AI",
+    href: "/servizi/digitalizzazione-automazione-ai",
+    services: [
+      "Automazione dei processi",
+      "Transizione 5.0",
+      "Servizi digitali per imprese",
+      "Portali e applicazioni web",
+      "Integrazione software e dati",
+      "Intelligenza artificiale per PMI",
+      "Analisi documentale e assistenti AI",
+    ],
+  },
 ] as const;
 
 export const footerAree = [
@@ -37,15 +66,8 @@ export const footerAree = [
 ] as const;
 
 export const footerServizi = [
-  { label: "Pratiche edilizie", href: "/#servizi" },
-  { label: "Legge 10", href: "/#servizi" },
-  { label: "Efficientamento energetico", href: "/#servizi" },
-  { label: "Fotovoltaico", href: "/#servizi" },
-  { label: "Diagnosi energetiche", href: "/#servizi" },
-  { label: "Transizione 5.0", href: "/#servizi" },
-  { label: "Automazione e Smart Building", href: "/#servizi" },
-  { label: "Servizi digitali per imprese", href: "/#servizi" },
-  { label: "Intelligenza artificiale per PMI", href: "/#servizi" },
+  { label: "Ingegneria, Edilizia & Energia", href: "/servizi/ingegneria-edilizia-energia" },
+  { label: "Digitalizzazione, Automazione & AI", href: "/servizi/digitalizzazione-automazione-ai" },
 ] as const;
 
 export const footerLegal = [
