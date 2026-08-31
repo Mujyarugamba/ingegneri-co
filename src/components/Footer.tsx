@@ -17,9 +17,9 @@ function FooterColumn({
   return (
     <div>
       {title ? (
-        <p className="text-xs font-semibold tracking-[0.18em] text-white/80 uppercase">
+        <h2 className="text-xs font-semibold tracking-[0.18em] text-white/80 uppercase">
           {title}
-        </p>
+        </h2>
       ) : null}
       <div className={title ? "mt-5" : undefined}>{children}</div>
     </div>
@@ -88,6 +88,7 @@ export default function Footer() {
                   className="text-sm text-white/75 transition-colors hover:text-white"
                 >
                   WhatsApp: {siteConfig.whatsApp}
+                  <span className="sr-only"> (si apre in una nuova scheda)</span>
                 </a>
               </li>
               <li>
@@ -129,6 +130,7 @@ export default function Footer() {
                   className="text-xs text-white/60 transition-colors hover:text-white"
                 >
                   LinkedIn
+                  <span className="sr-only"> (si apre in una nuova scheda)</span>
                 </a>
               </li>
             ) : null}

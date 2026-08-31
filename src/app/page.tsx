@@ -268,7 +268,7 @@ export default function Home() {
         <div className="page-container">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div>
-              <p className="section-label text-tech-blue-light">Chi siamo</p>
+              <p className="section-label text-white/80">Chi siamo</p>
               <h2 id="affidarsi-title" className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">Perché affidarsi a noi</h2>
               <p className="mt-6 text-base leading-relaxed text-gray-muted lg:text-lg">
                 Una rete tecnica multidisciplinare con radici solide e visione contemporanea, che unisce ingegneri, architetti e geometri in un unico approccio integrato: competenza tecnica, rigore normativo e innovazione applicata.
@@ -305,10 +305,16 @@ export default function Home() {
               <div className="hidden h-10 w-px bg-gray-border sm:block" aria-hidden="true" />
               <div>
                 <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">WhatsApp</p>
-                <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">{siteConfig.whatsApp}</a>
+                <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">
+                  {siteConfig.whatsApp}
+                  <span className="sr-only"> (si apre in una nuova scheda)</span>
+                </a>
               </div>
             </div>
-            <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-10 px-8 py-3.5">Contattaci su WhatsApp</a>
+            <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-10 px-8 py-3.5">
+              Contattaci su WhatsApp
+              <span className="sr-only"> (si apre in una nuova scheda)</span>
+            </a>
           </div>
         </div>
       </section>
