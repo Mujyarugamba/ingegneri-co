@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ingegneri &amp; Co">
+  <rect width="64" height="64" rx="14" fill="#1a4d7c"/>
+  <path d="M18 16h8v32h-8z" fill="#fff"/>
+  <path d="M33 20h6.2l6.8 10.4L52.8 20H59L49.2 34 60 48h-6.4l-7.8-10.6L38 48h-6.2l10.4-14z" fill="#fff"/>
+</svg>
