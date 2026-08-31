@@ -48,16 +48,16 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         <div className="page-container">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
             <div>
-              <p className="section-label">Il progetto</p>
+              <h2 className="section-label">Il progetto</h2>
               <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
                 {bodyText}
               </p>
 
               {project.features && project.features.length > 0 && (
                 <div className="mt-10">
-                  <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
+                  <h2 className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
                     Funzionalità
-                  </p>
+                  </h2>
                   <ul className="mt-4 flex flex-col gap-3">
                     {project.features.map((feature) => (
                       <li
@@ -76,9 +76,9 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             <div>
               {project.skills.length > 0 && (
                 <div className="card-elegant">
-                  <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
+                  <h2 className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
                     Competenze utilizzate
-                  </p>
+                  </h2>
                   <ul className="mt-5 flex flex-col gap-3">
                     {project.skills.map((skill) => (
                       <li
@@ -104,6 +104,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                         className="btn-primary w-full sm:w-auto"
                       >
                         {project.detail.visitLabel}
+                        <span className="sr-only"> (si apre in una nuova scheda)</span>
                       </a>
                       {project.detail.externalNote && (
                         <p className="mt-3 text-xs leading-relaxed text-gray-muted">

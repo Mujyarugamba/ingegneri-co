@@ -102,6 +102,7 @@ export function ServiceLanding({
               className="rounded-full bg-white px-5 py-3 text-center font-semibold text-slate-950"
             >
               Parla con noi su WhatsApp
+              <span className="sr-only"> (si apre in una nuova scheda)</span>
             </a>
             <a
               href={`mailto:${siteConfig.email}`}
