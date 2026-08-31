@@ -57,7 +57,7 @@ export default function DigitalServicesPage() {
             Digitalizzazione, Automazione &amp; AI
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-gray-muted md:text-lg">
-            Soluzioni digitali pensate per piccole e medie imprese che vogliono semplificare processi, integrare dati e strumenti e utilizzare l'intelligenza artificiale in modo concreto.
+            Soluzioni digitali pensate per piccole e medie imprese che vogliono semplificare processi, integrare dati e strumenti e utilizzare l&apos;intelligenza artificiale in modo concreto.
           </p>
         </div>
       </section>
