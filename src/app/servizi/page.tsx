@@ -61,7 +61,7 @@ export default function ServiziPage() {
             <span aria-hidden="true" className="mx-2">/</span>
             <span aria-current="page" className="text-white">Servizi</span>
           </nav>
-          <p className="section-label text-tech-blue-light">Servizi</p>
+          <p className="section-label text-white/80">Servizi</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-5xl">
             Due ecosistemi, un unico approccio multidisciplinare
           </h1>

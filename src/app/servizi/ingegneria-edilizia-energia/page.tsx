@@ -100,7 +100,7 @@ export default function EngineeringServicesPage() {
             <span aria-hidden="true" className="mx-2">/</span>
             <span aria-current="page" className="text-white">Ingegneria, Edilizia &amp; Energia</span>
           </nav>
-          <p className="section-label text-tech-blue-light">Ecosistema 1</p>
+          <p className="section-label text-white/80">Ecosistema 1</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-5xl">
             Ingegneria, Edilizia &amp; Energia
           </h1>
