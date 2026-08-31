@@ -63,12 +63,14 @@ export default function ContattiPage() {
                 <p className="text-xs font-semibold tracking-widest text-gray-muted uppercase">WhatsApp</p>
                 <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="mt-1 block text-base font-semibold text-tech-blue transition-colors hover:text-tech-blue-light">
                   {siteConfig.whatsApp}
+                  <span className="sr-only"> (si apre in una nuova scheda)</span>
                 </a>
               </div>
             </div>
 
             <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-10 px-8 py-3.5">
               Contattaci su WhatsApp
+              <span className="sr-only"> (si apre in una nuova scheda)</span>
             </a>
           </div>
         </div>
