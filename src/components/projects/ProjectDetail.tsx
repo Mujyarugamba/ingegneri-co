@@ -24,20 +24,20 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         <div className="relative page-container py-12 md:py-16 lg:py-24">
           <Link
             href="/progetti"
-            className="inline-flex items-center gap-2 text-sm font-medium text-tech-blue-light transition-colors hover:text-white"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
           >
             <span aria-hidden="true">←</span>
             Torna ai progetti
           </Link>
 
           <div className="mt-8 max-w-3xl">
-            <div className="mb-6 inline-flex rounded-xl border border-white/10 bg-white/5 p-4 text-tech-blue-light">
+            <div className="mb-6 inline-flex rounded-xl border border-white/10 bg-white/5 p-4 text-white/80">
               <ProjectIconDisplay icon={project.icon} className="h-7 w-7" />
             </div>
             <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {project.title}
             </h1>
-            <p className="mt-4 text-lg font-medium text-tech-blue-light">
+            <p className="mt-4 text-lg font-medium text-white/80">
               {project.subtitle}
             </p>
           </div>

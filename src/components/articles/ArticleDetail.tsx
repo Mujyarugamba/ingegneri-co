@@ -5,9 +5,9 @@ import {
 } from "@/lib/articles-data";
 
 const categoryStyles: Record<Article["category"], string> = {
-  Edilizia: "bg-tech-blue-pale/20 text-tech-blue-light border-tech-blue/30",
+  Edilizia: "bg-tech-blue-pale/20 text-white/80 border-white/20",
   Industria: "bg-white/10 text-white/80 border-white/20",
-  Energia: "bg-tech-blue/20 text-tech-blue-light border-tech-blue/30",
+  Energia: "bg-tech-blue/20 text-white/80 border-white/20",
   Innovazione: "bg-white/10 text-white/80 border-white/20",
 };
 
@@ -31,7 +31,7 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
         <div className="relative page-container py-12 md:py-16 lg:py-24">
           <Link
             href="/approfondimenti"
-            className="inline-flex items-center gap-2 text-sm font-medium text-tech-blue-light transition-colors hover:text-white"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
           >
             <span aria-hidden="true">←</span>
             Torna agli approfondimenti
@@ -81,7 +81,7 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
             <p className="mt-2 text-sm text-gray-muted">
               Contattaci per una consulenza personalizzata.
             </p>
-            <Link href="/#contatti" className="btn-primary mt-6">
+            <Link href="/contatti" className="btn-primary mt-6">
               Richiedi una consulenza
             </Link>
           </div>

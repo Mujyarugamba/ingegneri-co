@@ -53,7 +53,7 @@ export default function Header() {
             <details className="mobile-nav relative shrink-0">
               <summary
                 className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-gray-border bg-white text-anthracite shadow-sm transition-colors hover:border-tech-blue/40 hover:text-tech-blue [&::-webkit-details-marker]:hidden"
-                aria-label="Apri menu di navigazione"
+                aria-label="Menu di navigazione"
               >
                 <span className="mobile-nav-open">
                   <MenuIcon />
