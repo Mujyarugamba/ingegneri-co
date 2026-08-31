@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://ingegnerieco.it",
   tagline: "Engineering • Energy • Innovation",
   description:
-    "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione e innovazione tecnologica.",
+    "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione, servizi digitali e intelligenza artificiale per PMI.",
   institutionalPhrase:
     "Una rete di professionisti tecnici iscritti ai rispettivi Ordini e Collegi professionali.",
   professionals: "Ingegneri • Architetti • Geometri",
@@ -38,11 +38,14 @@ export const footerAree = [
 
 export const footerServizi = [
   { label: "Pratiche edilizie", href: "/#servizi" },
+  { label: "Legge 10", href: "/#servizi" },
   { label: "Efficientamento energetico", href: "/#servizi" },
   { label: "Fotovoltaico", href: "/#servizi" },
   { label: "Diagnosi energetiche", href: "/#servizi" },
   { label: "Transizione 5.0", href: "/#servizi" },
   { label: "Automazione e Smart Building", href: "/#servizi" },
+  { label: "Servizi digitali per imprese", href: "/#servizi" },
+  { label: "Intelligenza artificiale per PMI", href: "/#servizi" },
 ] as const;
 
 export const footerLegal = [
