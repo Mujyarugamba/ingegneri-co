@@ -6,10 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: {
-    default: `${siteConfig.name} | Ingegneria, energia e innovazione`,
-    template: `%s | ${siteConfig.name}`,
-  },
+  title: `${siteConfig.name} | Ingegneria, energia e innovazione`,
   description: siteConfig.description,
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
@@ -53,6 +50,36 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteConfig.url}/#organization`,
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/logo.png`,
+  description: siteConfig.description,
+  email: siteConfig.email,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+39 371 754 0625",
+    contactType: "customer service",
+    availableLanguage: ["Italian"],
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteConfig.url}/#website`,
+  url: siteConfig.url,
+  name: siteConfig.name,
+  description: siteConfig.description,
+  inLanguage: "it-IT",
+  publisher: {
+    "@id": `${siteConfig.url}/#organization`,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,6 +88,14 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <Header />
         {children}
         <Footer />
