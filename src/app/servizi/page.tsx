@@ -20,10 +20,47 @@ export const metadata: Metadata = {
 };
 
 export default function ServiziPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Servizi" },
+    ],
+  };
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Servizi Ingegneri & Co",
+    itemListElement: serviceEcosystems.flatMap((ecosystem) =>
+      ecosystem.services.map((service) => ({
+        "@type": "ListItem",
+        position: 0,
+        name: service.label,
+        url: `${siteConfig.url}${service.href}`,
+      })),
+    ).map((item, index) => ({ ...item, position: index + 1 })),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+
       <section className="bg-anthracite py-14 md:py-20 lg:py-24">
         <div className="page-container">
+          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-white/60">
+            <Link href="/" className="transition hover:text-white">Home</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span aria-current="page" className="text-white">Servizi</span>
+          </nav>
           <p className="section-label text-tech-blue-light">Servizi</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-5xl">
             Due ecosistemi, un unico approccio multidisciplinare
