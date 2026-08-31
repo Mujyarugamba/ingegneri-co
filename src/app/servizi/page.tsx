@@ -39,16 +39,22 @@ export default function ServiziPage() {
           {serviceEcosystems.map((ecosystem) => (
             <article key={ecosystem.href} className="rounded-2xl border border-gray-border bg-white p-6 shadow-sm md:p-8">
               <h2 className="text-2xl font-bold text-anthracite">{ecosystem.label}</h2>
-              <ul className="mt-6 space-y-3 text-gray-muted">
+              <p className="mt-4 leading-relaxed text-gray-muted">{ecosystem.description}</p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {ecosystem.services.map((service) => (
-                  <li key={service} className="flex gap-3">
-                    <span aria-hidden="true">•</span>
-                    <span>{service}</span>
+                  <li key={service.href}>
+                    <Link
+                      href={service.href}
+                      className="group flex h-full items-start gap-3 rounded-xl border border-gray-border px-4 py-3 text-anthracite-soft transition hover:border-tech-blue/40 hover:bg-tech-blue-pale/40"
+                    >
+                      <span aria-hidden="true" className="mt-0.5 text-tech-blue">→</span>
+                      <span className="font-medium group-hover:text-tech-blue">{service.label}</span>
+                    </Link>
                   </li>
                 ))}
               </ul>
               <Link href={ecosystem.href} className="btn-primary mt-8 inline-flex">
-                Scopri l&apos;area
+                Esplora l&apos;ecosistema
               </Link>
             </article>
           ))}
