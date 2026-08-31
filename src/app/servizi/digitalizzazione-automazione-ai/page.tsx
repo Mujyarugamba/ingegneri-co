@@ -20,13 +20,31 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  ["Automazione dei processi", "Analisi dei flussi di lavoro e introduzione di automazioni per ridurre attività ripetitive, errori e tempi operativi."],
-  ["Transizione 5.0", "Supporto tecnico nell'integrazione tra digitalizzazione, automazione ed efficientamento energetico nei progetti di investimento."],
-  ["Servizi digitali per imprese", "Digitalizzazione di procedure, raccolta dati, workflow operativi e strumenti su misura per organizzare meglio le attività aziendali."],
-  ["Portali e applicazioni web", "Progettazione e sviluppo di portali professionali, aree riservate, strumenti operativi e applicazioni web."],
-  ["Integrazione software e dati", "Collegamento tra sistemi, database e applicazioni per evitare duplicazioni e rendere i dati più utilizzabili."],
-  ["Intelligenza artificiale per PMI", "Introduzione dell'AI nei processi aziendali con casi d'uso concreti, sostenibili e misurabili."],
-  ["Analisi documentale e assistenti AI", "Lettura e classificazione di documenti, estrazione dati, ricerca interna e assistenti dedicati a procedure e conoscenza aziendale."],
+  {
+    title: "Automazione dei processi",
+    description: "Analisi dei flussi di lavoro e introduzione di automazioni per ridurre attività ripetitive, errori e tempi operativi.",
+    href: "/servizi/automazione-processi",
+  },
+  {
+    title: "Transizione 5.0",
+    description: "Supporto tecnico nell'integrazione tra digitalizzazione, automazione ed efficientamento energetico nei progetti di investimento.",
+    href: "/servizi/transizione-5-0",
+  },
+  {
+    title: "Servizi digitali per imprese",
+    description: "Digitalizzazione di procedure, raccolta dati, workflow operativi e strumenti su misura per organizzare meglio le attività aziendali.",
+    href: "/servizi/servizi-digitali-pmi",
+  },
+  {
+    title: "Portali e applicazioni web",
+    description: "Progettazione e sviluppo di portali professionali, aree riservate, strumenti operativi e applicazioni web.",
+    href: "/servizi/portali-applicazioni-web",
+  },
+  {
+    title: "Intelligenza artificiale per PMI",
+    description: "Introduzione dell'AI nei processi aziendali con casi d'uso concreti, sostenibili e misurabili.",
+    href: "/servizi/intelligenza-artificiale-pmi",
+  },
 ] as const;
 
 export default function DigitalServicesPage() {
@@ -46,11 +64,18 @@ export default function DigitalServicesPage() {
 
       <section className="section-padding bg-gray-light">
         <div className="page-container grid gap-5 md:grid-cols-2">
-          {services.map(([title, description]) => (
-            <article key={title} className="rounded-2xl border border-gray-border bg-white p-6 shadow-sm">
-              <h2 className="text-xl font-bold text-anthracite">{title}</h2>
-              <p className="mt-3 leading-relaxed text-gray-muted">{description}</p>
-            </article>
+          {services.map((service) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="group rounded-2xl border border-gray-border bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <article>
+                <h2 className="text-xl font-bold text-anthracite group-hover:text-tech-blue">{service.title}</h2>
+                <p className="mt-3 leading-relaxed text-gray-muted">{service.description}</p>
+                <p className="mt-5 text-sm font-semibold text-tech-blue">Scopri il servizio →</p>
+              </article>
+            </Link>
           ))}
         </div>
         <div className="page-container mt-10">
