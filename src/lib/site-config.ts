@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Ingegneri & Co",
+  url: "https://ingegnerieco.it",
   tagline: "Engineering • Energy • Innovation",
   description:
     "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione e innovazione tecnologica.",
