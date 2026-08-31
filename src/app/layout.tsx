@@ -88,6 +88,12 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body>
+        <a
+          href="#contenuto-principale"
+          className="sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:not-sr-only focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-tech-blue focus:shadow-lg"
+        >
+          Vai al contenuto principale
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -97,7 +103,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <Header />
-        {children}
+        <div id="contenuto-principale" tabIndex={-1} className="outline-none">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
