@@ -77,8 +77,6 @@ export const projects: Project[] = [
       "Assistenza tecnica",
     ],
     cta: { label: "Scopri il progetto", href: "/progetti/consorzio-isec" },
-    // TODO: aggiornare visitHref con il dominio ufficiale del Consorzio ISEC
-    detail: { visitLabel: "Visita il sito", visitHref: "#" },
     icon: "portal",
   },
   {

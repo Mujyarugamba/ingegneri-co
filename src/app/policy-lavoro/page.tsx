@@ -3,17 +3,22 @@ import Link from "next/link";
 import LegalPageLayout, {
   LegalSection,
 } from "@/components/legal/LegalPageLayout";
+import { siteConfig } from "@/lib/site-config";
+
+const canonicalUrl = `${siteConfig.url}/policy-lavoro`;
 
 export const metadata: Metadata = {
   title: "Policy sul luogo di lavoro | Ingegneri & Co",
   description:
     "Scopri la policy sul luogo di lavoro adottata da Ingegneri & Co, rete tecnica multidisciplinare composta da ingegneri, architetti e geometri.",
+  alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Policy sul luogo di lavoro | Ingegneri & Co",
     description:
       "Scopri la policy sul luogo di lavoro adottata da Ingegneri & Co, rete tecnica multidisciplinare composta da ingegneri, architetti e geometri.",
     type: "website",
     locale: "it_IT",
+    url: canonicalUrl,
   },
 };
 
