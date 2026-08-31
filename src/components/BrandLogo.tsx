@@ -16,7 +16,7 @@ export default function BrandLogo({ variant = "header" }: BrandLogoProps) {
       className={`group inline-flex max-w-full leading-tight ${
         isFooter
           ? "flex-col gap-1.5"
-          : "w-full items-center justify-center md:w-auto md:justify-start"
+          : "w-full flex-col items-center justify-center md:w-auto md:items-start md:justify-start"
       }`}
     >
       <Image
@@ -27,10 +27,15 @@ export default function BrandLogo({ variant = "header" }: BrandLogoProps) {
         className={`h-auto object-contain transition-opacity group-hover:opacity-90 ${
           isFooter
             ? "w-full max-w-[180px] sm:max-w-[220px] lg:max-w-[255px]"
-            : "w-[min(300px,92vw)] max-w-full md:w-full md:max-w-[240px] lg:max-w-[280px]"
+            : "w-[min(340px,94vw)] max-w-full md:w-full md:max-w-[240px] lg:max-w-[280px]"
         }`}
         priority={isHeader}
       />
+      {isHeader && (
+        <span className="mt-1 text-center text-[0.72rem] font-semibold tracking-[0.08em] text-anthracite-soft uppercase md:hidden">
+          {siteConfig.tagline}
+        </span>
+      )}
       {isFooter && (
         <span className="text-[0.62rem] font-medium tracking-[0.12em] text-tech-blue-light uppercase">
           {siteConfig.tagline}

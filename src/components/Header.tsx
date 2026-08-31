@@ -42,42 +42,14 @@ function CloseIcon() {
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 overflow-x-hidden border-b border-gray-border/70 bg-white/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-gray-border/70 bg-white/95 backdrop-blur-md">
       <div className="page-container py-3 md:flex md:items-center md:justify-between md:gap-4 md:py-4 lg:py-5">
-        {/* Mobile: brand centrato + menu */}
         <div className="w-full min-w-0 md:hidden">
           <div className="flex w-full flex-col items-center">
             <BrandLogo variant="header" />
           </div>
 
-          <div className="mt-3 flex items-center justify-between border-t border-gray-border/50 pt-3">
-            <nav
-              aria-label="Link rapidi"
-              className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-medium text-anthracite-soft"
-            >
-              <Link href="/" className="transition-colors hover:text-tech-blue">
-                Home
-              </Link>
-              <span className="text-gray-border" aria-hidden="true">
-                |
-              </span>
-              <Link
-                href="/progetti"
-                className="transition-colors hover:text-tech-blue"
-              >
-                Progetti
-              </Link>
-              <span className="text-gray-border" aria-hidden="true">
-                |
-              </span>
-              <Link
-                href="/contatti"
-                className="transition-colors hover:text-tech-blue"
-              >
-                Contatti
-              </Link>
-            </nav>
-
+          <div className="mt-3 flex items-center justify-end border-t border-gray-border/50 pt-3">
             <details className="mobile-nav relative shrink-0">
               <summary
                 className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-gray-border bg-white text-anthracite shadow-sm transition-colors hover:border-tech-blue/40 hover:text-tech-blue [&::-webkit-details-marker]:hidden"
@@ -119,7 +91,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Desktop */}
         <div className="hidden md:contents">
           <BrandLogo variant="header" />
 
