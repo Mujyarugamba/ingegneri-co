@@ -30,7 +30,13 @@ export default function HomeServiceEcosystems() {
                   </li>
                 ))}
               </ul>
-              <Link href={ecosystem.href} className="btn-primary mt-8 inline-flex">Esplora l&apos;ecosistema</Link>
+              <Link
+                href={ecosystem.href}
+                aria-label={`Esplora ${ecosystem.label}`}
+                className="btn-primary mt-8 inline-flex"
+              >
+                Esplora l&apos;ecosistema
+              </Link>
             </article>
           ))}
         </div>

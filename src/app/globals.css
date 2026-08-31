@@ -27,8 +27,9 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-tech-blue-light);
-  outline-offset: 3px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-tech-blue);
 }
 
 img,
