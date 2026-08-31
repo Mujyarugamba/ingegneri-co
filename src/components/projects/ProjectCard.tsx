@@ -7,18 +7,24 @@ import {
 
 type ProjectCardProps = {
   project: Project;
+  headingLevel?: "h2" | "h3";
 };
 
-function ProjectCardContent({ project }: ProjectCardProps) {
+function ProjectCardContent({
+  project,
+  headingLevel = "h3",
+}: ProjectCardProps) {
+  const Heading = headingLevel;
+
   return (
     <>
       <div className="mb-6 inline-flex rounded-xl bg-tech-blue-pale p-3.5 text-tech-blue transition-all duration-300 group-hover:bg-tech-blue group-hover:text-white">
         <ProjectIconDisplay icon={project.icon} />
       </div>
 
-      <h3 className="text-xl font-bold tracking-tight text-anthracite">
+      <Heading className="text-xl font-bold tracking-tight text-anthracite">
         {project.title}
-      </h3>
+      </Heading>
       <p className="mt-1 text-sm font-semibold text-tech-blue">
         {project.subtitle}
       </p>
@@ -58,7 +64,10 @@ function ProjectCardContent({ project }: ProjectCardProps) {
   );
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  headingLevel = "h3",
+}: ProjectCardProps) {
   const href = getProjectCardHref(project);
 
   if (href) {
@@ -67,14 +76,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         href={href}
         className="card-elegant group flex flex-col transition-all duration-300"
       >
-        <ProjectCardContent project={project} />
+        <ProjectCardContent project={project} headingLevel={headingLevel} />
       </Link>
     );
   }
 
   return (
     <article className="card-elegant group flex flex-col">
-      <ProjectCardContent project={project} />
+      <ProjectCardContent project={project} headingLevel={headingLevel} />
     </article>
   );
 }

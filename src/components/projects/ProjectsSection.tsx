@@ -25,6 +25,7 @@ export default function ProjectsSection({
   headingLevel = "h2",
 }: ProjectsSectionProps) {
   const Heading = headingLevel;
+  const cardHeadingLevel = headingLevel === "h1" ? "h2" : "h3";
 
   return (
     <section
@@ -45,7 +46,11 @@ export default function ProjectsSection({
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:gap-8 lg:grid-cols-3">
           {items.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              headingLevel={cardHeadingLevel}
+            />
           ))}
         </div>
       </div>

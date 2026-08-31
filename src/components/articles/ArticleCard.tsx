@@ -13,9 +13,15 @@ const categoryStyles: Record<Article["category"], string> = {
 
 type ArticleCardProps = {
   article: Article;
+  headingLevel?: "h2" | "h3";
 };
 
-export default function ArticleCard({ article }: ArticleCardProps) {
+export default function ArticleCard({
+  article,
+  headingLevel = "h3",
+}: ArticleCardProps) {
+  const Heading = headingLevel;
+
   return (
     <Link
       href={`/approfondimenti/${article.slug}`}
@@ -35,9 +41,9 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         </time>
       </div>
 
-      <h3 className="mt-5 text-lg font-bold tracking-tight text-anthracite transition-colors group-hover:text-tech-blue">
+      <Heading className="mt-5 text-lg font-bold tracking-tight text-anthracite transition-colors group-hover:text-tech-blue">
         {article.title}
-      </h3>
+      </Heading>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-muted">
         {article.excerpt}
       </p>

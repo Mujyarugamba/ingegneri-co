@@ -40,6 +40,7 @@ export default function ArticlesSection({
       ? "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8"
       : "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-3";
   const Heading = headingLevel;
+  const cardHeadingLevel = headingLevel === "h1" ? "h2" : "h3";
 
   return (
     <section id={id} aria-labelledby={`${id}-title`} className={className}>
@@ -56,7 +57,11 @@ export default function ArticlesSection({
 
         <div className={gridClass}>
           {displayItems.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
+            <ArticleCard
+              key={article.slug}
+              article={article}
+              headingLevel={cardHeadingLevel}
+            />
           ))}
         </div>
 
