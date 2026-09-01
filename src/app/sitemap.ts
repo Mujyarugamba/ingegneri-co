@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllArticleSlugs } from "@/lib/articles-data";
+import { articles } from "@/lib/articles-data";
 import { getProjectDetailSlugs } from "@/lib/projects-data";
 import { siteConfig } from "@/lib/site-config";
 
@@ -34,8 +34,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/policy-lavoro`, changeFrequency: "yearly", priority: 0.2 },
   ];
 
-  const articleRoutes: MetadataRoute.Sitemap = getAllArticleSlugs().map((slug) => ({
-    url: `${siteConfig.url}/approfondimenti/${slug}`,
+  const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${siteConfig.url}/approfondimenti/${article.slug}`,
+    lastModified: article.updatedAt ?? article.publishedAt,
     changeFrequency: "yearly",
     priority: 0.7,
   }));
