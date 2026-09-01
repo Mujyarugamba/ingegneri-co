@@ -47,8 +47,8 @@ export default function ContattiPage() {
         <div className="mx-auto w-full max-w-[900px] min-w-0 px-4 sm:px-6 lg:px-10">
           <div className="rounded-2xl border border-gray-border bg-white p-6 text-center shadow-sm sm:p-10 lg:p-14">
             <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-              Raccontaci le tue esigenze: ti aiuteremo a trovare la soluzione
-              tecnica più adatta.
+              Raccontaci le tue esigenze: valuteremo con te le soluzioni
+              tecniche più adatte al contesto.
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12">
