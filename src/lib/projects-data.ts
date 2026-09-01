@@ -34,9 +34,9 @@ export const projects: Project[] = [
     title: "Inquotus",
     subtitle: "Piattaforma digitale per i lavori in quota",
     description:
-      "Progetto dedicato alla digitalizzazione dei lavori in quota, sviluppato per mettere in contatto committenti, imprese e professionisti attraverso una piattaforma moderna, sicura e scalabile.",
+      "Progetto dedicato alla digitalizzazione dei lavori in quota, sviluppato per mettere in contatto committenti, imprese e professionisti attraverso una piattaforma progettata con attenzione a usabilità, sicurezza applicativa e possibilità di evoluzione.",
     fullDescription:
-      "Inquotus nasce per digitalizzare il settore dei lavori in quota, mettendo in relazione committenti, imprese specializzate e professionisti qualificati. La piattaforma integra gestione profili, richieste di intervento, documentazione tecnica e strumenti di matching tra domanda e offerta, con un'architettura pensata per scalabilità, sicurezza e usabilità.",
+      "Inquotus nasce per digitalizzare il settore dei lavori in quota, mettendo in relazione committenti, imprese specializzate e professionisti. La piattaforma integra gestione profili, richieste di intervento, documentazione tecnica e strumenti di matching tra domanda e offerta, con un'architettura progettata per evolvere insieme alle esigenze del servizio e con attenzione a sicurezza e usabilità.",
     skills: [
       "Analisi e progettazione",
       "Architettura software",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     title: "Consorzio ISEC",
     subtitle: "Portale istituzionale",
     description:
-      "Il Consorzio ISEC riunisce imprese, artigiani e professionisti nei settori delle costruzioni, dell'efficientamento energetico, del facility management e dei lavori civili. Grazie a una struttura flessibile e qualificata, organizza squadre operative adeguate alla complessità degli interventi, garantendo qualità, affidabilità e competitività nell'esecuzione degli appalti.",
+      "Il Consorzio ISEC riunisce imprese, artigiani e professionisti nei settori delle costruzioni, dell'efficientamento energetico, del facility management e dei lavori civili. Grazie a una struttura flessibile, organizza squadre operative in funzione della complessità degli interventi, con l'obiettivo di favorire qualità, affidabilità e competitività nell'esecuzione degli appalti.",
     skills: [
       "Sviluppo web",
       "Gestione contenuti",
