@@ -48,8 +48,16 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
                 dateTime={article.publishedAt}
                 className="text-sm text-gray-muted"
               >
-                {formatArticleDate(article.publishedAt)}
+                Pubblicato il {formatArticleDate(article.publishedAt)}
               </time>
+              {article.updatedAt && (
+                <time
+                  dateTime={article.updatedAt}
+                  className="text-sm text-gray-muted"
+                >
+                  · Aggiornato il {formatArticleDate(article.updatedAt)}
+                </time>
+              )}
             </div>
             <h1 className="mt-6 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {article.title}
