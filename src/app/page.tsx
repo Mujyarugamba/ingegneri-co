@@ -99,7 +99,7 @@ const comeLavoriamo = [
   {
     step: "1",
     title: "Analisi tecnica",
-    description: "Valutiamo esigenze, vincoli normativi e obiettivi per definire la soluzione più efficace.",
+    description: "Valutiamo esigenze, vincoli normativi e obiettivi per individuare una soluzione tecnicamente coerente con il contesto.",
   },
   {
     step: "2",
@@ -114,7 +114,7 @@ const comeLavoriamo = [
   {
     step: "4",
     title: "Assistenza fino alla conclusione",
-    description: "Vi affianchiamo in ogni fase, fino al completamento dell'intervento e alla verifica dei risultati.",
+    description: "Vi affianchiamo nelle diverse fasi, fino al completamento dell'intervento e alle verifiche tecniche previste.",
   },
 ];
 
@@ -215,7 +215,7 @@ export default function Home() {
             <p className="section-label">Expertise</p>
             <h2 id="competenze-title" className="section-title">Aree di competenza</h2>
             <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-              Tre aree tecniche integrate, coordinate da una rete di professionisti qualificati, per rispondere con precisione alle esigenze normative, progettuali e digitali di ogni committente.
+              Tre aree tecniche integrate, coordinate da una rete di professionisti con competenze complementari, per affrontare in modo coordinato esigenze normative, progettuali e digitali.
             </p>
           </div>
 
@@ -295,7 +295,7 @@ export default function Home() {
             <p className="section-label">Contatti</p>
             <h2 id="contatti-title" className="section-title">Parliamo del tuo progetto</h2>
             <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-              Che tu sia un privato, un&apos;impresa o un professionista del settore, siamo a disposizione per una consulenza personalizzata. Raccontaci le tue esigenze: ti aiuteremo a trovare la soluzione tecnica più adatta.
+              Che tu sia un privato, un&apos;impresa o un professionista del settore, siamo a disposizione per una consulenza personalizzata. Raccontaci le tue esigenze: valuteremo con te le soluzioni tecniche più adatte al contesto.
             </p>
             <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12">
               <div>
