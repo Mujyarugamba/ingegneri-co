@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Rete tecnica multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione, servizi digitali e intelligenza artificiale per PMI.",
   institutionalPhrase:
-    "Una rete di professionisti tecnici iscritti ai rispettivi Ordini e Collegi professionali.",
+    "Una rete multidisciplinare che integra competenze di ingegneri, architetti e geometri.",
   professionals: "Ingegneri • Architetti • Geometri",
   email: "info@ingegnerieco.it",
   whatsApp: "371 754 0625",
