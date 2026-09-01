@@ -58,6 +58,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
+    ...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
     inLanguage: "it-IT",
     mainEntityOfPage: `${siteConfig.url}/approfondimenti/${slug}`,
     author: {

@@ -11,6 +11,7 @@ export type Article = {
   excerpt: string;
   description: string;
   publishedAt: string;
+  updatedAt?: string;
   content: string[];
 };
 
@@ -58,7 +59,8 @@ export const articles: Article[] = [
       "Il quadro 2026 della Transizione 5.0: chiusura del precedente credito d'imposta e nuova misura di iperammortamento per investimenti digitali ed energetici.",
     description:
       "Transizione 5.0 nel 2026: come cambia la misura con il nuovo iperammortamento, quali investimenti riguarda e quali verifiche tecniche richiede.",
-    publishedAt: "2026-09-01",
+    publishedAt: "2026-02-01",
+    updatedAt: "2026-09-01",
     content: [
       "Nel 2026 il quadro della Transizione 5.0 è cambiato. Il precedente Piano basato sul credito d'imposta ha chiuso i termini per nuove domande; per i nuovi investimenti il riferimento è il Nuovo Piano Transizione 5.0 - Iperammortamento, introdotto dalla legge di bilancio 2026 e reso operativo con i provvedimenti attuativi del 2026.",
       "La nuova misura sostiene investimenti in beni strumentali tecnologicamente avanzati e, nei casi previsti, investimenti destinati all'autoproduzione e all'autoconsumo di energia da fonti rinnovabili. L'agevolazione opera attraverso una maggiorazione del costo fiscalmente riconosciuto dei beni ai fini delle quote di ammortamento e dei canoni di locazione finanziaria, in sostituzione dei precedenti crediti d'imposta Transizione 4.0 e 5.0.",
@@ -76,10 +78,10 @@ export const articles: Article[] = [
       "Efficientamento energetico degli edifici: diagnosi, interventi, incentivi e soluzioni tecniche per ridurre consumi e migliorare le prestazioni.",
     publishedAt: "2026-02-10",
     content: [
-      "L'efficientamento energetico è uno degli ambiti prioritari per la riqualificazione del patrimonio edilizio esistente. Interventi mirati su involucro, impianti e sistemi di controllo consentono di ridurre i consumi, migliorare il comfort e aumentare il valore dell'immobile.",
+      "L'efficientamento energetico è uno degli ambiti prioritari per la riqualificazione del patrimonio edilizio esistente. Interventi mirati su involucro, impianti e sistemi di controllo possono ridurre i consumi, migliorare il comfort e contribuire alla valorizzazione dell'immobile, in funzione delle caratteristiche del caso concreto.",
       "Il percorso inizia generalmente con una valutazione tecnica o una diagnosi energetica, finalizzata a individuare le criticità e a definire un piano di intervento coerente con budget, obiettivi e accesso agli eventuali incentivi disponibili.",
       "Tra le soluzioni più diffuse rientrano isolamento termico, sostituzione di infissi, installazione di impianti ad alta efficienza, produzione di energia da fonti rinnovabili e sistemi di monitoraggio dei consumi. Ogni intervento deve essere dimensionato in relazione alle caratteristiche costruttive dell'edificio e al suo uso.",
-      "Un approccio multidisciplinare consente di integrare progettazione edilizia, impiantistica e analisi economica, garantendo soluzioni efficaci e conformi alla normativa vigente.",
+      "Un approccio multidisciplinare consente di integrare progettazione edilizia, impiantistica e analisi economica, favorendo soluzioni tecnicamente coerenti e impostate nel rispetto della normativa applicabile.",
     ],
   },
   {
@@ -87,14 +89,14 @@ export const articles: Article[] = [
     title: "Automazione e Smart Building",
     category: "Innovazione",
     excerpt:
-      "Come l'automazione e i sistemi intelligenti migliorano efficienza, sicurezza e gestione degli edifici moderni.",
+      "Come l'automazione e i sistemi intelligenti possono migliorare efficienza, sicurezza e gestione degli edifici moderni.",
     description:
       "Automazione e Smart Building: tecnologie, benefici e applicazioni per edifici efficienti, connessi e facili da gestire.",
     publishedAt: "2026-02-18",
     content: [
       "Gli edifici intelligenti combinano automazione, connettività e monitoraggio in tempo reale per ottimizzare consumi, comfort e manutenzione. Lo Smart Building non è solo tecnologia: è un modello integrato di gestione degli spazi e degli impianti.",
       "I sistemi di building automation consentono di controllare illuminazione, climatizzazione, accessi e consumi energetici, adattando il funzionamento dell'edificio alle effettive esigenze di utilizzo. L'integrazione con sensori IoT e piattaforme di supervisione amplia le possibilità di analisi e intervento.",
-      "Per imprese e condomini, i vantaggi includono riduzione dei costi operativi, maggiore affidabilità degli impianti, tracciabilità dei dati e possibilità di manutenzione predittiva. La progettazione deve considerare scalabilità, cybersecurity e semplicità di gestione.",
+      "Per imprese e condomini, i possibili benefici includono riduzione dei costi operativi, maggiore affidabilità degli impianti, tracciabilità dei dati e supporto alla manutenzione predittiva. I risultati dipendono dalla configurazione degli impianti, dai dati disponibili e dalle modalità di utilizzo. La progettazione deve considerare scalabilità, cybersecurity e semplicità di gestione.",
       "Ingegneri & Co progetta soluzioni su misura che uniscono competenze impiantistiche, informatiche e di integrazione hardware/software, dalla fase di analisi fino alla messa in servizio.",
     ],
   },
@@ -108,9 +110,9 @@ export const articles: Article[] = [
       "Intelligenza Artificiale applicata all'ingegneria: casi d'uso concreti, vantaggi e criteri per integrarla nei processi tecnici e digitali.",
     publishedAt: "2026-02-25",
     content: [
-      "L'intelligenza artificiale sta entrando progressivamente nei processi dell'ingegneria, offrendo strumenti per analisi predittiva, automazione documentale, supporto decisionale e ottimizzazione delle risorse. Non sostituisce la competenza professionale, ma la amplifica quando utilizzata con criterio.",
+      "L'intelligenza artificiale sta entrando progressivamente nei processi dell'ingegneria, offrendo strumenti per analisi predittiva, automazione documentale, supporto decisionale e ottimizzazione delle risorse. Non sostituisce la competenza professionale, ma può ampliarne gli strumenti quando utilizzata con criterio.",
       "Nei settori edilizio e industriale, l'IA può supportare diagnosi energetiche, manutenzione predittiva, classificazione documenti, monitoraggio impianti e analisi di grandi volumi di dati provenienti da sensori e sistemi SCADA.",
-      "L'introduzione di soluzioni basate su IA richiede attenzione a qualità dei dati, affidabilità degli algoritmi, conformità normativa e integrazione con i sistemi esistenti. Un approccio graduale e verificabile riduce i rischi e massimizza il ritorno sull'investimento.",
+      "L'introduzione di soluzioni basate su IA richiede attenzione a qualità dei dati, affidabilità degli algoritmi, conformità normativa e integrazione con i sistemi esistenti. Un approccio graduale e verificabile può ridurre i rischi e aiutare a valutare concretamente benefici e limiti dell'investimento.",
       "Ingegneri & Co esplora e implementa soluzioni digitali che coniugano rigore tecnico, innovazione e utilità operativa, affiancando imprese e professionisti nell'adozione consapevole delle nuove tecnologie.",
     ],
   },

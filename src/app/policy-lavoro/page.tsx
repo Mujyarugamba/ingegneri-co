@@ -75,7 +75,7 @@ export default function PolicyLavoroPage() {
           L&apos;organizzazione delle attività viene definita in base alle
           esigenze del progetto, privilegiando la collaborazione tra i
           professionisti della rete, la presenza presso il cliente quando
-          necessario e l&apos;utilizzo di strumenti digitali per garantire
+          necessario e l&apos;utilizzo di strumenti digitali per favorire
           rapidità, efficienza e continuità operativa.
         </p>
       </LegalSection>
