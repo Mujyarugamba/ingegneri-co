@@ -28,10 +28,10 @@ export const articles: Article[] = [
       "Quando serve una SCIA? Guida tecnica su requisiti, documentazione e casi d'uso per privati, imprese e professionisti del settore edilizio.",
     publishedAt: "2026-01-15",
     content: [
-      "La SCIA — Segnalazione Certificata di Inizio Attività — è uno degli strumenti più utilizzati per avviare interventi edilizi compatibili con la normativa vigente. Permette di iniziare i lavori in tempi ridotti rispetto al permesso di costruire, a condizione che l'intervento rientri nelle categorie previste dal regolamento edilizio comunale e dalle norme nazionali.",
-      "In generale, la SCIA si utilizza per interventi di manutenzione straordinaria, restauro e risanamento conservativo, ristrutturazioni edilizie che non comportino incremento volumetrico significativo, cambi d'uso compatibili e molte tipologie di installazione di impianti, fermo restando la verifica puntuale del caso concreto.",
-      "La documentazione da predisporre include elaborati grafici, relazioni tecniche, computi estimativi quando richiesti e gli allegati previsti dalla pratica comunale. Un errore nella qualificazione dell'intervento può comportare sanzioni o la sospensione dei lavori: per questo è fondamentale un'analisi tecnica preliminare accurata.",
-      "Ingegneri & Co affianca privati, imprese e professionisti nella corretta individuazione del titolo abilitativo, nella redazione della documentazione e nella gestione dell'iter autorizzativo fino al completamento dell'intervento.",
+      "La SCIA — Segnalazione Certificata di Inizio Attività — è uno degli strumenti utilizzati per avviare determinati interventi edilizi previsti dalla normativa. La sua applicabilità va verificata sul caso concreto, tenendo conto della disciplina nazionale, regionale, comunale e degli eventuali vincoli presenti.",
+      "In generale, la SCIA può riguardare interventi di manutenzione straordinaria che interessano parti strutturali, interventi di restauro e risanamento conservativo sulle parti strutturali e alcune ristrutturazioni edilizie. Per opere di diversa natura possono invece trovare applicazione CILA, permesso di costruire, edilizia libera o altri titoli e procedure.",
+      "La documentazione da predisporre dipende dall'intervento e dal Comune competente e può comprendere elaborati grafici, relazioni tecniche, asseverazioni e gli ulteriori allegati richiesti. Un errore nella qualificazione dell'intervento può comportare conseguenze amministrative e sanzioni: per questo è fondamentale una verifica tecnica preliminare.",
+      "Ingegneri & Co affianca privati, imprese e professionisti nella corretta individuazione del titolo abilitativo, nella redazione della documentazione e nella gestione dell'iter tecnico-amministrativo dell'intervento.",
     ],
   },
   {
@@ -44,26 +44,26 @@ export const articles: Article[] = [
       "CILA, SCIA o Permesso di Costruire? Differenze, ambiti di applicazione e criteri di scelta spiegati in modo chiaro per committenti e professionisti.",
     publishedAt: "2026-01-22",
     content: [
-      "Nel panorama delle pratiche edilizie, CILA, SCIA e Permesso di Costruire rappresentano tre livelli diversi di complessità procedurale e di incidenza dell'intervento sul fabbricato e sul contesto urbanistico.",
-      "La CILA (Comunicazione di Inizio Lavori Asseverata) è generalmente destinata agli interventi di manutenzione ordinaria e ad alcune tipologie di lavori minori, con tempi rapidi e documentazione più snella. La SCIA copre interventi di maggiore entità, consentendo l'inizio dei lavori con contestuale presentazione della pratica, salvo verifiche successive da parte del Comune.",
-      "Il Permesso di Costruire resta necessario per le opere più rilevanti, come le nuove costruzioni, le volumetrie importanti o gli interventi che incidono in modo significativo sull'assetto urbanistico. In questi casi il rilascio del titolo precede l'avvio del cantiere.",
-      "La scelta dello strumento corretto dipende dalla classificazione dell'intervento, dal PRG vigente, dalle eventuali vincolistiche e dalla documentazione tecnica disponibile. Un supporto professionale consente di evitare errori procedurali e di ottimizzare tempi e costi del progetto.",
+      "Nel panorama delle pratiche edilizie, CILA, SCIA e Permesso di Costruire si applicano a interventi differenti e non rappresentano semplicemente tre livelli crescenti della stessa procedura. La corretta qualificazione dipende dalle opere previste e dalla disciplina applicabile all'immobile.",
+      "La CILA (Comunicazione di Inizio Lavori Asseverata) è generalmente utilizzata per interventi di manutenzione straordinaria che non interessano le parti strutturali dell'edificio e per gli altri casi previsti dalla normativa. La manutenzione ordinaria rientra invece, di regola, nell'edilizia libera, salvo vincoli, discipline speciali o opere che richiedano ulteriori adempimenti. La SCIA trova applicazione in diverse ipotesi di maggiore rilevanza, comprese alcune opere sulle parti strutturali e alcune ristrutturazioni edilizie.",
+      "Il Permesso di Costruire resta necessario per gli interventi individuati dalla legge, tra cui nuove costruzioni e trasformazioni urbanistiche o edilizie di maggiore consistenza. In questi casi l'avvio dei lavori è subordinato al rilascio del titolo, fatti salvi i procedimenti alternativi ammessi dalla normativa.",
+      "La scelta dello strumento corretto dipende dalla classificazione dell'intervento, dagli strumenti urbanistici vigenti, dagli eventuali vincoli e dalla documentazione disponibile. Una verifica professionale preventiva consente di evitare semplificazioni improprie e di impostare correttamente il procedimento.",
     ],
   },
   {
     slug: "come-funziona-transizione-5-0",
-    title: "Come funziona la Transizione 5.0",
+    title: "Transizione 5.0 nel 2026: il nuovo iperammortamento",
     category: "Industria",
     excerpt:
-      "Panoramica su digitalizzazione, efficienza energetica e agevolazioni per le imprese che investono in innovazione tecnologica.",
+      "Il quadro 2026 della Transizione 5.0: chiusura del precedente credito d'imposta e nuova misura di iperammortamento per investimenti digitali ed energetici.",
     description:
-      "Transizione 5.0: come funziona, requisiti e opportunità per imprese che combinano digitalizzazione, efficienza energetica e innovazione industriale.",
-    publishedAt: "2026-02-01",
+      "Transizione 5.0 nel 2026: come cambia la misura con il nuovo iperammortamento, quali investimenti riguarda e quali verifiche tecniche richiede.",
+    publishedAt: "2026-09-01",
     content: [
-      "La Transizione 5.0 rappresenta l'evoluzione delle politiche industriali verso un modello che integra digitalizzazione, intelligenza artificiale, efficienza energetica e sostenibilità dei processi produttivi. L'obiettivo è incentivare investimenti che migliorino competitività e performance ambientali delle imprese.",
-      "Gli interventi ammissibili riguardano tipicamente beni strumentali innovativi, soluzioni digitali, sistemi di monitoraggio energetico, automazione avanzata e tecnologie abilitanti collegate a riduzione dei consumi e miglioramento produttivo.",
-      "Per accedere alle agevolazioni è necessario dimostrare il rispetto dei requisiti tecnici previsti, la coerenza del piano di investimento e l'impatto atteso in termini di efficienza. La documentazione include diagnosi, relazioni tecniche, preventivi e perizie asseverate a seconda della tipologia di intervento.",
-      "Ingegneri & Co supporta le imprese nell'analisi di fattibilità, nella progettazione tecnica, nella predisposizione della documentazione e nell'integrazione tra impianti, automazione e obiettivi energetici.",
+      "Nel 2026 il quadro della Transizione 5.0 è cambiato. Il precedente Piano basato sul credito d'imposta ha chiuso i termini per nuove domande; per i nuovi investimenti il riferimento è il Nuovo Piano Transizione 5.0 - Iperammortamento, introdotto dalla legge di bilancio 2026 e reso operativo con i provvedimenti attuativi del 2026.",
+      "La nuova misura sostiene investimenti in beni strumentali tecnologicamente avanzati e, nei casi previsti, investimenti destinati all'autoproduzione e all'autoconsumo di energia da fonti rinnovabili. L'agevolazione opera attraverso una maggiorazione del costo fiscalmente riconosciuto dei beni ai fini delle quote di ammortamento e dei canoni di locazione finanziaria, in sostituzione dei precedenti crediti d'imposta Transizione 4.0 e 5.0.",
+      "La piattaforma GSE per la prenotazione delle agevolazioni è operativa dal 12 giugno 2026. La misura riguarda gli investimenti effettuati dal 1° gennaio 2026 al 30 settembre 2028, nel rispetto dei requisiti tecnici e procedurali previsti dalla disciplina vigente. L'effettività e la conformità degli investimenti devono essere comprovate anche tramite perizia tecnica asseverata e certificazione contabile nei casi e con le modalità previste.",
+      "Ingegneri & Co può supportare l'analisi tecnica degli investimenti, l'integrazione tra beni, impianti, automazione ed energia e la predisposizione della documentazione tecnica di competenza, fermo restando che l'accesso all'agevolazione va verificato sul singolo progetto e sulla normativa vigente al momento della domanda.",
     ],
   },
   {
@@ -92,7 +92,7 @@ export const articles: Article[] = [
       "Automazione e Smart Building: tecnologie, benefici e applicazioni per edifici efficienti, connessi e facili da gestire.",
     publishedAt: "2026-02-18",
     content: [
-      "Gli edifici intelligenti combiniano automazione, connettività e monitoraggio in tempo reale per ottimizzare consumi, comfort e manutenzione. Il Smart Building non è solo tecnologia: è un modello integrato di gestione degli spazi e degli impianti.",
+      "Gli edifici intelligenti combinano automazione, connettività e monitoraggio in tempo reale per ottimizzare consumi, comfort e manutenzione. Lo Smart Building non è solo tecnologia: è un modello integrato di gestione degli spazi e degli impianti.",
       "I sistemi di building automation consentono di controllare illuminazione, climatizzazione, accessi e consumi energetici, adattando il funzionamento dell'edificio alle effettive esigenze di utilizzo. L'integrazione con sensori IoT e piattaforme di supervisione amplia le possibilità di analisi e intervento.",
       "Per imprese e condomini, i vantaggi includono riduzione dei costi operativi, maggiore affidabilità degli impianti, tracciabilità dei dati e possibilità di manutenzione predittiva. La progettazione deve considerare scalabilità, cybersecurity e semplicità di gestione.",
       "Ingegneri & Co progetta soluzioni su misura che uniscono competenze impiantistiche, informatiche e di integrazione hardware/software, dalla fase di analisi fino alla messa in servizio.",

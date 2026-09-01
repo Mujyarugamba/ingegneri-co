@@ -60,7 +60,7 @@ export const projects: Project[] = [
       visitLabel: "Visita il sito",
       visitHref: "https://www.inquotus.it",
       external: true,
-      externalNote: "Il sito si aprirà in una nuova finestra.",
+      externalNote: "Il sito si aprirà in una nuova scheda.",
     },
     icon: "platform",
   },
