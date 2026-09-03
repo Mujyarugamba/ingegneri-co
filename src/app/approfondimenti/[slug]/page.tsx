@@ -52,6 +52,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
+  const canonicalUrl = `${siteConfig.url}/approfondimenti/${slug}`;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -60,7 +61,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     datePublished: article.publishedAt,
     ...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
     inLanguage: "it-IT",
-    mainEntityOfPage: `${siteConfig.url}/approfondimenti/${slug}`,
+    mainEntityOfPage: canonicalUrl,
     author: {
       "@id": `${siteConfig.url}/#organization`,
     },
@@ -69,11 +70,30 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Approfondimenti",
+        item: `${siteConfig.url}/approfondimenti`,
+      },
+      { "@type": "ListItem", position: 3, name: article.title, item: canonicalUrl },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <ArticleDetail article={article} />
     </>
