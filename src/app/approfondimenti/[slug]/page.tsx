@@ -38,8 +38,10 @@ export async function generateMetadata({
       description: article.description,
       type: "article",
       locale: "it_IT",
+      siteName: siteConfig.name,
       url: canonicalUrl,
       publishedTime: article.publishedAt,
+      ...(article.updatedAt ? { modifiedTime: article.updatedAt } : {}),
     },
   };
 }
@@ -56,6 +58,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${canonicalUrl}#article`,
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
