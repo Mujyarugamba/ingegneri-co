@@ -38,6 +38,7 @@ export async function generateMetadata({
       description: project.description,
       type: "website",
       locale: "it_IT",
+      siteName: siteConfig.name,
       url: canonicalUrl,
     },
   };
@@ -55,6 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const projectJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
+    "@id": `${canonicalUrl}#project`,
     name: project.title,
     description: project.description,
     url: canonicalUrl,
