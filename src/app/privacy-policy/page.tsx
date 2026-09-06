@@ -74,19 +74,39 @@ export default function PrivacyPolicyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="Titolare del sito">
+      <LegalSection title="Titolare del trattamento">
         <p>
           <strong className="font-semibold text-anthracite">
-            {siteConfig.name}
+            Ing. Augustin Mujyarugamba
           </strong>
         </p>
+        <p>Viale Monte Nero 68, 20135 Milano</p>
+        <p>P. IVA: 11835750156</p>
         <p>
           Email:{" "}
           <a
-            href={`mailto:${siteConfig.email}`}
+            href="mailto:augustin.mujyarugamba@gmail.com"
             className="font-medium text-tech-blue transition-colors hover:text-tech-blue-light"
           >
-            {siteConfig.email}
+            augustin.mujyarugamba@gmail.com
+          </a>
+        </p>
+        <p>
+          PEC:{" "}
+          <a
+            href="mailto:augustin.mujyarugamba@ingpec.eu"
+            className="font-medium text-tech-blue transition-colors hover:text-tech-blue-light"
+          >
+            augustin.mujyarugamba@ingpec.eu
+          </a>
+        </p>
+        <p>
+          Telefono:{" "}
+          <a
+            href="tel:+393394340891"
+            className="font-medium text-tech-blue transition-colors hover:text-tech-blue-light"
+          >
+            +39 339 4340891
           </a>
         </p>
       </LegalSection>
