@@ -8,8 +8,8 @@ export const siteConfig = {
     "Una rete multidisciplinare che integra competenze di ingegneri, architetti e geometri.",
   professionals: "Ingegneri • Architetti • Geometri",
   email: "info@ingegnerieco.it",
-  whatsApp: "371 754 0625",
-  whatsAppHref: "https://wa.me/393717540625",
+  whatsApp: "339 434 0891",
+  whatsAppHref: "https://wa.me/393394340891",
   copyrightYear: 2026,
   // Aggiornare con l'URL definitivo del profilo LinkedIn
   linkedinUrl: "#",

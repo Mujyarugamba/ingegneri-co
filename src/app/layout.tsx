@@ -61,7 +61,7 @@ const organizationJsonLd = {
   email: siteConfig.email,
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+39 371 754 0625",
+    telephone: "+39 339 434 0891",
     contactType: "customer service",
     availableLanguage: ["Italian"],
   },
