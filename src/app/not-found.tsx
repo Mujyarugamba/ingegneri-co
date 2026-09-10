@@ -11,7 +11,7 @@ export default function NotFound() {
               Pagina non trovata
             </h1>
             <p className="mt-5 text-base leading-relaxed text-gray-muted sm:text-lg">
-              L'indirizzo richiesto non esiste oppure la pagina è stata spostata.
+              L&apos;indirizzo richiesto non esiste oppure la pagina è stata spostata.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Link href="/" className="btn-primary">
