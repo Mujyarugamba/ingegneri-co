@@ -15,7 +15,7 @@ export default function HomeServiceEcosystems() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {serviceEcosystems.map((ecosystem, index) => (
             <article key={ecosystem.href} className="rounded-2xl border border-gray-border bg-white p-6 shadow-sm md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-tech-blue">Ecosistema {index + 1}</p>
@@ -41,7 +41,7 @@ export default function HomeServiceEcosystems() {
           ))}
         </div>
 
-        <div className="mt-8">
+        <div className="mt-6">
           <Link href="/servizi" className="btn-outline-dark inline-flex">Vedi tutti i servizi</Link>
         </div>
       </div>

@@ -37,8 +37,8 @@ export default function ArticlesSection({
   const displayItems = items ?? articles;
   const gridClass =
     columns === 2
-      ? "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8"
-      : "mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8 lg:grid-cols-3";
+      ? "mt-10 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 md:gap-8"
+      : "mt-10 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 md:gap-8 lg:grid-cols-3";
   const Heading = headingLevel;
   const cardHeadingLevel = headingLevel === "h1" ? "h2" : "h3";
 
@@ -66,7 +66,7 @@ export default function ArticlesSection({
         </div>
 
         {showViewAll && (
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <Link href={viewAllHref} className="btn-outline-dark">
               {viewAllLabel}
             </Link>
