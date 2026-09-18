@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <LegalPageLayout title="Cookie Policy">
+    <LegalPageLayout title="Cookie Policy" updatedAt="19 settembre 2026">
       <LegalSection title="Utilizzo dei cookie">
         <p>
           Il sito utilizza esclusivamente cookie tecnici necessari al
