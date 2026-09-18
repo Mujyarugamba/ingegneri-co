@@ -29,13 +29,13 @@ export async function generateMetadata({
 
   return {
     title: `${project.title} | Ingegneri & Co`,
-    description: project.description,
+    description: project.metaDescription ?? project.description,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
       title: `${project.title} | Ingegneri & Co`,
-      description: project.description,
+      description: project.metaDescription ?? project.description,
       type: "website",
       locale: "it_IT",
       siteName: siteConfig.name,
