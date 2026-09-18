@@ -47,7 +47,7 @@ const areeCompetenza = [
   {
     title: "Civile, Ambientale e Architettonica",
     description:
-      "Progettazione architettonica, interventi edilizi, conformità normativa e sostenibilità ambientale, con gestione integrata di pratiche e documentazione tecnica.",
+      "Interventi edilizi, conformità urbanistica e catastale, direzione lavori, sicurezza cantieri e prestazioni energetiche, con gestione integrata di pratiche e documentazione tecnica.",
     items: [
       "Pratiche edilizie",
       "CILA",
@@ -109,8 +109,8 @@ const comeLavoriamo = [
   },
   {
     step: "3",
-    title: "Gestione della pratica",
-    description: "Coordiniamo iter autorizzativi, adempimenti e rapporti con enti e stakeholder coinvolti.",
+    title: "Sviluppo e coordinamento",
+    description: "Coordiniamo attività tecniche, integrazioni, fornitori e adempimenti necessari allo sviluppo del progetto.",
   },
   {
     step: "4",
