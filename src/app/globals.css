@@ -27,7 +27,7 @@ body {
 }
 
 section[id] {
-  scroll-margin-top: 9rem;
+  scroll-margin-top: 16rem;
 }
 
 @media (min-width: 768px) {
