@@ -5,11 +5,11 @@ import { siteConfig } from "@/lib/site-config";
 const canonicalUrl = `${siteConfig.url}/servizi/servizi-digitali-pmi`;
 
 export const metadata: Metadata = {
-  title: "Digitalizzazione delle PMI e dei processi aziendali | Ingegneri & Co",
+  title: "Digitalizzazione PMI e processi aziendali | Ingegneri & Co",
   description: "Analisi di processi, dati e strumenti per definire un percorso di digitalizzazione graduale e sostenibile per PMI e organizzazioni.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
-    title: "Digitalizzazione delle PMI e dei processi aziendali | Ingegneri & Co",
+    title: "Digitalizzazione PMI e processi aziendali | Ingegneri & Co",
     description: "Consulenza e percorso di digitalizzazione per processi, dati e strumenti aziendali.",
     url: canonicalUrl,
     type: "website",
