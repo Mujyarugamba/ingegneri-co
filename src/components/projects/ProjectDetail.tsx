@@ -22,13 +22,13 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
         <div className="relative page-container py-12 md:py-16 lg:py-24">
-          <Link
-            href="/progetti"
-            className="inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
-          >
-            <span aria-hidden="true">←</span>
-            Torna ai progetti
-          </Link>
+          <nav aria-label="Breadcrumb" className="text-sm text-white/70">
+            <Link href="/" className="transition-colors hover:text-white">Home</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <Link href="/progetti" className="transition-colors hover:text-white">Progetti</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span aria-current="page" className="text-white">{project.title}</span>
+          </nav>
 
           <div className="mt-8 max-w-3xl">
             <div className="mb-6 inline-flex rounded-xl border border-white/10 bg-white/5 p-4 text-white/80">
@@ -56,7 +56,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               {project.features && project.features.length > 0 && (
                 <div className="mt-10">
                   <h2 className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
-                    Funzionalità
+                    Elementi del progetto
                   </h2>
                   <ul className="mt-4 flex flex-col gap-3">
                     {project.features.map((feature) => (
