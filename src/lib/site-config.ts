@@ -72,9 +72,9 @@ export const serviceEcosystems = [
 ] as const;
 
 export const footerAree = [
-  { label: "Civile, Ambientale e Architettonica", href: "/#competenze" },
-  { label: "Industriale", href: "/#competenze" },
-  { label: "Dell'Informazione", href: "/#competenze" },
+  { label: "Civile, Ambientale e Architettonica", href: "/#competenza-civile-ambientale" },
+  { label: "Industriale", href: "/#competenza-industriale" },
+  { label: "Dell'Informazione", href: "/#competenza-informazione" },
 ] as const;
 
 export const footerServizi = [
