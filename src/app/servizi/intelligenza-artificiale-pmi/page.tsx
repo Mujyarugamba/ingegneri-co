@@ -6,7 +6,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/intelligenza-artificiale-pmi`;
 
 export const metadata: Metadata = {
   title: "Intelligenza artificiale per PMI | Ingegneri & Co",
-  description: "Soluzioni di intelligenza artificiale per PMI: assistenti interni, analisi documentale, automazione, ricerca nelle informazioni aziendali e supporto ai processi.",
+  description: "Soluzioni di intelligenza artificiale per PMI: assistenti interni, analisi documentale, ricerca aziendale, automazione e integrazione nei processi.",
   alternates: { canonical: canonicalUrl },
   openGraph: { title: "Intelligenza artificiale per PMI | Ingegneri & Co", description: "AI applicata ai processi reali delle piccole e medie imprese.", url: canonicalUrl, type: "website" },
 };
