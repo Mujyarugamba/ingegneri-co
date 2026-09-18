@@ -34,6 +34,7 @@ export default function PolicyLavoroPage() {
   return (
     <LegalPageLayout
       title="Policy sul luogo di lavoro"
+      updatedAt="19 settembre 2026"
       label="Organizzazione"
       intro="Ingegneri & Co adotta un modello organizzativo flessibile, orientato alla collaborazione, alla qualità dei servizi e alla vicinanza alle esigenze dei clienti."
     >
