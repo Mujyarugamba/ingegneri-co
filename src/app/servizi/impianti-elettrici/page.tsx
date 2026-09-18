@@ -36,6 +36,8 @@ export default function Page() {
         "Coordinare impianto elettrico e altri sistemi tecnici",
         "Ridurre criticità in fase di esecuzione e gestione",
       ]}
+      context={["Nuovi impianti, ristrutturazioni, ampliamenti o modifiche che richiedono progettazione e coordinamento della distribuzione elettrica.","Adeguamenti e integrazioni con fotovoltaico, accumulo, sistemi di controllo e altri impianti tecnici."]}
+      relatedServices={[{label:"Fotovoltaico",href:"/servizi/fotovoltaico"},{label:"Smart Building, IoT e monitoraggio",href:"/servizi/smart-building-iot"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"}]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
     />
