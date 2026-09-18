@@ -5,12 +5,12 @@ import { serviceEcosystems, siteConfig } from "@/lib/site-config";
 const canonicalUrl = `${siteConfig.url}/servizi`;
 
 export const metadata: Metadata = {
-  title: "Servizi | Ingegneri & Co",
+  title: "Ingegneria, energia e servizi digitali | Ingegneri & Co",
   description:
-    "Due ecosistemi di servizi: Ingegneria, Edilizia & Energia e Digitalizzazione, Automazione & AI per imprese e PMI.",
+    "Servizi di ingegneria, edilizia, energia, impianti, automazione, digitalizzazione e AI organizzati in due ecosistemi integrati per privati e imprese.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
-    title: "Servizi | Ingegneri & Co",
+    title: "Ingegneria, energia e servizi digitali | Ingegneri & Co",
     description:
       "Servizi tecnici per edilizia ed energia e soluzioni digitali, automazione e intelligenza artificiale per le imprese.",
     type: "website",
