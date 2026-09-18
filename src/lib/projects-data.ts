@@ -7,6 +7,7 @@ export type Project = {
   title: string;
   subtitle: string;
   description: string;
+  metaDescription?: string;
   fullDescription?: string;
   skills: string[];
   features?: string[];
@@ -38,6 +39,8 @@ export const projects: Project[] = [
     subtitle: "Piattaforma digitale per i lavori in quota",
     description:
       "Progetto dedicato alla digitalizzazione dei lavori in quota, sviluppato per mettere in contatto committenti, imprese e professionisti attraverso una piattaforma progettata con attenzione a usabilità, sicurezza applicativa e possibilità di evoluzione.",
+    metaDescription:
+      "Piattaforma digitale per lavori in quota: profili, richieste, matching, documenti e workflow per committenti, imprese e professionisti.",
     fullDescription:
       "Inquotus nasce per digitalizzare il settore dei lavori in quota, mettendo in relazione committenti, imprese specializzate e professionisti. La piattaforma integra gestione profili, richieste di intervento, documentazione tecnica e strumenti di matching tra domanda e offerta, con un'architettura progettata per evolvere insieme alle esigenze del servizio e con attenzione a sicurezza e usabilità.",
     skills: [
@@ -79,6 +82,8 @@ export const projects: Project[] = [
     subtitle: "Portale istituzionale",
     description:
       "Progetto e sviluppo del portale istituzionale del Consorzio ISEC, pensato per presentare in modo chiaro la rete di imprese, artigiani e professionisti, i settori operativi e le competenze disponibili per appalti e interventi integrati.",
+    metaDescription:
+      "Portale istituzionale del Consorzio ISEC: sviluppo web, organizzazione dei contenuti, SEO e presentazione della rete di imprese e professionisti.",
     fullDescription:
       "Il progetto ha riguardato la costruzione della presenza digitale istituzionale del Consorzio ISEC, con organizzazione dei contenuti, sviluppo del portale, impostazione SEO e supporto tecnico. L'obiettivo è rendere comprensibili struttura, ambiti di attività e capacità operative del consorzio, offrendo un punto di riferimento digitale coerente per imprese, professionisti e committenti.",
     skills: [
