@@ -6,7 +6,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/due-diligence-immobiliare`;
 
 export const metadata: Metadata = {
   title: "Due diligence immobiliare | Ingegneri & Co",
-  description: "Due diligence tecnica immobiliare: verifiche urbanistiche, catastali, documentali, sopralluogo e analisi delle criticità prima di acquisti, vendite e investimenti.",
+  description: "Due diligence tecnica immobiliare con verifiche urbanistiche, catastali e documentali, sopralluogo e analisi delle criticità prima di acquisti e vendite.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Due diligence immobiliare | Ingegneri & Co",
