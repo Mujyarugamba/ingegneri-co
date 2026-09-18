@@ -19,6 +19,7 @@ export type ArticlesSectionProps = {
   viewAllLabel?: string;
   columns?: 2 | 3;
   headingLevel?: "h1" | "h2";
+  showHeader?: boolean;
 };
 
 export default function ArticlesSection({
@@ -33,27 +34,36 @@ export default function ArticlesSection({
   viewAllLabel = "Tutti gli approfondimenti",
   columns = 3,
   headingLevel = "h2",
+  showHeader = true,
 }: ArticlesSectionProps) {
   const displayItems = items ?? articles;
   const gridClass =
     columns === 2
-      ? "mt-10 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 md:gap-8"
-      : "mt-10 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 md:gap-8 lg:grid-cols-3";
+      ? `grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 ${showHeader ? "mt-10 md:mt-12" : ""}`
+      : `grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 ${showHeader ? "mt-10 md:mt-12" : ""}`;
   const Heading = headingLevel;
-  const cardHeadingLevel = headingLevel === "h1" ? "h2" : "h3";
+  const cardHeadingLevel = showHeader && headingLevel === "h2" ? "h3" : "h2";
 
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className={className}>
+    <section
+      id={id}
+      {...(showHeader
+        ? { "aria-labelledby": `${id}-title` }
+        : { "aria-label": title })}
+      className={className}
+    >
       <div className="page-container">
-        <div className="max-w-3xl">
-          <p className="section-label">{label}</p>
-          <Heading id={`${id}-title`} className="section-title">
-            {title}
-          </Heading>
-          <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
-            {intro}
-          </p>
-        </div>
+        {showHeader && (
+          <div className="max-w-3xl">
+            <p className="section-label">{label}</p>
+            <Heading id={`${id}-title`} className="section-title">
+              {title}
+            </Heading>
+            <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
+              {intro}
+            </p>
+          </div>
+        )}
 
         <div className={gridClass}>
           {displayItems.map((article) => (
