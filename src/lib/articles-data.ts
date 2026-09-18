@@ -37,6 +37,10 @@ export const articles: Article[] = [
       { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
       { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
     ],
+    sources: [
+      { label: "Normattiva — DPR 380/2001, art. 22 (SCIA)", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2001-06-06%3B380~art22%21vig=" },
+      { label: "Normattiva — DPR 380/2001, testo vigente", href: "https://www.normattiva.it/eli/id/2001/10/20/001G0429/CONSOLIDATED/20260216" },
+    ],
     content: [
       "La SCIA — Segnalazione Certificata di Inizio Attività — è uno degli strumenti utilizzati per avviare determinati interventi edilizi previsti dalla normativa. La sua applicabilità va verificata sul caso concreto, tenendo conto della disciplina nazionale, regionale, comunale e degli eventuali vincoli presenti.",
       "In generale, la SCIA può riguardare interventi di manutenzione straordinaria che interessano parti strutturali, interventi di restauro e risanamento conservativo sulle parti strutturali e alcune ristrutturazioni edilizie. Per opere di diversa natura possono invece trovare applicazione CILA, permesso di costruire, edilizia libera o altri titoli e procedure.",
@@ -56,6 +60,11 @@ export const articles: Article[] = [
     relatedServices: [
       { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
       { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
+    ],
+    sources: [
+      { label: "Normattiva — DPR 380/2001, art. 6-bis (CILA)", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.del.presidente.della.repubblica%3A2001-06-06%3B380~art6bis%21vig=" },
+      { label: "Normattiva — DPR 380/2001, art. 22 (SCIA)", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2001-06-06%3B380~art22%21vig=" },
+      { label: "Normattiva — DPR 380/2001, testo vigente", href: "https://www.normattiva.it/eli/id/2001/10/20/001G0429/CONSOLIDATED/20260216" },
     ],
     content: [
       "Nel panorama delle pratiche edilizie, CILA, SCIA e Permesso di Costruire si applicano a interventi differenti e non rappresentano semplicemente tre livelli crescenti della stessa procedura. La corretta qualificazione dipende dalle opere previste e dalla disciplina applicabile all'immobile.",
