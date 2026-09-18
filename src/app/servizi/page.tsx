@@ -7,7 +7,7 @@ const canonicalUrl = `${siteConfig.url}/servizi`;
 export const metadata: Metadata = {
   title: "Servizi | Ingegneri & Co",
   description:
-    "Due ecosistemi di servizi: Ingegneria, Edilizia & Energia e Digitalizzazione, Automazione & AI per imprese e PMI.",
+    "Servizi integrati di ingegneria, edilizia, energia, impianti, digitalizzazione, automazione e intelligenza artificiale per edifici e imprese.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Servizi | Ingegneri & Co",
@@ -63,10 +63,10 @@ export default function ServiziPage() {
           </nav>
           <p className="section-label text-white/80">Servizi</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-5xl">
-            Due ecosistemi, un unico approccio multidisciplinare
+            Due aree principali, competenze integrate
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-gray-muted md:text-lg">
-            Separiamo in modo chiaro i servizi legati a edifici, impianti ed energia dalle soluzioni dedicate a digitalizzazione, automazione e intelligenza artificiale per le imprese.
+            Organizziamo i servizi in due aree principali, mantenendo integrate le competenze che collegano edifici, impianti, energia, automazione e tecnologie digitali.
           </p>
         </div>
       </section>

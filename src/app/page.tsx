@@ -13,19 +13,6 @@ export const metadata: Metadata = {
   description:
     "Rete tecnica multidisciplinare di ingegneri, architetti e geometri. Affianchiamo imprese, professionisti e privati in edilizia, energia, impianti, automazione e innovazione tecnologica.",
   alternates: { canonical: canonicalUrl },
-  keywords: [
-    "ingegneria",
-    "architettura",
-    "geometri",
-    "efficientamento energetico",
-    "fotovoltaico",
-    "pratiche edilizie",
-    "diagnosi energetiche",
-    "Industria 4.0",
-    "Transizione 5.0",
-    "automazione",
-    "Smart Building",
-  ],
   openGraph: {
     title: "Ingegneri & Co | Ingegneria, energia e innovazione",
     description:
@@ -56,7 +43,7 @@ const areeCompetenza = [
       "Sanatorie",
       "Direzione lavori",
       "Sicurezza cantieri",
-      "Conformità urbanistica",
+      "Conformità urbanistica e catastale",
       "Due diligence immobiliare",
       "APE",
       "Legge 10",
@@ -71,7 +58,7 @@ const areeCompetenza = [
       "Fotovoltaico",
       "Diagnosi energetiche",
       "Efficientamento energetico",
-      "Audit energetici",
+      "Impianti termici e climatizzazione",
       "Transizione 5.0",
     ],
   },
@@ -90,8 +77,8 @@ const areeCompetenza = [
       "Controllo remoto degli impianti",
       "Integrazione hardware e software",
       "Intelligenza Artificiale applicata ai processi",
-      "Sviluppo di siti web e portali professionali",
-      "Industria 4.0 e Transizione 5.0",
+      "Portali e applicazioni web",
+      "Digitalizzazione e automazione dei processi",
     ],
   },
 ];
