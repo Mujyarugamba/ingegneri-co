@@ -6,7 +6,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/fotovoltaico`;
 
 export const metadata: Metadata = {
   title: "Fotovoltaico e sistemi di accumulo | Ingegneri & Co",
-  description: "Valutazione tecnica e progettazione di impianti fotovoltaici con o senza accumulo per edifici e imprese, integrate con consumi, impianti e obiettivi energetici.",
+  description: "Valutazione e progettazione di impianti fotovoltaici con accumulo per edifici e imprese, integrate con consumi, impianti elettrici e obiettivi energetici.",
   alternates: { canonical: canonicalUrl },
   openGraph: { title: "Fotovoltaico e sistemi di accumulo | Ingegneri & Co", description: "Impianti fotovoltaici integrati con i reali fabbisogni energetici di edifici e imprese.", url: canonicalUrl, type: "website" },
 };
