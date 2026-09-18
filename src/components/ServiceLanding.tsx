@@ -34,6 +34,16 @@ export function ServiceLanding({
       { "@type": "ListItem", position: 4, name: title },
     ],
   };
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: title,
+    serviceType: title,
+    description: intro,
+    provider: {
+      "@id": `${siteConfig.url}/#organization`,
+    },
+  };
   const faqJsonLd = faqs.length ? {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })),
@@ -42,6 +52,7 @@ export function ServiceLanding({
   return (
     <main className="bg-white text-anthracite">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
 
       <section className="relative overflow-hidden bg-anthracite">
