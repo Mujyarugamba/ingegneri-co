@@ -28,7 +28,7 @@ export async function generateMetadata({
   const canonicalUrl = `${siteConfig.url}/approfondimenti/${slug}`;
 
   return {
-    title: `${article.title} | Ingegneri & Co`,
+    title: article.seoTitle ?? `${article.title} | Ingegneri & Co`,
     description: article.description,
     alternates: {
       canonical: canonicalUrl,
