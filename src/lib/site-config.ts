@@ -39,12 +39,17 @@ export const serviceEcosystems = [
     services: [
       { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
       { label: "Due diligence immobiliare", href: "/servizi/due-diligence-immobiliare" },
+      { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
+      { label: "APE e certificazione energetica", href: "/servizi/ape-certificazione-energetica" },
       { label: "Legge 10", href: "/servizi/legge-10" },
       { label: "Efficientamento energetico", href: "/servizi/efficientamento-energetico" },
       { label: "Fotovoltaico", href: "/servizi/fotovoltaico" },
       { label: "Diagnosi energetiche", href: "/servizi/diagnosi-energetiche" },
       { label: "Impianti elettrici", href: "/servizi/impianti-elettrici" },
+      { label: "Impianti termici e climatizzazione", href: "/servizi/impianti-termici-climatizzazione" },
       { label: "Direzione lavori e supporto tecnico", href: "/servizi/direzione-lavori" },
+      { label: "Sicurezza cantieri", href: "/servizi/sicurezza-cantieri" },
+      { label: "Smart Building, IoT e monitoraggio", href: "/servizi/smart-building-iot" },
     ],
   },
   {
@@ -53,14 +58,15 @@ export const serviceEcosystems = [
     description:
       "Soluzioni per digitalizzare processi, integrare dati e sistemi, automatizzare attività e applicare l'intelligenza artificiale alle PMI.",
     services: [
-      { label: "Automazione dei processi", href: "/servizi/automazione-processi" },
-      { label: "Transizione 5.0", href: "/servizi/transizione-5-0" },
       { label: "Servizi digitali per imprese", href: "/servizi/servizi-digitali-pmi" },
+      { label: "Automazione dei processi", href: "/servizi/automazione-processi" },
+      { label: "Automazione industriale e sistemi di controllo", href: "/servizi/automazione-industriale" },
       { label: "Portali e applicazioni web", href: "/servizi/portali-applicazioni-web" },
       { label: "Integrazione software e dati", href: "/servizi/integrazione-software-dati" },
       { label: "Intelligenza artificiale per PMI", href: "/servizi/intelligenza-artificiale-pmi" },
       { label: "Analisi documentale e assistenti AI", href: "/servizi/analisi-documentale-assistenti-ai" },
       { label: "Smart Building, IoT e monitoraggio", href: "/servizi/smart-building-iot" },
+      { label: "Transizione 5.0", href: "/servizi/transizione-5-0" },
     ],
   },
 ] as const;
