@@ -1,48 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLanding } from "@/components/ServiceLanding";
 import { siteConfig } from "@/lib/site-config";
-
 const canonicalUrl = `${siteConfig.url}/servizi/due-diligence-immobiliare`;
-
-export const metadata: Metadata = {
-  title: "Due diligence immobiliare | Ingegneri & Co",
-  description:
-    "Due diligence tecnica immobiliare: verifiche urbanistiche, catastali, documentali, sopralluogo e analisi delle criticità prima di acquisti, vendite e investimenti.",
-  alternates: { canonical: canonicalUrl },
-  openGraph: {
-    title: "Due diligence immobiliare | Ingegneri & Co",
-    description:
-      "Verifica tecnica e documentale dell’immobile per individuare conformità, difformità e criticità.",
-    url: canonicalUrl,
-    type: "website",
-  },
-};
-
-export default function Page() {
-  return (
-    <ServiceLanding
-      eyebrow="Ingegneria, Edilizia & Energia"
-      title="Due diligence immobiliare"
-      intro="Analizziamo lo stato tecnico e documentale dell’immobile per individuare eventuali difformità, criticità e aspetti da approfondire prima di un acquisto, una vendita, una ristrutturazione o un investimento."
-      bullets={[
-        "Accesso agli atti e verifica dei titoli edilizi",
-        "Verifica urbanistica e dello stato legittimo",
-        "Verifica catastale e confronto con lo stato dei luoghi",
-        "Sopralluogo e rilievo dell’immobile",
-        "Verifica della documentazione tecnica disponibile",
-        "Analisi di impianti, prestazioni energetiche e documenti disponibili",
-        "Individuazione di difformità e criticità",
-        "Valutazione delle possibili regolarizzazioni",
-        "Relazione tecnica di due diligence",
-        "Stima indicativa degli interventi, quando richiesta",
-      ]}
-      outcomes={[
-        "Conoscere la situazione tecnica e documentale dell’immobile",
-        "Individuare criticità prima di assumere decisioni o impegni",
-        "Disporre di un quadro tecnico per acquisti, vendite, ristrutturazioni e investimenti",
-      ]}
-      ecosystemHref="/servizi/ingegneria-edilizia-energia"
-      ecosystemLabel="Ingegneria, Edilizia & Energia"
-    />
-  );
-}
+export const metadata: Metadata = { title:"Due diligence immobiliare | Ingegneri & Co", description:"Due diligence tecnica immobiliare: verifiche urbanistiche, catastali, documentali, sopralluogo e analisi delle criticità prima di acquisti, vendite e investimenti.", alternates:{canonical:canonicalUrl}, openGraph:{title:"Due diligence immobiliare | Ingegneri & Co",description:"Verifica tecnica e documentale dell'immobile per individuare conformità, difformità e criticità.",url:canonicalUrl,type:"website"} };
+export default function Page(){return <ServiceLanding eyebrow="Ingegneria, Edilizia & Energia" title="Due diligence immobiliare" intro="Analizziamo lo stato tecnico e documentale dell'immobile per individuare eventuali difformità, criticità e aspetti da approfondire prima di un acquisto, una vendita, una ristrutturazione o un investimento." bullets={["Accesso agli atti e verifica dei titoli edilizi","Verifica urbanistica e dello stato legittimo","Verifica catastale e confronto con lo stato dei luoghi","Sopralluogo e rilievo dell'immobile","Verifica della documentazione tecnica disponibile","Analisi di impianti, prestazioni energetiche e documenti disponibili","Individuazione di difformità e criticità","Valutazione delle possibili regolarizzazioni","Relazione tecnica di due diligence","Stima indicativa degli interventi, quando richiesta"]} outcomes={["Conoscere la situazione tecnica e documentale dell'immobile","Individuare criticità prima di assumere decisioni o impegni","Disporre di un quadro tecnico per acquisti, vendite, ristrutturazioni e investimenti"]} context={["Prima di un acquisto o di un investimento, per conoscere meglio lo stato tecnico e documentale dell'immobile.","Prima di una vendita o di una ristrutturazione, quando è utile individuare in anticipo documenti mancanti, difformità o aspetti da approfondire."]} relatedServices={[{label:"Conformità urbanistica e catastale",href:"/servizi/conformita-urbanistica-catastale"},{label:"Pratiche edilizie",href:"/servizi/pratiche-edilizie"},{label:"APE e certificazione energetica",href:"/servizi/ape-certificazione-energetica"}]} ecosystemHref="/servizi/ingegneria-edilizia-energia" ecosystemLabel="Ingegneria, Edilizia & Energia" />;}

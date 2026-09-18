@@ -1,43 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLanding } from "@/components/ServiceLanding";
 import { siteConfig } from "@/lib/site-config";
-
-const canonicalUrl = `${siteConfig.url}/servizi/integrazione-software-dati`;
-
-export const metadata: Metadata = {
-  title: "Integrazione software e dati | Ingegneri & Co",
-  description:
-    "Integrazione tra software, database e strumenti aziendali per ridurre duplicazioni, automatizzare flussi e rendere i dati più utilizzabili.",
-  alternates: { canonical: canonicalUrl },
-  openGraph: {
-    title: "Integrazione software e dati | Ingegneri & Co",
-    description: "Collegamento tra sistemi, database e applicazioni per processi più ordinati e dati più accessibili.",
-    url: canonicalUrl,
-    type: "website",
-  },
-};
-
-export default function Page() {
-  return (
-    <ServiceLanding
-      eyebrow="Digitalizzazione, Automazione & AI"
-      title="Integrazione software e dati"
-      intro="Colleghiamo strumenti, database e applicazioni per ridurre passaggi manuali, duplicazioni e frammentazione delle informazioni, progettando flussi coerenti con l'organizzazione reale dell'impresa."
-      bullets={[
-        "Analisi dei sistemi esistenti",
-        "Integrazione tra applicazioni e database",
-        "Automazione dello scambio dati",
-        "Riduzione delle duplicazioni informative",
-        "Dashboard e flussi operativi",
-        "Supporto alla migrazione e normalizzazione dei dati",
-      ]}
-      outcomes={[
-        "Rendere i dati più accessibili e affidabili",
-        "Ridurre attività manuali ripetitive",
-        "Creare una base tecnica per automazioni e AI",
-      ]}
-      ecosystemHref="/servizi/digitalizzazione-automazione-ai"
-      ecosystemLabel="Digitalizzazione, Automazione & AI"
-    />
-  );
-}
+const canonicalUrl=`${siteConfig.url}/servizi/integrazione-software-dati`;
+export const metadata:Metadata={title:"Integrazione software, API e dati | Ingegneri & Co",description:"Integrazione tra software, API, database e strumenti aziendali per collegare sistemi, ridurre duplicazioni e rendere i dati più utilizzabili.",alternates:{canonical:canonicalUrl},openGraph:{title:"Integrazione software, API e dati | Ingegneri & Co",description:"Collegamento tecnico tra applicazioni, database e sistemi aziendali.",url:canonicalUrl,type:"website"}};
+export default function Page(){return <ServiceLanding eyebrow="Digitalizzazione, Automazione & AI" title="Integrazione software e dati" intro="Colleghiamo applicazioni, database e sistemi affinché possano scambiarsi informazioni in modo coerente, riducendo duplicazioni e creando una base tecnica più ordinata per automazioni, dashboard e applicazioni AI." bullets={["Analisi dei sistemi e delle fonti dati","Integrazione tra applicazioni e database","API e scambio strutturato di dati","Normalizzazione e organizzazione delle informazioni","Supporto alla migrazione dei dati","Base dati per dashboard, automazioni e AI"]} outcomes={["Rendere i dati più accessibili e affidabili","Ridurre duplicazioni tra sistemi","Creare una base tecnica per automazioni e AI"]} context={["Quando le stesse informazioni vengono copiate manualmente tra software diversi o archiviate in più punti.","Quando applicazioni e database devono comunicare per alimentare processi, dashboard, portali o soluzioni AI."]} relatedServices={[{label:"Digitalizzazione per PMI",href:"/servizi/servizi-digitali-pmi"},{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Analisi documentale e assistenti AI",href:"/servizi/analisi-documentale-assistenti-ai"}]} ecosystemHref="/servizi/digitalizzazione-automazione-ai" ecosystemLabel="Digitalizzazione, Automazione & AI" />;}

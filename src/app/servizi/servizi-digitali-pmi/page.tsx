@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLanding } from "@/components/ServiceLanding";
 import { siteConfig } from "@/lib/site-config";
-
-const canonicalUrl = `${siteConfig.url}/servizi/servizi-digitali-pmi`;
-
-export const metadata: Metadata = {
-  title: "Servizi digitali per PMI | Ingegneri & Co",
-  description: "Servizi digitali per piccole e medie imprese: analisi dei processi, strumenti operativi, integrazioni, dashboard, portali e soluzioni su misura.",
-  alternates: { canonical: canonicalUrl },
-  openGraph: { title: "Servizi digitali per PMI | Ingegneri & Co", description: "Digitalizzazione concreta dei processi aziendali, senza aggiungere complessità inutile.", url: canonicalUrl, type: "website" },
-};
-
-export default function Page() {
-  return <ServiceLanding eyebrow="Digitalizzazione, Automazione & AI" title="Servizi digitali per PMI" intro="Aiutiamo le imprese a trasformare attività manuali e frammentate in processi digitali più semplici, collegati e tracciabili, scegliendo strumenti proporzionati alle reali esigenze operative." bullets={["Analisi dei processi digitali", "Dashboard operative", "Raccolta e organizzazione dati", "Integrazione tra applicazioni", "Strumenti interni su misura", "Supporto alla digitalizzazione graduale"]} outcomes={["Ridurre frammentazione e doppio lavoro", "Rendere i dati più accessibili", "Costruire soluzioni digitali sostenibili nel tempo"]} ecosystemHref="/servizi/digitalizzazione-automazione-ai" ecosystemLabel="Digitalizzazione, Automazione & AI" />;
-}
+const canonicalUrl=`${siteConfig.url}/servizi/servizi-digitali-pmi`;
+export const metadata:Metadata={title:"Digitalizzazione per PMI | Ingegneri & Co",description:"Percorsi di digitalizzazione per PMI: analisi di procedure, dati e strumenti per definire soluzioni operative proporzionate alle esigenze dell'impresa.",alternates:{canonical:canonicalUrl},openGraph:{title:"Digitalizzazione per PMI | Ingegneri & Co",description:"Analisi e percorso di digitalizzazione dei processi aziendali.",url:canonicalUrl,type:"website"}};
+export default function Page(){return <ServiceLanding eyebrow="Digitalizzazione, Automazione & AI" title="Digitalizzazione per PMI" intro="Partiamo dall'organizzazione reale dell'impresa per individuare procedure frammentate, strumenti non collegati e informazioni difficili da utilizzare, definendo un percorso di digitalizzazione graduale e sostenibile." bullets={["Analisi dei processi e degli strumenti esistenti","Mappatura dei flussi informativi","Raccolta e organizzazione dei dati","Individuazione delle priorità digitali","Scelta di strumenti proporzionati alle esigenze","Piano di evoluzione e integrazione"]} outcomes={["Definire priorità prima di introdurre nuovi strumenti","Ridurre frammentazione e doppio lavoro","Costruire un percorso digitale sostenibile nel tempo"]} context={["Quando procedure, file, email e strumenti diversi rendono difficile avere una visione unica delle attività.","Quando l'impresa vuole digitalizzare gradualmente senza introdurre tecnologia non necessaria o scollegata dai processi reali."]} relatedServices={[{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Integrazione software e dati",href:"/servizi/integrazione-software-dati"},{label:"Intelligenza artificiale per PMI",href:"/servizi/intelligenza-artificiale-pmi"}]} ecosystemHref="/servizi/digitalizzazione-automazione-ai" ecosystemLabel="Digitalizzazione, Automazione & AI" />;}
