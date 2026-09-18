@@ -57,6 +57,7 @@ const areeCompetenza = [
       "Direzione lavori",
       "Sicurezza cantieri",
       "Conformità urbanistica",
+      "Due diligence immobiliare",
       "APE",
       "Legge 10",
     ],
