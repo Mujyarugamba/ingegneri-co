@@ -17,10 +17,10 @@ export default function NotFound() {
               <Link href="/" className="btn-primary">
                 Torna alla home
               </Link>
-              <Link href="/servizi" className="btn-secondary">
+              <Link href="/servizi" className="btn-outline-dark">
                 Esplora i servizi
               </Link>
-              <Link href="/contatti" className="btn-secondary">
+              <Link href="/contatti" className="btn-outline-dark">
                 Contatti
               </Link>
             </div>
