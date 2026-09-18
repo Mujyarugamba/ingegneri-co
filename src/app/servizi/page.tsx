@@ -29,18 +29,23 @@ export default function ServiziPage() {
     ],
   };
 
+  const uniqueServices = serviceEcosystems
+    .flatMap((ecosystem) => ecosystem.services)
+    .filter(
+      (service, index, services) =>
+        services.findIndex((candidate) => candidate.href === service.href) === index,
+    );
+
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Servizi Ingegneri & Co",
-    itemListElement: serviceEcosystems.flatMap((ecosystem) =>
-      ecosystem.services.map((service) => ({
-        "@type": "ListItem",
-        position: 0,
-        name: service.label,
-        url: `${siteConfig.url}${service.href}`,
-      })),
-    ).map((item, index) => ({ ...item, position: index + 1 })),
+    itemListElement: uniqueServices.map((service, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: service.label,
+      url: `${siteConfig.url}${service.href}`,
+    })),
   };
 
   return (
