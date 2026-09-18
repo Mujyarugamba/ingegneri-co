@@ -29,7 +29,7 @@ export const projectsIntro =
   "Ogni progetto rappresenta un'opportunità per integrare competenze di ingegneria, energia, automazione, sviluppo software e innovazione tecnologica, offrendo soluzioni concrete per imprese e professionisti.";
 
 export const portfolioPageIntro =
-  "Una selezione di progetti che rappresentano il nostro approccio multidisciplinare all'ingegneria, all'energia, all'innovazione e allo sviluppo di soluzioni digitali.";
+  "Progetti e casi applicativi che mostrano il nostro approccio multidisciplinare tra ingegneria, energia, automazione e sviluppo di soluzioni digitali.";
 
 export const projects: Project[] = [
   {
