@@ -4,6 +4,9 @@ export type ArticleCategory =
   | "Energia"
   | "Innovazione";
 
+export type ArticleLink = { label: string; href: string };
+export type ArticleSource = { label: string; href: string };
+
 export type Article = {
   slug: string;
   title: string;
@@ -13,6 +16,8 @@ export type Article = {
   publishedAt: string;
   updatedAt?: string;
   content: string[];
+  relatedServices?: ArticleLink[];
+  sources?: ArticleSource[];
 };
 
 export const approfondimentiIntro =
@@ -28,6 +33,10 @@ export const articles: Article[] = [
     description:
       "Quando serve una SCIA? Guida tecnica su requisiti, documentazione e casi d'uso per privati, imprese e professionisti del settore edilizio.",
     publishedAt: "2026-01-15",
+    relatedServices: [
+      { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
+      { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
+    ],
     content: [
       "La SCIA — Segnalazione Certificata di Inizio Attività — è uno degli strumenti utilizzati per avviare determinati interventi edilizi previsti dalla normativa. La sua applicabilità va verificata sul caso concreto, tenendo conto della disciplina nazionale, regionale, comunale e degli eventuali vincoli presenti.",
       "In generale, la SCIA può riguardare interventi di manutenzione straordinaria che interessano parti strutturali, interventi di restauro e risanamento conservativo sulle parti strutturali e alcune ristrutturazioni edilizie. Per opere di diversa natura possono invece trovare applicazione CILA, permesso di costruire, edilizia libera o altri titoli e procedure.",
@@ -44,6 +53,10 @@ export const articles: Article[] = [
     description:
       "CILA, SCIA o Permesso di Costruire? Differenze, ambiti di applicazione e criteri di scelta spiegati in modo chiaro per committenti e professionisti.",
     publishedAt: "2026-01-22",
+    relatedServices: [
+      { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
+      { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
+    ],
     content: [
       "Nel panorama delle pratiche edilizie, CILA, SCIA e Permesso di Costruire si applicano a interventi differenti e non rappresentano semplicemente tre livelli crescenti della stessa procedura. La corretta qualificazione dipende dalle opere previste e dalla disciplina applicabile all'immobile.",
       "La CILA (Comunicazione di Inizio Lavori Asseverata) è generalmente utilizzata per interventi di manutenzione straordinaria che non interessano le parti strutturali dell'edificio e per gli altri casi previsti dalla normativa. La manutenzione ordinaria rientra invece, di regola, nell'edilizia libera, salvo vincoli, discipline speciali o opere che richiedano ulteriori adempimenti. La SCIA trova applicazione in diverse ipotesi di maggiore rilevanza, comprese alcune opere sulle parti strutturali e alcune ristrutturazioni edilizie.",
@@ -61,6 +74,17 @@ export const articles: Article[] = [
       "Transizione 5.0 nel 2026: come cambia la misura con il nuovo iperammortamento, quali investimenti riguarda e quali verifiche tecniche richiede.",
     publishedAt: "2026-02-01",
     updatedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Nuovo Piano Transizione 5.0", href: "/servizi/transizione-5-0" },
+      { label: "Automazione industriale e sistemi di controllo", href: "/servizi/automazione-industriale" },
+      { label: "Fotovoltaico e sistemi di accumulo", href: "/servizi/fotovoltaico" },
+      { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
+    ],
+    sources: [
+      { label: "MIMIT — Nuovo Piano Transizione 5.0 - Iperammortamento", href: "https://www.mimit.gov.it/it/incentivi/nuovo-piano-transizione-5-0-iperammortamento" },
+      { label: "MIMIT — Piano Transizione 5.0 (precedente misura)", href: "https://www.mimit.gov.it/it/incentivi/piano-transizione-5-0" },
+      { label: "MIMIT — Decreto direttoriale 10 giugno 2026", href: "https://www.mimit.gov.it/it/normativa/decreti-direttoriali/decreto-direttoriale-10-giugno-2026-iperammortamento-termini-e-modelli-di-comunicazione" },
+    ],
     content: [
       "Nel 2026 il quadro della Transizione 5.0 è cambiato. Il precedente Piano basato sul credito d'imposta ha chiuso i termini per nuove domande; per i nuovi investimenti il riferimento è il Nuovo Piano Transizione 5.0 - Iperammortamento, introdotto dalla legge di bilancio 2026 e reso operativo con i provvedimenti attuativi del 2026.",
       "La nuova misura sostiene investimenti in beni strumentali tecnologicamente avanzati e, nei casi previsti, investimenti destinati all'autoproduzione e all'autoconsumo di energia da fonti rinnovabili. L'agevolazione opera attraverso una maggiorazione del costo fiscalmente riconosciuto dei beni ai fini delle quote di ammortamento e dei canoni di locazione finanziaria, in sostituzione dei precedenti crediti d'imposta Transizione 4.0 e 5.0.",
@@ -77,6 +101,12 @@ export const articles: Article[] = [
     description:
       "Efficientamento energetico degli edifici: diagnosi, interventi, incentivi e soluzioni tecniche per ridurre consumi e migliorare le prestazioni.",
     publishedAt: "2026-02-10",
+    relatedServices: [
+      { label: "Diagnosi energetiche", href: "/servizi/diagnosi-energetiche" },
+      { label: "Efficientamento energetico", href: "/servizi/efficientamento-energetico" },
+      { label: "Impianti termici e climatizzazione", href: "/servizi/impianti-termici-climatizzazione" },
+      { label: "Fotovoltaico e sistemi di accumulo", href: "/servizi/fotovoltaico" },
+    ],
     content: [
       "L'efficientamento energetico è uno degli ambiti prioritari per la riqualificazione del patrimonio edilizio esistente. Interventi mirati su involucro, impianti e sistemi di controllo possono ridurre i consumi, migliorare il comfort e contribuire alla valorizzazione dell'immobile, in funzione delle caratteristiche del caso concreto.",
       "Il percorso inizia generalmente con una valutazione tecnica o una diagnosi energetica, finalizzata a individuare le criticità e a definire un piano di intervento coerente con budget, obiettivi e accesso agli eventuali incentivi disponibili.",
@@ -93,6 +123,12 @@ export const articles: Article[] = [
     description:
       "Automazione e Smart Building: tecnologie, benefici e applicazioni per edifici efficienti, connessi e facili da gestire.",
     publishedAt: "2026-02-18",
+    relatedServices: [
+      { label: "Smart Building, Building Automation e IoT", href: "/servizi/smart-building-iot" },
+      { label: "Progettazione e verifica impianti elettrici", href: "/servizi/impianti-elettrici" },
+      { label: "Automazione industriale e sistemi di controllo", href: "/servizi/automazione-industriale" },
+      { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
+    ],
     content: [
       "Gli edifici intelligenti combinano automazione, connettività e monitoraggio in tempo reale per ottimizzare consumi, comfort e manutenzione. Lo Smart Building non è solo tecnologia: è un modello integrato di gestione degli spazi e degli impianti.",
       "I sistemi di building automation consentono di controllare illuminazione, climatizzazione, accessi e consumi energetici, adattando il funzionamento dell'edificio alle effettive esigenze di utilizzo. L'integrazione con sensori IoT e piattaforme di supervisione amplia le possibilità di analisi e intervento.",
@@ -109,6 +145,12 @@ export const articles: Article[] = [
     description:
       "Intelligenza Artificiale applicata all'ingegneria: casi d'uso concreti, vantaggi e criteri per integrarla nei processi tecnici e digitali.",
     publishedAt: "2026-02-25",
+    relatedServices: [
+      { label: "Intelligenza artificiale per PMI", href: "/servizi/intelligenza-artificiale-pmi" },
+      { label: "Analisi documentale e assistenti AI", href: "/servizi/analisi-documentale-assistenti-ai" },
+      { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
+      { label: "Automazione dei processi e workflow", href: "/servizi/automazione-processi" },
+    ],
     content: [
       "L'intelligenza artificiale sta entrando progressivamente nei processi dell'ingegneria, offrendo strumenti per analisi predittiva, automazione documentale, supporto decisionale e ottimizzazione delle risorse. Non sostituisce la competenza professionale, ma può ampliarne gli strumenti quando utilizzata con criterio.",
       "Nei settori edilizio e industriale, l'IA può supportare diagnosi energetiche, manutenzione predittiva, classificazione documenti, monitoraggio impianti e analisi di grandi volumi di dati provenienti da sensori e sistemi SCADA.",
