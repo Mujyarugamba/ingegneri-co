@@ -1,7 +1,10 @@
+import Link from "next/link";
+
 type LegalPageLayoutProps = {
   title: string;
   intro?: string;
   label?: string;
+  updatedAt?: string;
   children: React.ReactNode;
 };
 
@@ -9,6 +12,7 @@ export default function LegalPageLayout({
   title,
   intro,
   label = "Informazioni legali",
+  updatedAt,
   children,
 }: LegalPageLayoutProps) {
   return (
@@ -24,6 +28,11 @@ export default function LegalPageLayout({
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
         <div className="relative page-container max-w-[900px] py-12 md:py-16 lg:py-24">
+          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-white/70">
+            <Link href="/" className="transition-colors hover:text-white">Home</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span aria-current="page" className="text-white">{title}</span>
+          </nav>
           <p className="section-label text-white/80">{label}</p>
           <h1 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
             {title}
@@ -32,6 +41,9 @@ export default function LegalPageLayout({
             <p className="mt-5 text-base leading-relaxed text-gray-muted lg:text-lg">
               {intro}
             </p>
+          )}
+          {updatedAt && (
+            <p className="mt-4 text-sm text-white/55">Ultimo aggiornamento: {updatedAt}</p>
           )}
         </div>
       </section>
