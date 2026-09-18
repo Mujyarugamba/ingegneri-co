@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ServiceLanding
-      eyebrow="Digitalizzazione, Automazione & AI"
+      eyebrow="Competenza trasversale: impianti, energia e digitale"
       title="Smart Building, IoT e monitoraggio"
       intro="Progettiamo sistemi per raccogliere, integrare e utilizzare dati provenienti da impianti, sensori e dispositivi, con l'obiettivo di migliorare controllo, visibilità e gestione tecnica di edifici e attività."
       bullets={[
@@ -36,6 +36,8 @@ export default function Page() {
         "Centralizzare informazioni tecniche oggi disperse",
         "Creare basi dati utili per analisi, automazione e manutenzione",
       ]}
+      context={["Edifici nei quali impianti, sensori e contatori producono dati che oggi non vengono raccolti o utilizzati in modo coordinato.","Quando monitoraggio energetico, Building Automation e supervisione devono dialogare con impianti e strumenti digitali."]}
+      relatedServices={[{label:"Automazione industriale e sistemi di controllo",href:"/servizi/automazione-industriale"},{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"},{label:"Diagnosi energetiche",href:"/servizi/diagnosi-energetiche"},{label:"Integrazione software e dati",href:"/servizi/integrazione-software-dati"}]}
       ecosystemHref="/servizi/digitalizzazione-automazione-ai"
       ecosystemLabel="Digitalizzazione, Automazione & AI"
     />

@@ -36,6 +36,8 @@ export default function Page() {
         "Trasformare documenti non strutturati in informazioni utilizzabili",
         "Supportare il personale senza sostituire i controlli necessari",
       ]}
+      context={["Archivi documentali nei quali reperire informazioni richiede molto tempo o conoscenza specifica delle cartelle e dei file.","Processi nei quali classificazione, estrazione dati e ricerca possono supportare gli operatori mantenendo verifiche e controlli umani."]}
+      relatedServices={[{label:"Intelligenza artificiale per PMI",href:"/servizi/intelligenza-artificiale-pmi"},{label:"Integrazione software e dati",href:"/servizi/integrazione-software-dati"},{label:"Automazione dei processi",href:"/servizi/automazione-processi"}]}
       ecosystemHref="/servizi/digitalizzazione-automazione-ai"
       ecosystemLabel="Digitalizzazione, Automazione & AI"
     />
