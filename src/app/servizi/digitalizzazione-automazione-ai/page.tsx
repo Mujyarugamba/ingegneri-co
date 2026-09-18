@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Servizi digitali per imprese", description: "Punto di ingresso per analizzare procedure, strumenti e dati e definire un percorso di digitalizzazione sostenibile.", href: "/servizi/servizi-digitali-pmi" },
-  { title: "Automazione dei processi", description: "Workflow e automazioni per ridurre attività ripetitive, passaggi manuali, errori e tempi operativi.", href: "/servizi/automazione-processi" },
+  { title: "Digitalizzazione delle PMI", description: "Consulenza e punto di ingresso per analizzare processi, strumenti e dati e definire un percorso di digitalizzazione sostenibile.", href: "/servizi/servizi-digitali-pmi" },
+  { title: "Automazione dei processi e workflow", description: "Workflow, notifiche, approvazioni e automazioni per ridurre attività ripetitive e passaggi manuali.", href: "/servizi/automazione-processi" },
   { title: "Automazione industriale e sistemi di controllo", description: "PLC, supervisione, acquisizione dati e integrazione hardware-software per impianti e processi tecnici.", href: "/servizi/automazione-industriale" },
-  { title: "Portali e applicazioni web", description: "Progettazione e sviluppo di portali professionali, aree riservate, strumenti operativi e applicazioni web.", href: "/servizi/portali-applicazioni-web" },
-  { title: "Integrazione software e dati", description: "Collegamento tecnico tra applicazioni, database e sistemi per rendere i dati più accessibili e riutilizzabili.", href: "/servizi/integrazione-software-dati" },
+  { title: "Portali e applicazioni web", description: "Portali professionali, aree riservate e strumenti operativi collegati ai processi e ai dati dell'impresa.", href: "/servizi/portali-applicazioni-web" },
+  { title: "Integrazione software, API e dati", description: "Architettura tecnica per collegare applicazioni, database e sistemi e rendere le informazioni riutilizzabili.", href: "/servizi/integrazione-software-dati" },
   { title: "Intelligenza artificiale per PMI", description: "Applicazioni dell'AI a problemi e processi aziendali concreti, mantenendo il controllo umano dove necessario.", href: "/servizi/intelligenza-artificiale-pmi" },
   { title: "Analisi documentale e assistenti AI", description: "Classificazione, estrazione dati, ricerca interna e assistenti dedicati a procedure e conoscenza aziendale.", href: "/servizi/analisi-documentale-assistenti-ai" },
-  { title: "Smart Building, IoT e monitoraggio", description: "Competenza trasversale tra impianti, sensori, Building Automation, dati e monitoraggio energetico.", href: "/servizi/smart-building-iot" },
-  { title: "Transizione 5.0", description: "Servizio trasversale tra investimenti tecnologici, digitalizzazione, automazione ed energia.", href: "/servizi/transizione-5-0" },
+  { title: "Smart Building, Building Automation e IoT", description: "Servizio trasversale per edifici: impianti, sensori, supervisione, dati e monitoraggio energetico.", href: "/servizi/smart-building-iot" },
+  { title: "Nuovo Piano Transizione 5.0", description: "Supporto tecnico per investimenti tecnologici, interconnessione, automazione e autoproduzione energetica.", href: "/servizi/transizione-5-0" },
 ] as const;
 
 export default function DigitalServicesPage() {

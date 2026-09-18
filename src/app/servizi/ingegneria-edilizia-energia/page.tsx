@@ -18,13 +18,13 @@ const services = [
   { title: "APE e certificazione energetica", description: "Attestato di Prestazione Energetica e valutazione della classe energetica dell'immobile.", href: "/servizi/ape-certificazione-energetica" },
   { title: "Legge 10", description: "Relazioni tecniche energetiche e verifiche previste per gli interventi nei casi applicabili.", href: "/servizi/legge-10" },
   { title: "Diagnosi energetiche", description: "Analisi dei consumi e individuazione delle opportunità di miglioramento energetico.", href: "/servizi/diagnosi-energetiche" },
-  { title: "Efficientamento energetico", description: "Analisi e interventi per ridurre consumi e migliorare le prestazioni di edifici e impianti.", href: "/servizi/efficientamento-energetico" },
-  { title: "Fotovoltaico", description: "Dimensionamento, progettazione e supporto tecnico per fotovoltaico e sistemi di accumulo.", href: "/servizi/fotovoltaico" },
-  { title: "Impianti elettrici", description: "Progettazione, verifica, adeguamento e integrazione di impianti elettrici.", href: "/servizi/impianti-elettrici" },
+  { title: "Efficientamento energetico", description: "Dalla diagnosi alla definizione di interventi coordinati su involucro, impianti e sistemi di controllo.", href: "/servizi/efficientamento-energetico" },
+  { title: "Fotovoltaico e sistemi di accumulo", description: "Dimensionamento, progettazione e integrazione di produzione fotovoltaica, accumulo e autoconsumo.", href: "/servizi/fotovoltaico" },
+  { title: "Progettazione e verifica impianti elettrici", description: "Progettazione, verifica, adeguamento e integrazione di impianti elettrici.", href: "/servizi/impianti-elettrici" },
   { title: "Impianti termici e climatizzazione", description: "Progettazione e riqualificazione di riscaldamento, raffrescamento, climatizzazione e pompe di calore.", href: "/servizi/impianti-termici-climatizzazione" },
   { title: "Direzione lavori e supporto tecnico", description: "Coordinamento tecnico e assistenza durante le fasi esecutive dell'intervento.", href: "/servizi/direzione-lavori" },
   { title: "Sicurezza cantieri", description: "Coordinamento della sicurezza CSP/CSE, PSC e supporto tecnico-documentale.", href: "/servizi/sicurezza-cantieri" },
-  { title: "Smart Building, IoT e monitoraggio", description: "Competenza trasversale tra impianti, sensori, Building Automation, dati e monitoraggio energetico.", href: "/servizi/smart-building-iot" },
+  { title: "Smart Building, Building Automation e IoT", description: "Competenza trasversale tra impianti, sensori, automazione dell'edificio, dati e monitoraggio energetico.", href: "/servizi/smart-building-iot" },
 ] as const;
 
 export default function EngineeringServicesPage() {
