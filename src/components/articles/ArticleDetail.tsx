@@ -29,13 +29,13 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-size-[3.5rem_3.5rem]" />
 
         <div className="relative page-container py-12 md:py-16 lg:py-24">
-          <Link
-            href="/approfondimenti"
-            className="inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white"
-          >
-            <span aria-hidden="true">←</span>
-            Torna agli approfondimenti
-          </Link>
+          <nav aria-label="Breadcrumb" className="text-sm text-white/70">
+            <Link href="/" className="transition-colors hover:text-white">Home</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <Link href="/approfondimenti" className="transition-colors hover:text-white">Approfondimenti</Link>
+            <span aria-hidden="true" className="mx-2">/</span>
+            <span aria-current="page" className="text-white">{article.title}</span>
+          </nav>
 
           <div className="mt-8 max-w-3xl">
             <div className="flex flex-wrap items-center gap-3">
