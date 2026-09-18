@@ -7,7 +7,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/ingegneria-edilizia-energia`;
 export const metadata: Metadata = {
   title: "Ingegneria, Edilizia ed Energia | Ingegneri & Co",
   description:
-    "Pratiche edilizie, Legge 10, efficientamento energetico, fotovoltaico, diagnosi energetiche, impianti elettrici e direzione lavori.",
+    "Pratiche edilizie, due diligence immobiliare, Legge 10, efficientamento energetico, fotovoltaico, diagnosi energetiche, impianti elettrici e direzione lavori.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Ingegneria, Edilizia ed Energia | Ingegneri & Co",
@@ -24,6 +24,11 @@ const services = [
     title: "Pratiche edilizie",
     description: "CILA, SCIA, Permessi di Costruire, sanatorie, conformità e documentazione tecnica.",
     href: "/servizi/pratiche-edilizie",
+  },
+  {
+    title: "Due diligence immobiliare",
+    description: "Verifica tecnica e documentale dell’immobile per individuare conformità, difformità e criticità prima di acquisti, vendite o investimenti.",
+    href: "/servizi/due-diligence-immobiliare",
   },
   {
     title: "Legge 10",

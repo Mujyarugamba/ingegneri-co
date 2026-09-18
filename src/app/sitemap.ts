@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/servizi`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${siteConfig.url}/servizi/ingegneria-edilizia-energia`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteConfig.url}/servizi/pratiche-edilizie`, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${siteConfig.url}/servizi/due-diligence-immobiliare`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteConfig.url}/servizi/legge-10`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteConfig.url}/servizi/efficientamento-energetico`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteConfig.url}/servizi/fotovoltaico`, changeFrequency: "monthly", priority: 0.85 },

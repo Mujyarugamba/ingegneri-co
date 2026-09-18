@@ -38,6 +38,7 @@ export const serviceEcosystems = [
       "Servizi tecnici per edifici, impianti ed energia, dalla pratica edilizia alla progettazione e alla gestione dell'intervento.",
     services: [
       { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
+      { label: "Due diligence immobiliare", href: "/servizi/due-diligence-immobiliare" },
       { label: "Legge 10", href: "/servizi/legge-10" },
       { label: "Efficientamento energetico", href: "/servizi/efficientamento-energetico" },
       { label: "Fotovoltaico", href: "/servizi/fotovoltaico" },
