@@ -71,6 +71,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     publisher: {
       "@id": `${siteConfig.url}/#organization`,
     },
+    ...(article.sources?.length
+      ? { citation: article.sources.map((source) => source.href) }
+      : {}),
   };
 
   const breadcrumbJsonLd = {
