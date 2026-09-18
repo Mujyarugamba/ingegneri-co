@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLanding } from "@/components/ServiceLanding";
 import { siteConfig } from "@/lib/site-config";
-
-const canonicalUrl = `${siteConfig.url}/servizi/pratiche-edilizie`;
-
-export const metadata: Metadata = {
-  title: "Pratiche edilizie | Ingegneri & Co",
-  description: "Supporto tecnico per CILA, SCIA, permessi, sanatorie, verifiche urbanistiche e pratiche edilizie per immobili e attività.",
-  alternates: { canonical: canonicalUrl },
-  openGraph: { title: "Pratiche edilizie | Ingegneri & Co", description: "Pratiche edilizie e supporto tecnico per immobili e attività.", url: canonicalUrl, type: "website" },
-};
-
-export default function Page() {
-  return <ServiceLanding eyebrow="Ingegneria, Edilizia & Energia" title="Pratiche edilizie" intro="Gestiamo e coordiniamo gli adempimenti tecnici necessari per interventi edilizi, regolarizzazioni e verifiche dello stato legittimo dell'immobile, con attenzione alla documentazione e al rapporto con gli enti competenti." bullets={["CILA e SCIA", "Permessi di costruire", "Sanatorie e regolarizzazioni", "Verifiche urbanistiche e catastali", "Accesso agli atti", "Coordinamento documentale"]} outcomes={["Individuare la procedura corretta", "Ridurre errori e integrazioni documentali", "Coordinare il percorso tecnico-amministrativo"]} ecosystemHref="/servizi/ingegneria-edilizia-energia" ecosystemLabel="Ingegneria, Edilizia & Energia" />;
-}
+const canonicalUrl=`${siteConfig.url}/servizi/pratiche-edilizie`;
+export const metadata:Metadata={title:"Pratiche edilizie, CILA e SCIA | Ingegneri & Co",description:"Supporto tecnico per CILA, SCIA, permessi, sanatorie, accesso agli atti e pratiche edilizie per immobili e attività.",alternates:{canonical:canonicalUrl},openGraph:{title:"Pratiche edilizie, CILA e SCIA | Ingegneri & Co",description:"Pratiche edilizie e supporto tecnico per immobili e attività.",url:canonicalUrl,type:"website"}};
+export default function Page(){return <ServiceLanding eyebrow="Ingegneria, Edilizia & Energia" title="Pratiche edilizie" intro="Gestiamo e coordiniamo gli adempimenti tecnici necessari per interventi edilizi e regolarizzazioni, individuando la procedura appropriata e coordinando elaborati e documentazione nel rapporto con gli enti competenti." bullets={["CILA e SCIA","Permessi di costruire","Sanatorie e regolarizzazioni","Accesso agli atti","Elaborati e documentazione tecnica","Coordinamento del percorso tecnico-amministrativo"]} outcomes={["Individuare la procedura corretta","Ridurre errori e integrazioni documentali","Coordinare il percorso tecnico-amministrativo"]} context={["Interventi di ristrutturazione o modifica dell'immobile che richiedono una pratica edilizia.","Regolarizzazioni e situazioni nelle quali occorre ricostruire o coordinare il percorso documentale dell'intervento."]} relatedServices={[{label:"Conformità urbanistica e catastale",href:"/servizi/conformita-urbanistica-catastale"},{label:"Due diligence immobiliare",href:"/servizi/due-diligence-immobiliare"},{label:"Direzione lavori",href:"/servizi/direzione-lavori"}]} ecosystemHref="/servizi/ingegneria-edilizia-energia" ecosystemLabel="Ingegneria, Edilizia & Energia" />;}
