@@ -9,9 +9,9 @@ import { siteConfig } from "@/lib/site-config";
 const canonicalUrl = `${siteConfig.url}/`;
 
 export const metadata: Metadata = {
-  title: "Ingegneri & Co | Ingegneria, energia e innovazione per edifici e imprese",
+  title: "Ingegneri & Co | Ingegneria, energia e innovazione",
   description:
-    "Rete tecnica multidisciplinare di ingegneri, architetti e geometri. Affianchiamo imprese, professionisti e privati in edilizia, energia, impianti, automazione e innovazione tecnologica.",
+    "Rete multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione, digitalizzazione e AI per imprese e privati.",
   alternates: { canonical: canonicalUrl },
   keywords: [
     "ingegneria",
@@ -45,6 +45,7 @@ const percheScegliere = [
 
 const areeCompetenza = [
   {
+    id: "competenza-civile-ambientale",
     title: "Civile, Ambientale e Architettonica",
     href: "/servizi/ingegneria-edilizia-energia",
     description:
@@ -64,6 +65,7 @@ const areeCompetenza = [
     ],
   },
   {
+    id: "competenza-industriale",
     title: "Industriale",
     href: "/servizi/ingegneria-edilizia-energia",
     description:
@@ -78,6 +80,7 @@ const areeCompetenza = [
     ],
   },
   {
+    id: "competenza-informazione",
     title: "Dell'Informazione",
     href: "/servizi/digitalizzazione-automazione-ai",
     description:
@@ -227,7 +230,7 @@ export default function Home() {
             {areeCompetenza.map((area, index) => {
               const Icon = areaIcons[index];
               return (
-                <article key={area.title} className="card-elegant group flex flex-col">
+                <article id={area.id} key={area.title} className="card-elegant group flex flex-col scroll-mt-32">
                   <div className="mb-6 inline-flex rounded-xl bg-tech-blue-pale p-3.5 text-tech-blue transition-all duration-300 group-hover:bg-tech-blue group-hover:text-white"><Icon /></div>
                   <h3 className="text-xl font-bold tracking-tight text-anthracite">{area.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-gray-muted">{area.description}</p>
