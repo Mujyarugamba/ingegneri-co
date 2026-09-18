@@ -5,11 +5,11 @@ import { siteConfig } from "@/lib/site-config";
 const canonicalUrl = `${siteConfig.url}/servizi/transizione-5-0`;
 
 export const metadata: Metadata = {
-  title: "Nuovo Piano Transizione 5.0 e iperammortamento | Ingegneri & Co",
-  description: "Supporto tecnico per il Nuovo Piano Transizione 5.0: beni tecnologicamente avanzati, interconnessione, autoproduzione da fonti rinnovabili e documentazione tecnica per l'iperammortamento.",
+  title: "Nuovo Piano Transizione 5.0 | Ingegneri & Co",
+  description: "Supporto tecnico per il Nuovo Piano Transizione 5.0: beni avanzati, interconnessione, autoproduzione da rinnovabili e documentazione per l'iperammortamento.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
-    title: "Nuovo Piano Transizione 5.0 e iperammortamento | Ingegneri & Co",
+    title: "Nuovo Piano Transizione 5.0 | Ingegneri & Co",
     description: "Supporto tecnico agli investimenti del Nuovo Piano Transizione 5.0 basato sull'iperammortamento.",
     url: canonicalUrl,
     type: "website",
