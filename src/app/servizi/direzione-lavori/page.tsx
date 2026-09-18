@@ -6,8 +6,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/direzione-lavori`;
 
 export const metadata: Metadata = {
   title: "Direzione lavori e supporto tecnico | Ingegneri & Co",
-  description:
-    "Direzione lavori, coordinamento tecnico e assistenza nelle fasi esecutive per interventi edilizi, impiantistici ed energetici.",
+  description: "Direzione lavori, coordinamento tecnico e assistenza nelle fasi esecutive per interventi edilizi, impiantistici ed energetici.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Direzione lavori e supporto tecnico | Ingegneri & Co",
@@ -36,7 +35,12 @@ export default function Page() {
         "Gestire tempestivamente le criticità tecniche",
         "Mantenere tracciabilità delle decisioni operative",
       ]}
-      context={["Interventi edilizi o impiantistici nei quali è necessario mantenere continuità tra progetto, decisioni operative ed esecuzione.","Cantieri con più imprese, fornitori o competenze tecniche che richiedono un riferimento per il coordinamento delle attività di competenza."]}
+      context={["Interventi edilizi o impiantistici nei quali è necessario mantenere continuità tra progetto, decisioni operative ed esecuzione.", "Cantieri con più imprese, fornitori o competenze tecniche che richiedono un riferimento per il coordinamento delle attività di competenza."]}
+      process={[
+        { title: "Avvio e coordinamento", text: "Allineiamo progetto, imprese, fornitori e programma delle attività rispetto al perimetro dell'incarico." },
+        { title: "Controllo dell'esecuzione", text: "Seguiamo le fasi operative e verifichiamo la coerenza tecnica tra quanto progettato e quanto realizzato." },
+        { title: "Varianti e chiusura", text: "Gestiamo gli aspetti tecnici delle variazioni e supportiamo la documentazione conclusiva dell'intervento." },
+      ]}
       relatedServices={[{label:"Pratiche edilizie",href:"/servizi/pratiche-edilizie"},{label:"Sicurezza cantieri",href:"/servizi/sicurezza-cantieri"},{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"}]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
