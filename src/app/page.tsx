@@ -276,19 +276,21 @@ export default function Home() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div>
               <p className="section-label text-white/80">Chi siamo</p>
-              <h2 id="affidarsi-title" className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">Perché affidarsi a noi</h2>
+              <h2 id="affidarsi-title" className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">Una rete tecnica multidisciplinare</h2>
               <p className="mt-6 text-base leading-relaxed text-gray-muted lg:text-lg">
-                Una rete tecnica multidisciplinare con radici solide e visione contemporanea, che unisce ingegneri, architetti e geometri in un unico approccio integrato: competenza tecnica, rigore normativo e innovazione applicata.
+                Ingegneri &amp; Co integra professionisti e competenze complementari: ingegneri, architetti e geometri collaborano in funzione del progetto, coordinando aspetti edilizi, energetici, impiantistici e digitali quando il lavoro richiede più discipline.
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-white/50 italic">{siteConfig.institutionalPhrase}</p>
             </div>
-            <ul className="flex flex-col gap-5">
-              {percheAffidarsi.map((punto) => (
-                <li key={punto} className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-200 hover:border-white/20 hover:bg-white/10">
-                  <IconCheck /><span className="text-base font-medium text-white">{punto}</span>
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h3 className="mb-5 text-lg font-bold text-white">Perché affidarsi a noi</h3>
+              <ul className="flex flex-col gap-5">
+                {percheAffidarsi.map((punto) => (
+                  <li key={punto} className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-200 hover:border-white/20 hover:bg-white/10">
+                    <IconCheck /><span className="text-base font-medium text-white">{punto}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
