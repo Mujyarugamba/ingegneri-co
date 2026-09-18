@@ -25,6 +25,7 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPageLayout
       title="Privacy Policy"
+      updatedAt="19 settembre 2026"
       intro="Ingegneri & Co presta particolare attenzione alla tutela dei dati personali degli utenti che visitano il presente sito web."
     >
       <LegalSection title="Natura del sito">
