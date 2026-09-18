@@ -29,6 +29,7 @@ export default function BrandLogo({ variant = "header" }: BrandLogoProps) {
             ? "w-full max-w-[180px] sm:max-w-[220px] lg:max-w-[255px]"
             : "w-[min(340px,94vw)] max-w-full md:w-full md:max-w-[240px] lg:max-w-[280px]"
         }`}
+        sizes={isFooter ? "(max-width: 640px) 180px, 255px" : "(max-width: 767px) 94vw, 280px"}
         priority={isHeader}
       />
       {isHeader && (
