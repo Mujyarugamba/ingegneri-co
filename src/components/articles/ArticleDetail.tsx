@@ -82,6 +82,47 @@ export default function ArticleDetail({ article }: ArticleDetailProps) {
             ))}
           </div>
 
+          {article.relatedServices && article.relatedServices.length > 0 && (
+            <section className="mt-12 border-t border-gray-border pt-10">
+              <p className="section-label">Approfondisci con i servizi</p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-anthracite">Servizi collegati</h2>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {article.relatedServices.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="rounded-xl border border-gray-border bg-white p-4 font-semibold text-anthracite transition hover:border-tech-blue/40 hover:text-tech-blue hover:shadow-sm"
+                  >
+                    {service.label}
+                    <span className="mt-2 block text-sm font-semibold text-tech-blue">Approfondisci →</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {article.sources && article.sources.length > 0 && (
+            <section className="mt-10 rounded-2xl border border-gray-border bg-gray-light p-6">
+              <p className="section-label">Fonti</p>
+              <h2 className="mt-2 text-lg font-bold text-anthracite">Fonti istituzionali</h2>
+              <ul className="mt-4 space-y-3">
+                {article.sources.map((source) => (
+                  <li key={source.href}>
+                    <a
+                      href={source.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-tech-blue hover:text-tech-blue-light"
+                    >
+                      {source.label} ↗
+                      <span className="sr-only"> (si apre in una nuova scheda)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <div className="mt-12 rounded-2xl border border-gray-border bg-gray-light p-8 text-center">
             <p className="text-sm font-semibold text-anthracite">
               Hai bisogno di supporto tecnico su questo tema?
