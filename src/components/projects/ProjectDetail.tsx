@@ -93,6 +93,25 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 </div>
               )}
 
+              {project.relatedServices && project.relatedServices.length > 0 && (
+                <div className="mt-6 rounded-2xl border border-gray-border bg-white p-6 shadow-sm">
+                  <h2 className="text-xs font-semibold tracking-widest text-gray-muted uppercase">
+                    Servizi collegati
+                  </h2>
+                  <div className="mt-4 flex flex-col gap-3">
+                    {project.relatedServices.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="rounded-lg border border-gray-border px-4 py-3 text-sm font-semibold text-anthracite transition hover:border-tech-blue/40 hover:text-tech-blue"
+                      >
+                        {service.label} →
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {project.detail && (
                 <div className="mt-6">
                   {project.detail.external ? (
