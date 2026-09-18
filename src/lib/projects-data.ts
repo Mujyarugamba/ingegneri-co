@@ -1,5 +1,7 @@
 export type ProjectIcon = "platform" | "portal" | "innovation";
 
+export type ProjectLink = { label: string; href: string };
+
 export type Project = {
   id: string;
   title: string;
@@ -8,6 +10,7 @@ export type Project = {
   fullDescription?: string;
   skills: string[];
   features?: string[];
+  relatedServices?: ProjectLink[];
   cta: {
     label: string;
     href?: string;
@@ -55,6 +58,12 @@ export const projects: Project[] = [
       "Dashboard operative e notifiche in tempo reale",
       "Ottimizzazione SEO e visibilità online della piattaforma",
     ],
+    relatedServices: [
+      { label: "Portali e applicazioni web", href: "/servizi/portali-applicazioni-web" },
+      { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
+      { label: "Automazione dei processi e workflow", href: "/servizi/automazione-processi" },
+      { label: "Intelligenza artificiale per PMI", href: "/servizi/intelligenza-artificiale-pmi" },
+    ],
     cta: { label: "Scopri il progetto", href: "/progetti/inquotus" },
     detail: {
       visitLabel: "Visita il sito",
@@ -83,6 +92,10 @@ export const projects: Project[] = [
       "Organizzazione dei settori di attività e delle competenze",
       "Struttura responsive per consultazione desktop e mobile",
       "Impostazione SEO e gestione dei contenuti",
+    ],
+    relatedServices: [
+      { label: "Portali e applicazioni web", href: "/servizi/portali-applicazioni-web" },
+      { label: "Digitalizzazione delle PMI", href: "/servizi/servizi-digitali-pmi" },
     ],
     cta: { label: "Scopri il progetto", href: "/progetti/consorzio-isec" },
     icon: "portal",
