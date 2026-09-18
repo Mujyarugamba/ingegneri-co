@@ -10,6 +10,7 @@ export type ArticleSource = { label: string; href: string };
 export type Article = {
   slug: string;
   title: string;
+  seoTitle?: string;
   category: ArticleCategory;
   excerpt: string;
   description: string;
@@ -27,6 +28,7 @@ export const articles: Article[] = [
   {
     slug: "quando-serve-una-scia",
     title: "Quando serve una SCIA?",
+    seoTitle: "Quando serve una SCIA? | Ingegneri & Co",
     category: "Edilizia",
     excerpt:
       "Guida pratica per capire quando la Segnalazione Certificata di Inizio Attività è lo strumento corretto per il tuo intervento edilizio.",
@@ -51,6 +53,7 @@ export const articles: Article[] = [
   {
     slug: "differenze-cila-scia-permesso-costruire",
     title: "Differenze tra CILA, SCIA e Permesso di Costruire",
+    seoTitle: "CILA, SCIA e Permesso di Costruire | Ingegneri & Co",
     category: "Edilizia",
     excerpt:
       "Confronto tra i principali titoli abilitativi edilizi per orientarsi nella scelta dello strumento più adatto al proprio progetto.",
@@ -76,6 +79,7 @@ export const articles: Article[] = [
   {
     slug: "come-funziona-transizione-5-0",
     title: "Transizione 5.0 nel 2026: il nuovo iperammortamento",
+    seoTitle: "Transizione 5.0 e iperammortamento 2026 | Ingegneri & Co",
     category: "Industria",
     excerpt:
       "Il quadro 2026 della Transizione 5.0: chiusura del precedente credito d'imposta e nuova misura di iperammortamento per investimenti digitali ed energetici.",
@@ -104,6 +108,7 @@ export const articles: Article[] = [
   {
     slug: "efficientamento-energetico-edifici",
     title: "Efficientamento energetico degli edifici",
+    seoTitle: "Efficientamento energetico edifici | Ingegneri & Co",
     category: "Energia",
     excerpt:
       "Strategie e interventi per ridurre i consumi, migliorare il comfort abitativo e valorizzare il patrimonio immobiliare.",
@@ -126,6 +131,7 @@ export const articles: Article[] = [
   {
     slug: "automazione-smart-building",
     title: "Automazione e Smart Building",
+    seoTitle: "Smart Building e automazione | Ingegneri & Co",
     category: "Innovazione",
     excerpt:
       "Come l'automazione e i sistemi intelligenti possono migliorare efficienza, sicurezza e gestione degli edifici moderni.",
@@ -148,6 +154,7 @@ export const articles: Article[] = [
   {
     slug: "intelligenza-artificiale-applicata-ingegneria",
     title: "Intelligenza Artificiale applicata all'ingegneria",
+    seoTitle: "AI applicata all'ingegneria | Ingegneri & Co",
     category: "Innovazione",
     excerpt:
       "Opportunità, casi d'uso e limiti dell'IA nei processi tecnici, dalla progettazione al monitoraggio operativo.",
