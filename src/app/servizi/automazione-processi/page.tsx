@@ -5,11 +5,11 @@ import { siteConfig } from "@/lib/site-config";
 const canonicalUrl = `${siteConfig.url}/servizi/automazione-processi`;
 
 export const metadata: Metadata = {
-  title: "Automazione dei processi e workflow aziendali | Ingegneri & Co",
+  title: "Automazione processi e workflow | Ingegneri & Co",
   description: "Workflow, notifiche, approvazioni e automazioni operative per ridurre attività ripetitive e passaggi manuali nei processi aziendali.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
-    title: "Automazione dei processi e workflow aziendali | Ingegneri & Co",
+    title: "Automazione processi e workflow | Ingegneri & Co",
     description: "Workflow e automazioni operative integrate con gli strumenti aziendali.",
     url: canonicalUrl,
     type: "website",
