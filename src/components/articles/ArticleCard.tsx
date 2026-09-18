@@ -21,6 +21,8 @@ export default function ArticleCard({
   headingLevel = "h3",
 }: ArticleCardProps) {
   const Heading = headingLevel;
+  const displayDate = article.updatedAt ?? article.publishedAt;
+  const dateLabel = article.updatedAt ? "Aggiornato" : "Pubblicato";
 
   return (
     <Link
@@ -34,10 +36,10 @@ export default function ArticleCard({
           {article.category}
         </span>
         <time
-          dateTime={article.publishedAt}
+          dateTime={displayDate}
           className="text-xs text-gray-muted"
         >
-          {formatArticleDate(article.publishedAt)}
+          {dateLabel} {formatArticleDate(displayDate)}
         </time>
       </div>
 

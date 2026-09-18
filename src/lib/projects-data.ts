@@ -69,25 +69,23 @@ export const projects: Project[] = [
     title: "Consorzio ISEC",
     subtitle: "Portale istituzionale",
     description:
-      "Il Consorzio ISEC riunisce imprese, artigiani e professionisti nei settori delle costruzioni, dell'efficientamento energetico, del facility management e dei lavori civili. Grazie a una struttura flessibile, organizza squadre operative in funzione della complessità degli interventi, con l'obiettivo di favorire qualità, affidabilità e competitività nell'esecuzione degli appalti.",
+      "Progetto e sviluppo del portale istituzionale del Consorzio ISEC, pensato per presentare in modo chiaro la rete di imprese, artigiani e professionisti, i settori operativi e le competenze disponibili per appalti e interventi integrati.",
+    fullDescription:
+      "Il progetto ha riguardato la costruzione della presenza digitale istituzionale del Consorzio ISEC, con organizzazione dei contenuti, sviluppo del portale, impostazione SEO e supporto tecnico. L'obiettivo è rendere comprensibili struttura, ambiti di attività e capacità operative del consorzio, offrendo un punto di riferimento digitale coerente per imprese, professionisti e committenti.",
     skills: [
       "Sviluppo web",
       "Gestione contenuti",
       "SEO",
       "Assistenza tecnica",
     ],
+    features: [
+      "Presentazione istituzionale del consorzio e della rete professionale",
+      "Organizzazione dei settori di attività e delle competenze",
+      "Struttura responsive per consultazione desktop e mobile",
+      "Impostazione SEO e gestione dei contenuti",
+    ],
     cta: { label: "Scopri il progetto", href: "/progetti/consorzio-isec" },
     icon: "portal",
-  },
-  {
-    id: "nuovi-progetti",
-    title: "Nuovi progetti",
-    subtitle: "Ricerca e innovazione",
-    description:
-      "Ingegneri & Co sviluppa costantemente nuovi progetti nei settori dell'ingegneria, dell'energia, dell'automazione, dell'intelligenza artificiale e delle piattaforme digitali.",
-    skills: [],
-    cta: { label: "Prossimamente", comingSoon: true },
-    icon: "innovation",
   },
 ];
 

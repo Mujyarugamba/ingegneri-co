@@ -60,7 +60,7 @@ export const articles: Article[] = [
     description:
       "Transizione 5.0 nel 2026: come cambia la misura con il nuovo iperammortamento, quali investimenti riguarda e quali verifiche tecniche richiede.",
     publishedAt: "2026-02-01",
-    updatedAt: "2026-09-01",
+    updatedAt: "2026-09-19",
     content: [
       "Nel 2026 il quadro della Transizione 5.0 è cambiato. Il precedente Piano basato sul credito d'imposta ha chiuso i termini per nuove domande; per i nuovi investimenti il riferimento è il Nuovo Piano Transizione 5.0 - Iperammortamento, introdotto dalla legge di bilancio 2026 e reso operativo con i provvedimenti attuativi del 2026.",
       "La nuova misura sostiene investimenti in beni strumentali tecnologicamente avanzati e, nei casi previsti, investimenti destinati all'autoproduzione e all'autoconsumo di energia da fonti rinnovabili. L'agevolazione opera attraverso una maggiorazione del costo fiscalmente riconosciuto dei beni ai fini delle quote di ammortamento e dei canoni di locazione finanziaria, in sostituzione dei precedenti crediti d'imposta Transizione 4.0 e 5.0.",
@@ -130,7 +130,8 @@ export function getLatestArticles(limit = 3): Article[] {
   return [...articles]
     .sort(
       (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+        new Date(b.updatedAt ?? b.publishedAt).getTime() -
+        new Date(a.updatedAt ?? a.publishedAt).getTime(),
     )
     .slice(0, limit);
 }
