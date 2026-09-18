@@ -46,6 +46,7 @@ const percheScegliere = [
 const areeCompetenza = [
   {
     title: "Civile, Ambientale e Architettonica",
+    href: "/servizi/ingegneria-edilizia-energia",
     description:
       "Interventi edilizi, conformità urbanistica e catastale, direzione lavori, sicurezza cantieri e prestazioni energetiche, con gestione integrata di pratiche e documentazione tecnica.",
     items: [
@@ -64,6 +65,7 @@ const areeCompetenza = [
   },
   {
     title: "Industriale",
+    href: "/servizi/ingegneria-edilizia-energia",
     description:
       "Soluzioni per impianti, efficienza energetica e innovazione industriale, con competenze per audit, diagnosi e supporto ai percorsi di investimento.",
     items: [
@@ -72,11 +74,12 @@ const areeCompetenza = [
       "Diagnosi energetiche",
       "Efficientamento energetico",
       "Audit energetici",
-      "Transizione 5.0",
+      "Nuovo Piano Transizione 5.0",
     ],
   },
   {
     title: "Dell'Informazione",
+    href: "/servizi/digitalizzazione-automazione-ai",
     description:
       "Progettiamo e integriamo soluzioni tecnologiche per automazione, monitoraggio, digitalizzazione dei processi e sviluppo di piattaforme software, supportando imprese e professionisti nell'innovazione.",
     items: [
@@ -235,7 +238,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-8 pt-2"><Link href="/servizi" className="btn-outline-dark">Scopri di più</Link></div>
+                  <div className="mt-8 pt-2"><Link href={area.href} className="btn-outline-dark">Scopri i servizi dell&apos;area</Link></div>
                 </article>
               );
             })}
