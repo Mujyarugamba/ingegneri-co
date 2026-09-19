@@ -21,6 +21,7 @@ if (!urlList.length) {
 const response = await fetch("https://api.indexnow.org/indexnow", {
   method: "POST",
   headers: { "content-type": "application/json; charset=utf-8" },
+  signal: AbortSignal.timeout(15_000),
   body: JSON.stringify({
     host: "ingegnerieco.it",
     key,
