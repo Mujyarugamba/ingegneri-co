@@ -224,6 +224,17 @@ if (!fs.existsSync(sitemapPath)) {
 }
 
 
+const indexNowKey = "540b2bf2be696b69b838724601bf46d7";
+const indexNowKeyPath = path.join(root, `${indexNowKey}.txt`);
+if (!fs.existsSync(indexNowKeyPath)) {
+  failures.push({ file: `${indexNowKey}.txt`, missing: ["chiave IndexNow non trovata"] });
+} else {
+  const publishedKey = fs.readFileSync(indexNowKeyPath, "utf8").trim();
+  if (publishedKey !== indexNowKey) {
+    failures.push({ file: `${indexNowKey}.txt`, missing: ["contenuto chiave IndexNow non valido"] });
+  }
+}
+
 const feedPath = path.join(root, "feed.xml");
 if (!fs.existsSync(feedPath)) {
   failures.push({ file: "feed.xml", missing: ["file non trovato"] });
