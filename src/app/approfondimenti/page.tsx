@@ -20,6 +20,12 @@ export const metadata: Metadata = {
 };
 
 export default function ApprofondimentiPage() {
+  const orderedArticles = [...articles].sort(
+    (a, b) =>
+      new Date(b.updatedAt ?? b.publishedAt).getTime() -
+      new Date(a.updatedAt ?? a.publishedAt).getTime(),
+  );
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -33,7 +39,7 @@ export default function ApprofondimentiPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Approfondimenti Ingegneri & Co",
-    itemListElement: articles.map((article, index) => ({
+    itemListElement: orderedArticles.map((article, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: article.title,
@@ -59,6 +65,7 @@ export default function ApprofondimentiPage() {
         className="section-padding bg-gray-light"
         columns={3}
         showHeader={false}
+        items={orderedArticles}
       />
     </main>
   );
