@@ -59,8 +59,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     "@id": `${canonicalUrl}#project`,
     name: project.title,
     description: project.description,
+    image: `${siteConfig.url}/opengraph-image.png`,
+    keywords: project.skills,
     url: canonicalUrl,
     inLanguage: "it-IT",
+    isPartOf: {
+      "@id": `${siteConfig.url}/#website`,
+    },
     creator: {
       "@id": `${siteConfig.url}/#organization`,
     },
