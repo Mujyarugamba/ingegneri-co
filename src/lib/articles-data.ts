@@ -185,7 +185,88 @@ export const articles: Article[] = [
       "L'introduzione di soluzioni basate su IA richiede attenzione a qualità dei dati, affidabilità degli algoritmi, conformità normativa e integrazione con i sistemi esistenti. Un approccio graduale e verificabile può ridurre i rischi e aiutare a valutare concretamente benefici e limiti dell'investimento.",
       "Ingegneri & Co esplora e implementa soluzioni digitali che coniugano rigore tecnico, innovazione e utilità operativa, affiancando imprese e professionisti nell'adozione consapevole delle nuove tecnologie.",
     ],
+  },,
+  {
+    slug: "ape-quando-serve-validita",
+    title: "APE: quando serve e quanto dura",
+    seoTitle: "APE: quando serve e quanto dura | Ingegneri & Co",
+    category: "Energia",
+    excerpt:
+      "Quando è richiesto l'Attestato di Prestazione Energetica, quanto può durare e perché non va confuso con diagnosi energetica e relazione Legge 10.",
+    description:
+      "APE: quando è richiesto, validità e differenze rispetto a diagnosi energetica e Legge 10, con riferimento alla procedura CENED in Lombardia.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "APE e certificazione energetica", href: "/servizi/ape-certificazione-energetica" },
+      { label: "Relazione Legge 10", href: "/servizi/legge-10" },
+      { label: "Diagnosi energetiche", href: "/servizi/diagnosi-energetiche" },
+    ],
+    sources: [
+      { label: "Normattiva — D.Lgs. 192/2005, art. 6", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2005-08-19%3B192~art6=" },
+      { label: "Regione Lombardia — CENED, Certificazione Energetica degli Edifici", href: "https://www.regione.lombardia.it/ambiente-e-territorio/energia/cened-certificazione-energetica-degli-edifici" },
+      { label: "Gazzetta Ufficiale — Linee guida nazionali APE, DM 26 giugno 2015", href: "https://www.gazzettaufficiale.it/eli/id/2015/07/15/15A05200/sg" },
+    ],
+    content: [
+      "L'APE, Attestato di Prestazione Energetica, descrive la prestazione energetica di un edificio o di una unità immobiliare secondo la procedura applicabile. Il D.Lgs. 192/2005 prevede il rilascio dell'attestato, tra gli altri casi, per edifici o unità immobiliari costruiti, venduti o locati a un nuovo locatario, fatti salvi i casi e le esclusioni previsti dalla disciplina vigente.",
+      "Nelle compravendite e nelle nuove locazioni il proprietario deve rendere disponibile l'APE al potenziale acquirente o al nuovo locatario secondo quanto previsto dalla normativa. Se è già disponibile un attestato in corso di validità e conforme alle disposizioni applicabili, non è necessario produrne automaticamente uno nuovo per il solo fatto che cambia il soggetto interessato.",
+      "La validità temporale massima dell'APE è di dieci anni dal rilascio, ma è subordinata al rispetto delle prescrizioni relative ai controlli di efficienza energetica dei sistemi tecnici e l'attestato deve essere aggiornato quando un intervento di ristrutturazione o riqualificazione modifica la classe energetica dell'edificio o dell'unità immobiliare.",
+      "APE, relazione energetica di progetto e diagnosi energetica hanno finalità diverse. L'APE certifica la prestazione e la classe energetica; la relazione tecnica energetica accompagna il progetto nei casi previsti; la diagnosi analizza in maggiore dettaglio consumi, usi significativi e possibili interventi. In Lombardia il sistema regionale di riferimento per la certificazione energetica è CENED.",
+    ],
   },
+  {
+    slug: "relazione-legge-10-quando-serve",
+    title: "Relazione Legge 10: quando serve",
+    seoTitle: "Relazione Legge 10: quando serve | Ingegneri & Co",
+    category: "Energia",
+    excerpt:
+      "A cosa serve la relazione tecnica energetica, quali interventi può riguardare e perché deve essere coordinata con involucro e impianti.",
+    description:
+      "Relazione Legge 10: funzione, casi di applicazione e rapporto con progetto energetico, impianti e APE.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Relazione Legge 10", href: "/servizi/legge-10" },
+      { label: "Impianti termici e climatizzazione", href: "/servizi/impianti-termici-climatizzazione" },
+      { label: "APE e certificazione energetica", href: "/servizi/ape-certificazione-energetica" },
+      { label: "Efficientamento energetico", href: "/servizi/efficientamento-energetico" },
+    ],
+    sources: [
+      { label: "Gazzetta Ufficiale — DM 26 giugno 2015, schemi della relazione tecnica", href: "https://www.gazzettaufficiale.it/eli/id/2015/07/15/15A05199/sg" },
+      { label: "Gazzetta Ufficiale — DM 26 giugno 2015, requisiti minimi degli edifici", href: "https://www.gazzettaufficiale.it/eli/id/2015/07/15/15A05198/sg" },
+    ],
+    content: [
+      "La cosiddetta Relazione Legge 10 è la relazione tecnica energetica di progetto utilizzata per documentare il rispetto delle prescrizioni e dei requisiti minimi di prestazione energetica nei casi previsti dalla normativa. Il decreto 26 giugno 2015 definisce schemi e modalità di riferimento differenziati in funzione della tipologia di intervento.",
+      "La relazione può riguardare nuove costruzioni, ristrutturazioni importanti e interventi di riqualificazione energetica, secondo la classificazione e le condizioni stabilite dalla disciplina applicabile. Non ogni lavoro edilizio richiede automaticamente lo stesso livello di verifica: il corretto inquadramento dipende dalle opere previste, dall'edificio, dagli impianti interessati e dalle disposizioni regionali pertinenti.",
+      "La qualità della relazione dipende dal coordinamento dei dati di progetto. Geometrie, stratigrafie dell'involucro, serramenti, sistemi di generazione, distribuzione, emissione, regolazione e fonti rinnovabili devono essere coerenti con gli elaborati edilizi e impiantistici. Una modifica significativa del progetto può quindi richiedere di aggiornare anche le verifiche energetiche.",
+      "La relazione tecnica non coincide con l'APE. La prima documenta le verifiche energetiche del progetto nei casi previsti; l'APE attesta invece la prestazione energetica dell'edificio o dell'unità immobiliare secondo la procedura di certificazione. Nei lavori di riqualificazione è utile coordinare fin dall'inizio pratica edilizia, progetto impiantistico e adempimenti energetici.",
+    ],
+  },
+  {
+    slug: "conformita-urbanistica-catastale-differenze",
+    title: "Conformità urbanistica e catastale: le differenze",
+    seoTitle: "Conformità urbanistica e catastale: differenze | Ingegneri & Co",
+    category: "Edilizia",
+    excerpt:
+      "Perché conformità urbanistica e catastale sono verifiche diverse e quali documenti vanno confrontati prima di lavori o compravendite.",
+    description:
+      "Conformità urbanistica e catastale: differenze tra stato legittimo, titoli edilizi, planimetria catastale e stato dei luoghi.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
+      { label: "Due diligence immobiliare", href: "/servizi/due-diligence-immobiliare" },
+      { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
+    ],
+    sources: [
+      { label: "Normattiva — DPR 380/2001, art. 9-bis sullo stato legittimo", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3A2001%3B380~art9bis%21vig=" },
+      { label: "Normattiva — DL 78/2010, art. 19 sulla conformità catastale negli atti", href: "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.articolo.numero=19&atto.articolo.tipoArticolo=0&atto.codiceRedazionale=010G0101&atto.dataPubblicazioneGazzetta=2010-05-31" },
+      { label: "Agenzia delle Entrate — Guida all'acquisto della casa", href: "https://www1.agenziaentrate.gov.it/web_app_entrate/guida_acquisto_casa.html" },
+    ],
+    content: [
+      "Conformità urbanistica e conformità catastale riguardano piani diversi e non dovrebbero essere confuse. La verifica urbanistico-edilizia ricostruisce il quadro dei titoli e degli atti che concorrono a definire lo stato legittimo dell'immobile o dell'unità immobiliare secondo la disciplina edilizia. La verifica catastale riguarda invece i dati e la rappresentazione presenti negli archivi catastali.",
+      "L'articolo 9-bis del DPR 380/2001 disciplina la documentazione amministrativa e lo stato legittimo degli immobili. La ricostruzione va svolta sul caso concreto, considerando i titoli rilevanti, gli eventuali atti successivi e la documentazione che la normativa ammette nei casi previsti.",
+      "Sul piano catastale, per gli atti di trasferimento di unità immobiliari urbane la normativa richiede il riferimento alle planimetrie depositate e la dichiarazione di conformità allo stato di fatto dei dati catastali e delle planimetrie, dichiarazione che può essere sostituita nei casi previsti da un'attestazione di un tecnico abilitato. Questa verifica non sostituisce la ricostruzione urbanistico-edilizia.",
+      "Prima di una compravendita, di una ristrutturazione o della presentazione di una nuova pratica è quindi utile confrontare stato dei luoghi, documentazione comunale e dati catastali. Se emergono scostamenti, occorre identificarne natura e origine prima di valutare eventuali aggiornamenti catastali, pratiche edilizie o percorsi di regolarizzazione ammessi dalla disciplina vigente.",
+    ],
+  }
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
