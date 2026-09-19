@@ -15,7 +15,7 @@ const services = [
   { title: "Digitalizzazione delle PMI", description: "Consulenza e punto di ingresso per analizzare processi, strumenti e dati e definire un percorso di digitalizzazione sostenibile.", href: "/servizi/servizi-digitali-pmi" },
   { title: "Automazione dei processi e workflow", description: "Workflow, notifiche, approvazioni e automazioni per ridurre attività ripetitive e passaggi manuali.", href: "/servizi/automazione-processi" },
   { title: "Automazione industriale e sistemi di controllo", description: "PLC, supervisione, acquisizione dati e integrazione hardware-software per impianti e processi tecnici.", href: "/servizi/automazione-industriale" },
-  { title: "Portali e applicazioni web", description: "Portali professionali, aree riservate e strumenti operativi collegati ai processi e ai dati dell'impresa.", href: "/servizi/portali-applicazioni-web" },
+  { title: "Portali e applicazioni web", description: "Portali professionali, aree riservate e strumenti operativi collegati ai processi e ai dati dell&apos;impresa.", href: "/servizi/portali-applicazioni-web" },
   { title: "Integrazione software, API e dati", description: "Architettura tecnica per collegare applicazioni, database e sistemi e rendere le informazioni riutilizzabili.", href: "/servizi/integrazione-software-dati" },
   { title: "Intelligenza artificiale per PMI", description: "Applicazioni dell'AI a problemi e processi aziendali concreti, mantenendo il controllo umano dove necessario.", href: "/servizi/intelligenza-artificiale-pmi" },
   { title: "Analisi documentale e assistenti AI", description: "Classificazione, estrazione dati, ricerca interna e assistenti dedicati a procedure e conoscenza aziendale.", href: "/servizi/analisi-documentale-assistenti-ai" },
