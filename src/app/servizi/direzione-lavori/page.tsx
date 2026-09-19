@@ -42,6 +42,10 @@ export default function Page() {
         { title: "Varianti e chiusura", text: "Gestiamo gli aspetti tecnici delle variazioni e supportiamo la documentazione conclusiva dell'intervento." },
       ]}
       relatedServices={[{label:"Pratiche edilizie",href:"/servizi/pratiche-edilizie"},{label:"Sicurezza cantieri",href:"/servizi/sicurezza-cantieri"},{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"}]}
+      faqs={[
+        { question: "La direzione lavori coincide con l'esecuzione delle opere?", answer: "No. La direzione lavori svolge le attività tecniche previste dall'incarico e verifica la coerenza dell'esecuzione con il progetto; l'esecuzione materiale delle opere resta in capo alle imprese e ai fornitori incaricati." },
+        { question: "La direzione lavori può comprendere anche aspetti impiantistici?", answer: "Sì, quando il perimetro dell'incarico lo prevede. Il coordinamento può riguardare opere edilizie, impianti elettrici, sistemi termici e altre discipline tecniche coinvolte nell'intervento." },
+      ]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
     />
