@@ -54,11 +54,26 @@ for (const file of files) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) missing.push(`H1 count=${h1Count}`);
 
-  const ogImageCount = (html.match(/<meta[^>]+property=["']og:image["'][^>]*>/gi) || []).length;
-  if (ogImageCount !== 1) missing.push(`og:image count=${ogImageCount}`);
+  const socialImageUrls = (tags) =>
+    tags
+      .map((tag) => tag.match(/content=["']([^"']+)["']/i)?.[1])
+      .filter(Boolean);
 
-  const twitterImageCount = (html.match(/<meta[^>]+name=["']twitter:image["'][^>]*>/gi) || []).length;
-  if (twitterImageCount !== 1) missing.push(`twitter:image count=${twitterImageCount}`);
+  const ogImageTags = html.match(/<meta[^>]+property=["']og:image["'][^>]*>/gi) || [];
+  const ogImageUrls = socialImageUrls(ogImageTags);
+  if (!ogImageUrls.length) {
+    missing.push("og:image mancante");
+  } else if (new Set(ogImageUrls).size > 1) {
+    missing.push(`og:image in conflitto: ${[...new Set(ogImageUrls)].join(", ")}`);
+  }
+
+  const twitterImageTags = html.match(/<meta[^>]+name=["']twitter:image["'][^>]*>/gi) || [];
+  const twitterImageUrls = socialImageUrls(twitterImageTags);
+  if (!twitterImageUrls.length) {
+    missing.push("twitter:image mancante");
+  } else if (new Set(twitterImageUrls).size > 1) {
+    missing.push(`twitter:image in conflitto: ${[...new Set(twitterImageUrls)].join(", ")}`);
+  }
 
   if (/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) {
     missing.push("meta robots noindex inatteso");
