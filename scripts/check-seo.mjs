@@ -54,6 +54,12 @@ for (const file of files) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) missing.push(`H1 count=${h1Count}`);
 
+  const ogImageCount = (html.match(/<meta[^>]+property=["']og:image["'][^>]*>/gi) || []).length;
+  if (ogImageCount !== 1) missing.push(`og:image count=${ogImageCount}`);
+
+  const twitterImageCount = (html.match(/<meta[^>]+name=["']twitter:image["'][^>]*>/gi) || []).length;
+  if (twitterImageCount !== 1) missing.push(`twitter:image count=${twitterImageCount}`);
+
   if (/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) {
     missing.push("meta robots noindex inatteso");
   }
