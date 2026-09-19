@@ -10,6 +10,14 @@ export const siteConfig = {
   email: "info@ingegnerieco.it",
   whatsApp: "339 434 0891",
   whatsAppHref: "https://wa.me/393394340891",
+  address: {
+    streetAddress: "Viale Monte Nero 68",
+    postalCode: "20135",
+    addressLocality: "Milano",
+    addressRegion: "MI",
+    addressCountry: "IT",
+    formatted: "Viale Monte Nero 68, 20135 Milano",
+  },
   serviceAreas: ["Milano", "Pavia", "Verbania", "Lombardia", "Piemonte"],
   copyrightYear: 2026,
   // Aggiornare con l'URL definitivo del profilo LinkedIn
