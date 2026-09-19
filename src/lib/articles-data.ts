@@ -114,11 +114,16 @@ export const articles: Article[] = [
     description:
       "Efficientamento energetico degli edifici: diagnosi, interventi, incentivi e soluzioni tecniche per ridurre consumi e migliorare le prestazioni.",
     publishedAt: "2026-02-10",
+    updatedAt: "2026-09-19",
     relatedServices: [
       { label: "Diagnosi energetiche", href: "/servizi/diagnosi-energetiche" },
       { label: "Efficientamento energetico", href: "/servizi/efficientamento-energetico" },
       { label: "Impianti termici e climatizzazione", href: "/servizi/impianti-termici-climatizzazione" },
       { label: "Fotovoltaico e sistemi di accumulo", href: "/servizi/fotovoltaico" },
+    ],
+    sources: [
+      { label: "ENEA — Linee guida per la diagnosi energetica degli edifici", href: "https://www.efficienzaenergetica.enea.it/servizi-per/pubblica-amministrazione/riqualificazione-energetica-degli-edifici-della-pubblica-amministrazione/edilizia-pubblica-e-scolastica/linee-guida-per-la-diagnosi-energetica-degli-edifici-pubblici.html" },
+      { label: "Commissione europea — Prestazione energetica degli edifici", href: "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings_en" },
     ],
     content: [
       "L'efficientamento energetico è uno degli ambiti prioritari per la riqualificazione del patrimonio edilizio esistente. Interventi mirati su involucro, impianti e sistemi di controllo possono ridurre i consumi, migliorare il comfort e contribuire alla valorizzazione dell'immobile, in funzione delle caratteristiche del caso concreto.",
@@ -137,11 +142,15 @@ export const articles: Article[] = [
     description:
       "Automazione e Smart Building: tecnologie, benefici e applicazioni per edifici efficienti, connessi e facili da gestire.",
     publishedAt: "2026-02-18",
+    updatedAt: "2026-09-19",
     relatedServices: [
       { label: "Smart Building, Building Automation e IoT", href: "/servizi/smart-building-iot" },
       { label: "Progettazione e verifica impianti elettrici", href: "/servizi/impianti-elettrici" },
       { label: "Automazione industriale e sistemi di controllo", href: "/servizi/automazione-industriale" },
       { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
+    ],
+    sources: [
+      { label: "Commissione europea — Smart Readiness Indicator", href: "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/smart-readiness-indicator_en" },
     ],
     content: [
       "Gli edifici intelligenti combinano automazione, connettività e monitoraggio in tempo reale per ottimizzare consumi, comfort e manutenzione. Lo Smart Building non è solo tecnologia: è un modello integrato di gestione degli spazi e degli impianti.",
@@ -160,11 +169,15 @@ export const articles: Article[] = [
     description:
       "Intelligenza Artificiale applicata all'ingegneria: casi d'uso concreti, vantaggi e criteri per integrarla nei processi tecnici e digitali.",
     publishedAt: "2026-02-25",
+    updatedAt: "2026-09-19",
     relatedServices: [
       { label: "Intelligenza artificiale per PMI", href: "/servizi/intelligenza-artificiale-pmi" },
       { label: "Analisi documentale e assistenti AI", href: "/servizi/analisi-documentale-assistenti-ai" },
       { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
       { label: "Automazione dei processi e workflow", href: "/servizi/automazione-processi" },
+    ],
+    sources: [
+      { label: "Commissione europea — Approccio europeo all'intelligenza artificiale e AI Act", href: "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" },
     ],
     content: [
       "L'intelligenza artificiale sta entrando progressivamente nei processi dell'ingegneria, offrendo strumenti per analisi predittiva, automazione documentale, supporto decisionale e ottimizzazione delle risorse. Non sostituisce la competenza professionale, ma può ampliarne gli strumenti quando utilizzata con criterio.",
