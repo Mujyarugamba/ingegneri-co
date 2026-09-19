@@ -10,6 +10,7 @@ export const siteConfig = {
   email: "info@ingegnerieco.it",
   whatsApp: "339 434 0891",
   whatsAppHref: "https://wa.me/393394340891",
+  serviceAreas: ["Milano", "Pavia", "Verbania", "Lombardia", "Piemonte"],
   copyrightYear: 2026,
   // Aggiornare con l'URL definitivo del profilo LinkedIn
   linkedinUrl: "#",
