@@ -54,10 +54,22 @@ for (const file of files) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) missing.push(`H1 count=${h1Count}`);
 
+  const normalizeSocialImageUrl = (value) => {
+    try {
+      const url = new URL(value);
+      url.search = "";
+      url.hash = "";
+      return url.toString();
+    } catch {
+      return value.split(/[?#]/)[0];
+    }
+  };
+
   const socialImageUrls = (tags) =>
     tags
       .map((tag) => tag.match(/content=["']([^"']+)["']/i)?.[1])
-      .filter(Boolean);
+      .filter(Boolean)
+      .map(normalizeSocialImageUrl);
 
   const ogImageTags = html.match(/<meta[^>]+property=["']og:image["'][^>]*>/gi) || [];
   const ogImageUrls = socialImageUrls(ogImageTags);
