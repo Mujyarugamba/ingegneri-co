@@ -38,6 +38,14 @@ const failures = [];
 const titles = new Map();
 const canonicals = new Map();
 
+function routeFromHtml(file) {
+  const rel = path.relative(root, file).replaceAll("\\", "/");
+  if (rel === "index.html") return "/";
+  return `/${rel.replace(/\.html$/, "")}`;
+}
+
+const routes = new Set(files.map(routeFromHtml));
+
 for (const file of files) {
   const html = fs.readFileSync(file, "utf8");
   const rel = path.relative(root, file).replaceAll("\\", "/");
@@ -59,6 +67,28 @@ for (const file of files) {
     const previous = canonicals.get(canonical);
     if (previous) failures.push({ file: rel, missing: [`canonical duplicato con ${previous}`] });
     else canonicals.set(canonical, rel);
+  }
+
+  const hrefs = [...html.matchAll(/href=["']([^"']+)["']/gi)].map((match) => match[1]);
+  const brokenLinks = new Set();
+
+  for (const href of hrefs) {
+    if (!href.startsWith("/") || href.startsWith("//") || href.startsWith("/_next/")) continue;
+
+    const target = href.split("#")[0].split("?")[0] || "/";
+    const normalized = target !== "/" ? target.replace(/\/$/, "") : "/";
+
+    if (/\.[a-z0-9]+$/i.test(normalized)) {
+      const assetPath = path.join(root, normalized.slice(1));
+      if (!fs.existsSync(assetPath)) brokenLinks.add(href);
+      continue;
+    }
+
+    if (!routes.has(normalized)) brokenLinks.add(href);
+  }
+
+  if (brokenLinks.size) {
+    missing.push(`link interni non risolti: ${[...brokenLinks].join(", ")}`);
   }
 
   if (missing.length) {
