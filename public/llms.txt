@@ -1,0 +1,23 @@
+# Ingegneri & Co
+
+> Rete tecnica multidisciplinare di ingegneri, architetti e geometri per edilizia, energia, impianti, automazione, servizi digitali e intelligenza artificiale per PMI.
+
+Ingegneri & Co opera principalmente in Lombardia e Piemonte. Il sito presenta servizi tecnici per edifici e impianti, efficienza energetica, progettazione e verifiche impiantistiche, automazione industriale e Smart Building, digitalizzazione dei processi, integrazione software e applicazioni AI.
+
+## Servizi principali
+
+- [Ingegneria, Edilizia & Energia](https://ingegnerieco.it/servizi/ingegneria-edilizia-energia): pratiche edilizie, due diligence, conformità urbanistica e catastale, APE, Legge 10, diagnosi ed efficientamento energetico, fotovoltaico, impianti elettrici e termici, direzione lavori e sicurezza cantieri.
+- [Digitalizzazione, Automazione & AI](https://ingegnerieco.it/servizi/digitalizzazione-automazione-ai): digitalizzazione PMI, workflow, automazione industriale, applicazioni web, integrazione software e dati, AI e analisi documentale.
+- [Smart Building, Building Automation e IoT](https://ingegnerieco.it/servizi/smart-building-iot): supervisione, sensori, monitoraggio energetico e integrazione dei dati degli edifici.
+- [Nuovo Piano Transizione 5.0](https://ingegnerieco.it/servizi/transizione-5-0): supporto tecnico agli investimenti tecnologici e agli interventi energetici previsti dalla disciplina vigente.
+
+## Approfondimenti e progetti
+
+- [Approfondimenti](https://ingegnerieco.it/approfondimenti): contenuti tecnici su edilizia, energia, automazione e intelligenza artificiale.
+- [Progetti](https://ingegnerieco.it/progetti): esempi di attività e casi seguiti dalla rete professionale.
+- [Chi siamo](https://ingegnerieco.it/chi-siamo): organizzazione e approccio multidisciplinare.
+
+## Contatti
+
+- [Contatti](https://ingegnerieco.it/contatti): riferimenti per richieste tecniche e consulenze.
+- Email: info@ingegnerieco.it
