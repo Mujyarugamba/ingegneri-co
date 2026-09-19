@@ -185,7 +185,7 @@ if (!fs.existsSync(robotsPath)) {
   if (!/User-agent:\s*\*/i.test(robots)) {
     failures.push({ file: "robots.txt", missing: ["User-agent: *"] });
   }
-  if (!/Sitemap:\s*https:\/\/ingegnerieco\.it\/sitemap\.xml/i.test(robots)) {
+  if (!robots.includes(`Sitemap: ${canonicalOrigin}/sitemap.xml`)) {
     failures.push({ file: "robots.txt", missing: ["riferimento alla sitemap canonica"] });
   }
 }
@@ -257,7 +257,7 @@ if (!fs.existsSync(feedPath)) {
   const feedChecks = [
     ["RSS 2.0", /<rss\b[^>]*version=["']2\.0["']/i.test(feed)],
     ["titolo feed", /<title>Approfondimenti Ingegneri &amp; Co<\/title>/i.test(feed)],
-    ["link canonico", /<link>https:\/\/ingegnerieco\.it\/approfondimenti<\/link>/i.test(feed)],
+    ["link canonico", feed.includes(`<link>${canonicalOrigin}/approfondimenti</link>)],
     ["almeno un item", /<item>[\s\S]*?<\/item>/i.test(feed)],
   ];
   const missingFeed = feedChecks.filter(([, ok]) => !ok).map(([name]) => name);
@@ -274,10 +274,10 @@ if (!fs.existsSync(llmsPath)) {
   const llmsChecks = [
     ["H1 Ingegneri & Co", /^# Ingegneri & Co/m.test(llms)],
     ["sezione servizi", /^## Servizi principali/m.test(llms)],
-    ["link servizi", /https:\/\/ingegnerieco\.it\/servizi\//.test(llms)],
-    ["link approfondimenti", /https:\/\/ingegnerieco\.it\/approfondimenti/.test(llms)],
-    ["link progetti", /https:\/\/ingegnerieco\.it\/progetti/.test(llms)],
-    ["link contatti", /https:\/\/ingegnerieco\.it\/contatti/.test(llms)],
+    ["link servizi", llms.includes(`${canonicalOrigin}/servizi/`)],
+    ["link approfondimenti", llms.includes(`${canonicalOrigin}/approfondimenti`)],
+    ["link progetti", llms.includes(`${canonicalOrigin}/progetti`)],
+    ["link contatti", llms.includes(`${canonicalOrigin}/contatti`)],
   ];
 
   const missingLlms = llmsChecks.filter(([, ok]) => !ok).map(([name]) => name);
@@ -285,9 +285,10 @@ if (!fs.existsSync(llmsPath)) {
     failures.push({ file: "llms.txt", missing: missingLlms });
   }
 
-  const llmsUrls = [...llms.matchAll(/https:\/\/ingegnerieco\.it([^\s)]+)/g)].map(
-    (match) => match[1] || "/"
-  );
+  const llmsUrls = [...llms.matchAll(/https:\/\/[^\s)]+/g)]
+    .map((match) => match[0])
+    .filter((url) => url.startsWith(canonicalOrigin))
+    .map((url) => new URL(url).pathname || "/");
 
   for (const target of llmsUrls) {
     const normalized = target !== "/" ? target.replace(/\/$/, "") : "/";
