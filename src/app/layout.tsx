@@ -93,6 +93,7 @@ export default function RootLayout({
     <html lang="it">
       <head>
         <meta property="og:image" content={`${siteConfig.url}/opengraph-image.png`} />
+        <link rel="describedby" href="/llms.txt" />
       </head>
       <body>
         <a
