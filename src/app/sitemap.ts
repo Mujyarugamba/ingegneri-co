@@ -7,6 +7,9 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicesLastModified = "2026-09-19";
+  const articlesLastModified = [...articles]
+    .map((article) => article.updatedAt ?? article.publishedAt)
+    .sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0];
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteConfig.url}/`, lastModified: servicesLastModified, changeFrequency: "weekly", priority: 1 },
@@ -36,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/servizi/analisi-documentale-assistenti-ai`, lastModified: servicesLastModified, changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteConfig.url}/servizi/smart-building-iot`, lastModified: servicesLastModified, changeFrequency: "monthly", priority: 0.85 },
     { url: `${siteConfig.url}/progetti`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${siteConfig.url}/approfondimenti`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${siteConfig.url}/approfondimenti`, lastModified: articlesLastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${siteConfig.url}/contatti`, changeFrequency: "yearly", priority: 0.6 },
     { url: `${siteConfig.url}/privacy-policy`, changeFrequency: "yearly", priority: 0.2 },
     { url: `${siteConfig.url}/cookie-policy`, changeFrequency: "yearly", priority: 0.2 },
