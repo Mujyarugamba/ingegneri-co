@@ -8,6 +8,7 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteConfig.url}/`, changeFrequency: "weekly", priority: 1 },
+    { url: `${siteConfig.url}/chi-siamo`, changeFrequency: "yearly", priority: 0.8 },
     { url: `${siteConfig.url}/servizi`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${siteConfig.url}/servizi/ingegneria-edilizia-energia`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteConfig.url}/servizi/pratiche-edilizie`, changeFrequency: "monthly", priority: 0.85 },
