@@ -26,6 +26,10 @@ export default function Page() {
         { title: "Fase esecutiva", text: "Svolgiamo sopralluoghi, verifiche e attività di coordinamento previste durante l'esecuzione." },
       ]}
       relatedServices={[{label:"Direzione lavori",href:"/servizi/direzione-lavori"},{label:"Pratiche edilizie",href:"/servizi/pratiche-edilizie"}]}
+      faqs={[
+        { question: "CSP e CSE sono necessari in tutti i cantieri?", answer: "No. La necessità degli incarichi dipende dalle caratteristiche del cantiere, dall'organizzazione delle imprese e dalle condizioni previste dalla normativa applicabile. Il caso va quindi inquadrato prima dell'avvio delle attività." },
+        { question: "Coordinamento della sicurezza e direzione lavori sono la stessa funzione?", answer: "No. Sono attività distinte, con finalità e responsabilità differenti. Quando entrambe sono previste, è però importante che progetto, organizzazione del cantiere e attività esecutive siano tecnicamente coordinati." },
+      ]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
     />
