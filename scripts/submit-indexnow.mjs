@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const siteUrl = "https://ingegnerieco.it";
+const siteUrl = "https://www.ingegnerieco.it";
 const key = "540b2bf2be696b69b838724601bf46d7";
 const sitemapPath = path.resolve("out", "sitemap.xml");
 
@@ -23,7 +23,7 @@ const response = await fetch("https://api.indexnow.org/indexnow", {
   headers: { "content-type": "application/json; charset=utf-8" },
   signal: AbortSignal.timeout(15_000),
   body: JSON.stringify({
-    host: "ingegnerieco.it",
+    host: new URL(siteUrl).hostname,
     key,
     keyLocation: `${siteUrl}/${key}.txt`,
     urlList,
