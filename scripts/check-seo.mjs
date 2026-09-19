@@ -283,27 +283,7 @@ if (!fs.existsSync(llmsPath)) {
   if (missingLlms.length) {
     failures.push({ file: "llms.txt", missing: missingLlms });
   }
-}
 
-
-const feedPath = path.join(root, "feed.xml");
-if (!fs.existsSync(feedPath)) {
-  failures.push({ file: "feed.xml", missing: ["file non trovato"] });
-} else {
-  const feed = fs.readFileSync(feedPath, "utf8");
-  if (!/<rss\b[^>]*version=["']2\.0["']/i.test(feed)) {
-    failures.push({ file: "feed.xml", missing: ["RSS 2.0 non valido o non riconosciuto"] });
-  }
-  if (!/<item>[\s\S]*?<title>[\s\S]*?<\/title>[\s\S]*?<link>https:\/\/ingegnerieco\.it\//i.test(feed)) {
-    failures.push({ file: "feed.xml", missing: ["nessun articolo con URL canonico"] });
-  }
-}
-
-const llmsPath = path.join(root, "llms.txt");
-if (!fs.existsSync(llmsPath)) {
-  failures.push({ file: "llms.txt", missing: ["file non trovato"] });
-} else {
-  const llms = fs.readFileSync(llmsPath, "utf8");
   const llmsUrls = [...llms.matchAll(/https:\/\/ingegnerieco\.it([^\s)]+)/g)].map(
     (match) => match[1] || "/"
   );
@@ -315,6 +295,8 @@ if (!fs.existsSync(llmsPath)) {
     }
   }
 }
+
+
 
 const assetBudgets = [
   { file: "imagine.webp", maxBytes: 300 * 1024 },
