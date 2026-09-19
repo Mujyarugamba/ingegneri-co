@@ -42,6 +42,10 @@ export default function Page() {
         { title: "Coordinamento", text: "Coordiniamo l'impianto elettrico con fotovoltaico, termico, automazione e altri sistemi tecnici coinvolti." },
       ]}
       relatedServices={[{label:"Fotovoltaico e sistemi di accumulo",href:"/servizi/fotovoltaico"},{label:"Smart Building, IoT e monitoraggio",href:"/servizi/smart-building-iot"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"}]}
+      faqs={[
+        { question: "Intervenite anche su impianti elettrici esistenti?", answer: "Sì. L'attività può riguardare verifica tecnica, adeguamento, rifacimento o integrazione di impianti esistenti, in funzione dello stato dell'impianto e degli obiettivi dell'intervento." },
+        { question: "La progettazione elettrica può essere coordinata con fotovoltaico, climatizzazione e automazione?", answer: "Sì. Il coordinamento tra distribuzione elettrica, fotovoltaico, sistemi termici e automazione consente di gestire in modo più coerente potenze, protezioni, alimentazioni e integrazioni tra i diversi sistemi." },
+      ]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
     />
