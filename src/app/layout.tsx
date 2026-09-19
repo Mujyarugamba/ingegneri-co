@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     images: [
       {
-        url: "/logo.png",
+        url: "/opengraph-image.png",
         alt: `${siteConfig.name} — ${siteConfig.tagline}`,
       },
     ],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} | Ingegneria, energia e innovazione`,
     description: siteConfig.description,
-    images: ["/logo.png"],
+    images: ["/twitter-image.png"],
   },
   robots: {
     index: true,
@@ -92,7 +92,6 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
-        <meta property="og:image" content={`${siteConfig.url}/opengraph-image.png`} />
         <link rel="describedby" href="/llms.txt" />
       </head>
       <body>
