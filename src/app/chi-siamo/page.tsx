@@ -103,7 +103,7 @@ export default function ChiSiamoPage() {
               Il valore di “&amp; Co.” sta nella possibilità di mettere in relazione competenze differenti quando il progetto lo richiede. Un intervento edilizio può coinvolgere aspetti energetici e impiantistici; un progetto industriale può richiedere automazione, dati e integrazione software; una trasformazione digitale può avere ricadute operative sugli impianti e sui processi.
             </p>
             <p className="mt-4 leading-relaxed text-anthracite-soft">
-              Per questo organizziamo il lavoro per competenze e responsabilità, mantenendo un coordinamento tecnico coerente con il perimetro dell'incarico.
+              Per questo organizziamo il lavoro per competenze e responsabilità, mantenendo un coordinamento tecnico coerente con il perimetro dell&apos;incarico.
             </p>
           </div>
 
