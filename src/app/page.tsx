@@ -267,6 +267,9 @@ export default function Home() {
               <p className="mt-6 text-base leading-relaxed text-gray-muted lg:text-lg">
                 Ingegneri &amp; Co integra professionisti e competenze complementari: ingegneri, architetti e geometri collaborano in funzione del progetto, coordinando aspetti edilizi, energetici, impiantistici e digitali quando il lavoro richiede più discipline.
               </p>
+              <Link href="/chi-siamo" className="btn-outline-light mt-7">
+                Conosci la rete
+              </Link>
             </div>
             <div>
               <h3 className="mb-5 text-lg font-bold text-white">Perché affidarsi a noi</h3>
