@@ -46,6 +46,7 @@ export const serviceEcosystems = [
       { label: "Efficientamento energetico", href: "/servizi/efficientamento-energetico" },
       { label: "Fotovoltaico e sistemi di accumulo", href: "/servizi/fotovoltaico" },
       { label: "Diagnosi energetiche", href: "/servizi/diagnosi-energetiche" },
+      { label: "Nuovo Piano Transizione 5.0", href: "/servizi/transizione-5-0" },
       { label: "Progettazione e verifica impianti elettrici", href: "/servizi/impianti-elettrici" },
       { label: "Impianti termici e climatizzazione", href: "/servizi/impianti-termici-climatizzazione" },
       { label: "Direzione lavori e supporto tecnico", href: "/servizi/direzione-lavori" },
