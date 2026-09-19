@@ -20,6 +20,7 @@ const services = [
   { title: "Diagnosi energetiche", description: "Analisi dei consumi e individuazione delle opportunità di miglioramento energetico.", href: "/servizi/diagnosi-energetiche" },
   { title: "Efficientamento energetico", description: "Dalla diagnosi alla definizione di interventi coordinati su involucro, impianti e sistemi di controllo.", href: "/servizi/efficientamento-energetico" },
   { title: "Fotovoltaico e sistemi di accumulo", description: "Dimensionamento, progettazione e integrazione di produzione fotovoltaica, accumulo e autoconsumo.", href: "/servizi/fotovoltaico" },
+  { title: "Nuovo Piano Transizione 5.0", description: "Supporto tecnico per investimenti in beni tecnologicamente avanzati, interconnessione e autoproduzione da fonti rinnovabili.", href: "/servizi/transizione-5-0" },
   { title: "Progettazione e verifica impianti elettrici", description: "Progettazione, verifica, adeguamento e integrazione di impianti elettrici.", href: "/servizi/impianti-elettrici" },
   { title: "Impianti termici e climatizzazione", description: "Progettazione e riqualificazione di riscaldamento, raffrescamento, climatizzazione e pompe di calore.", href: "/servizi/impianti-termici-climatizzazione" },
   { title: "Direzione lavori e supporto tecnico", description: "Coordinamento tecnico e assistenza durante le fasi esecutive dell'intervento.", href: "/servizi/direzione-lavori" },
