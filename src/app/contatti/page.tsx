@@ -68,6 +68,11 @@ export default function ContattiPage() {
               </a>
             </div>
 
+            <div className="mt-4 rounded-xl border border-gray-border p-5">
+              <span className="text-xs font-semibold tracking-widest text-gray-muted uppercase">Sede</span>
+              <span className="mt-2 block font-semibold text-anthracite">{siteConfig.address.formatted}</span>
+            </div>
+
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl bg-gray-light p-5">
                 <h3 className="font-bold text-anthracite">Area operativa</h3>
