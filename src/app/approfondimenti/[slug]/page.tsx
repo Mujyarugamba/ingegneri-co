@@ -61,6 +61,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     "@id": `${canonicalUrl}#article`,
     headline: article.title,
     description: article.description,
+    image: `${siteConfig.url}/opengraph-image.png`,
+    articleSection: article.category,
     datePublished: article.publishedAt,
     ...(article.updatedAt ? { dateModified: article.updatedAt } : {}),
     inLanguage: "it-IT",
