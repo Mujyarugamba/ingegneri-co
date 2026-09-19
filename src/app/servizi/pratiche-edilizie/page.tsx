@@ -6,7 +6,7 @@ const canonicalUrl = `${siteConfig.url}/servizi/pratiche-edilizie`;
 
 export const metadata: Metadata = {
   title: "Pratiche edilizie, CILA e SCIA | Ingegneri & Co",
-  description: "Supporto tecnico per CILA, SCIA, permessi, sanatorie, accesso agli atti e pratiche edilizie per immobili e attività.",
+  description: "Supporto tecnico per CILA, SCIA, permessi, sanatorie, cambi d’uso, accesso agli atti e pratiche edilizie per immobili e attività.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Pratiche edilizie, CILA e SCIA | Ingegneri & Co",
@@ -22,7 +22,7 @@ export default function Page() {
       eyebrow="Ingegneria, Edilizia & Energia"
       title="Pratiche edilizie"
       intro="Gestiamo e coordiniamo gli adempimenti tecnici necessari per interventi edilizi e regolarizzazioni, individuando la procedura appropriata e coordinando elaborati e documentazione nel rapporto con gli enti competenti."
-      bullets={["CILA e SCIA", "Permessi di costruire", "Sanatorie e regolarizzazioni", "Accesso agli atti", "Elaborati e documentazione tecnica", "Coordinamento del percorso tecnico-amministrativo"]}
+      bullets={["CILA e SCIA", "Permessi di costruire", "Sanatorie e regolarizzazioni", "Cambio d’uso e pratiche collegate", "Accesso agli atti", "Supporto tecnico per idoneità alloggiativa", "Elaborati e documentazione tecnica", "Coordinamento del percorso tecnico-amministrativo"]}
       outcomes={["Individuare la procedura corretta", "Ridurre errori e integrazioni documentali", "Coordinare il percorso tecnico-amministrativo"]}
       context={["Interventi di ristrutturazione o modifica dell'immobile che richiedono una pratica edilizia.", "Regolarizzazioni e situazioni nelle quali occorre ricostruire o coordinare il percorso documentale dell'intervento."]}
       process={[
