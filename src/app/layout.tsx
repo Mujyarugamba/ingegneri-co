@@ -93,6 +93,12 @@ export default function RootLayout({
       <head>
         <meta property="og:image" content={`${siteConfig.url}/opengraph-image.png`} />
         <meta name="twitter:image" content={`${siteConfig.url}/twitter-image.png`} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Approfondimenti Ingegneri & Co"
+          href="/feed.xml"
+        />
         <link rel="describedby" href="/llms.txt" />
       </head>
       <body>

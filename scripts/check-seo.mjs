@@ -224,6 +224,23 @@ if (!fs.existsSync(sitemapPath)) {
 }
 
 
+const feedPath = path.join(root, "feed.xml");
+if (!fs.existsSync(feedPath)) {
+  failures.push({ file: "feed.xml", missing: ["file non trovato"] });
+} else {
+  const feed = fs.readFileSync(feedPath, "utf8");
+  const feedChecks = [
+    ["RSS 2.0", /<rss\b[^>]*version=["']2\.0["']/i.test(feed)],
+    ["titolo feed", /<title>Approfondimenti Ingegneri &amp; Co<\/title>/i.test(feed)],
+    ["link canonico", /<link>https:\/\/ingegnerieco\.it\/approfondimenti<\/link>/i.test(feed)],
+    ["almeno un item", /<item>[\s\S]*?<\/item>/i.test(feed)],
+  ];
+  const missingFeed = feedChecks.filter(([, ok]) => !ok).map(([name]) => name);
+  if (missingFeed.length) {
+    failures.push({ file: "feed.xml", missing: missingFeed });
+  }
+}
+
 const llmsPath = path.join(root, "llms.txt");
 if (!fs.existsSync(llmsPath)) {
   failures.push({ file: "llms.txt", missing: ["file non trovato"] });
