@@ -27,10 +27,10 @@ export type Project = {
 };
 
 export const projectsIntro =
-  "Ogni progetto rappresenta un'opportunità per integrare competenze di ingegneria, energia, automazione, sviluppo software e innovazione tecnologica, offrendo soluzioni concrete per imprese e professionisti.";
+  "I progetti pubblicati mostrano come traduciamo esigenze operative e organizzative in portali, applicazioni web e strumenti digitali progettati per imprese, professionisti e reti tecniche.";
 
 export const portfolioPageIntro =
-  "Progetti e casi applicativi che mostrano il nostro approccio multidisciplinare tra ingegneria, energia, automazione e sviluppo di soluzioni digitali.";
+  "Progetti e casi applicativi che mostrano il nostro approccio alla digitalizzazione, allo sviluppo di portali e applicazioni web e all'integrazione di processi e dati.";
 
 export const projects: Project[] = [
   {
