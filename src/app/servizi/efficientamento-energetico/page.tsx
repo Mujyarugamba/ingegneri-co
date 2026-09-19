@@ -17,7 +17,7 @@ export default function Page() {
       eyebrow="Ingegneria, Edilizia & Energia"
       title="Efficientamento energetico"
       intro="Valutiamo consumi, involucro, impianti e modalità di utilizzo per individuare interventi tecnicamente coerenti e misurabili, con priorità alle soluzioni che migliorano prestazioni, controllo e affidabilità."
-      bullets={["Analisi dei consumi", "Interventi sull'involucro", "Riqualificazione degli impianti", "Regolazione e controllo", "Integrazione con fotovoltaico", "Valutazione tecnico-economica degli interventi"]}
+      bullets={["Analisi dei consumi", "Interventi sull'involucro", "Riqualificazione degli impianti", "Regolazione e controllo", "Integrazione con fotovoltaico", "Studi di fattibilità tecnico-economica degli interventi"]}
       outcomes={["Ridurre consumi e sprechi", "Migliorare comfort e prestazioni", "Definire priorità di investimento tecnicamente motivate"]}
       context={["Quando consumi, comfort o prestazioni dell'edificio suggeriscono di valutare interventi sull'involucro, sugli impianti o sui sistemi di regolazione.", "Dopo una diagnosi energetica o un'analisi preliminare, per trasformare le criticità individuate in scenari di intervento coordinati."]}
       process={[
