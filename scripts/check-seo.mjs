@@ -164,6 +164,17 @@ if (!fs.existsSync(sitemapPath)) {
   for (const url of sitemapUrls) {
     if (!url.startsWith("https://ingegnerieco.it/") && url !== "https://ingegnerieco.it") {
       failures.push({ file: "sitemap.xml", missing: [`URL fuori dominio canonico: ${url}`] });
+      continue;
+    }
+
+    const pathname = new URL(url).pathname || "/";
+    const normalizedPathname = pathname !== "/" ? pathname.replace(/\/$/, "") : "/";
+
+    if (!routes.has(normalizedPathname)) {
+      failures.push({
+        file: "sitemap.xml",
+        missing: [`URL senza pagina esportata: ${url}`],
+      });
     }
   }
 }
