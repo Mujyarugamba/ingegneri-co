@@ -54,6 +54,10 @@ for (const file of files) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) missing.push(`H1 count=${h1Count}`);
 
+  if (/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) {
+    missing.push("meta robots noindex inatteso");
+  }
+
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
   if (title) {
     const previous = titles.get(title);
