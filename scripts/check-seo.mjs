@@ -257,7 +257,7 @@ if (!fs.existsSync(feedPath)) {
   const feedChecks = [
     ["RSS 2.0", /<rss\b[^>]*version=["']2\.0["']/i.test(feed)],
     ["titolo feed", /<title>Approfondimenti Ingegneri &amp; Co<\/title>/i.test(feed)],
-    ["link canonico", feed.includes(`<link>${canonicalOrigin}/approfondimenti</link>)],
+    ["link canonico", feed.includes(`<link>${canonicalOrigin}/approfondimenti</link>`) ],
     ["almeno un item", /<item>[\s\S]*?<\/item>/i.test(feed)],
   ];
   const missingFeed = feedChecks.filter(([, ok]) => !ok).map(([name]) => name);
