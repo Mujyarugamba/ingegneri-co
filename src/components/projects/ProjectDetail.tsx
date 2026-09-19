@@ -145,6 +145,20 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         </div>
       </section>
+
+      <section className="border-t border-gray-border bg-gray-light">
+        <div className="page-container py-12 text-center md:py-16">
+          <h2 className="text-2xl font-bold tracking-tight text-anthracite">
+            Hai un progetto digitale o tecnico da sviluppare?
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl leading-relaxed text-gray-muted">
+            Partiamo dall&apos;esigenza, definiamo requisiti e integrazioni e valutiamo il percorso più adatto al progetto.
+          </p>
+          <Link href="/contatti" className="btn-primary mt-6">
+            Parliamone
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
