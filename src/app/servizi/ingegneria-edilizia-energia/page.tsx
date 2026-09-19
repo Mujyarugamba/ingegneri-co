@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Pratiche edilizie", description: "CILA, SCIA, Permessi di Costruire, sanatorie, accesso agli atti e documentazione tecnica.", href: "/servizi/pratiche-edilizie" },
+  { title: "Pratiche edilizie", description: "CILA, SCIA, Permessi di Costruire, sanatorie, cambi d’uso, accesso agli atti e supporto tecnico-documentale.", href: "/servizi/pratiche-edilizie" },
   { title: "Due diligence immobiliare", description: "Verifica tecnica e documentale dell'immobile prima di acquisti, vendite o investimenti.", href: "/servizi/due-diligence-immobiliare" },
   { title: "Conformità urbanistica e catastale", description: "Confronto tra titoli edilizi, documentazione catastale e stato dei luoghi.", href: "/servizi/conformita-urbanistica-catastale" },
   { title: "APE e certificazione energetica", description: "Attestato di Prestazione Energetica e valutazione della classe energetica dell'immobile.", href: "/servizi/ape-certificazione-energetica" },
