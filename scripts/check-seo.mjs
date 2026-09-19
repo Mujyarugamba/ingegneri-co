@@ -35,15 +35,34 @@ const checks = [
 ];
 
 const failures = [];
+const titles = new Map();
+const canonicals = new Map();
 
 for (const file of files) {
   const html = fs.readFileSync(file, "utf8");
+  const rel = path.relative(root, file).replaceAll("\\", "/");
   const missing = checks.filter(([, test]) => !test(html)).map(([name]) => name);
+
+  const h1Count = (html.match(/<h1\b/gi) || []).length;
+  if (h1Count !== 1) missing.push(`H1 count=${h1Count}`);
+
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
+  if (title) {
+    const previous = titles.get(title);
+    if (previous) failures.push({ file: rel, missing: [`title duplicato con ${previous}`] });
+    else titles.set(title, rel);
+  }
+
+  const canonicalTag = html.match(/<link[^>]*rel=["']canonical["'][^>]*>/i)?.[0];
+  const canonical = canonicalTag?.match(/href=["']([^"']+)["']/i)?.[1];
+  if (canonical) {
+    const previous = canonicals.get(canonical);
+    if (previous) failures.push({ file: rel, missing: [`canonical duplicato con ${previous}`] });
+    else canonicals.set(canonical, rel);
+  }
+
   if (missing.length) {
-    failures.push({
-      file: path.relative(root, file).replaceAll("\\", "/"),
-      missing,
-    });
+    failures.push({ file: rel, missing });
   }
 }
 
