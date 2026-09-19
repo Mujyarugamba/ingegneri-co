@@ -106,6 +106,50 @@ for (const file of files) {
   }
 }
 
+
+const robotsPath = path.join(root, "robots.txt");
+const sitemapPath = path.join(root, "sitemap.xml");
+
+if (!fs.existsSync(robotsPath)) {
+  failures.push({ file: "robots.txt", missing: ["file non trovato"] });
+} else {
+  const robots = fs.readFileSync(robotsPath, "utf8");
+  if (!/User-agent:\s*\*/i.test(robots)) {
+    failures.push({ file: "robots.txt", missing: ["User-agent: *"] });
+  }
+  if (!/Sitemap:\s*https:\/\/ingegnerieco\.it\/sitemap\.xml/i.test(robots)) {
+    failures.push({ file: "robots.txt", missing: ["riferimento alla sitemap canonica"] });
+  }
+}
+
+if (!fs.existsSync(sitemapPath)) {
+  failures.push({ file: "sitemap.xml", missing: ["file non trovato"] });
+} else {
+  const sitemap = fs.readFileSync(sitemapPath, "utf8");
+  const sitemapUrls = new Set(
+    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)].map((match) => match[1].trim())
+  );
+
+  for (const file of files) {
+    const html = fs.readFileSync(file, "utf8");
+    const canonicalTag = html.match(/<link[^>]*rel=["']canonical["'][^>]*>/i)?.[0];
+    const canonical = canonicalTag?.match(/href=["']([^"']+)["']/i)?.[1];
+
+    if (canonical && !sitemapUrls.has(canonical)) {
+      failures.push({
+        file: path.relative(root, file).replaceAll("\\", "/"),
+        missing: [`canonical non presente in sitemap: ${canonical}`],
+      });
+    }
+  }
+
+  for (const url of sitemapUrls) {
+    if (!url.startsWith("https://ingegnerieco.it/") && url !== "https://ingegnerieco.it") {
+      failures.push({ file: "sitemap.xml", missing: [`URL fuori dominio canonico: ${url}`] });
+    }
+  }
+}
+
 const assetBudgets = [
   { file: "imagine.webp", maxBytes: 300 * 1024 },
   { file: "logo.webp", maxBytes: 300 * 1024 },
