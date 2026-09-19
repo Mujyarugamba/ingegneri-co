@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, siteImages } from "@/lib/site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -55,7 +55,7 @@ const organizationJsonLd = {
   "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.name,
   url: siteConfig.url,
-  logo: `${siteConfig.url}/logo.png`,
+  logo: `${siteConfig.url}${siteImages.logo}`,
   description: siteConfig.description,
   email: siteConfig.email,
   contactPoint: {
@@ -65,7 +65,9 @@ const organizationJsonLd = {
     availableLanguage: ["Italian"],
   },
   areaServed: siteConfig.serviceAreas.map((name) => ({
-    "@type": "AdministrativeArea",
+    "@type": ["Milano", "Pavia", "Verbania"].includes(name)
+      ? "City"
+      : "AdministrativeArea",
     name,
   })),
 };
