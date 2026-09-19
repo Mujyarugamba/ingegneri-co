@@ -126,16 +126,24 @@ if (!fs.existsSync(sitemapPath)) {
   failures.push({ file: "sitemap.xml", missing: ["file non trovato"] });
 } else {
   const sitemap = fs.readFileSync(sitemapPath, "utf8");
+  const normalizeUrl = (value) =>
+    value === "https://ingegnerieco.it/"
+      ? "https://ingegnerieco.it"
+      : value.replace(/\/$/, "");
+
   const sitemapUrls = new Set(
-    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)].map((match) => match[1].trim())
+    [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)].map((match) =>
+      normalizeUrl(match[1].trim())
+    )
   );
 
   for (const file of files) {
     const html = fs.readFileSync(file, "utf8");
     const canonicalTag = html.match(/<link[^>]*rel=["']canonical["'][^>]*>/i)?.[0];
     const canonical = canonicalTag?.match(/href=["']([^"']+)["']/i)?.[1];
+    const normalizedCanonical = canonical ? normalizeUrl(canonical) : null;
 
-    if (canonical && !sitemapUrls.has(canonical)) {
+    if (normalizedCanonical && !sitemapUrls.has(normalizedCanonical)) {
       failures.push({
         file: path.relative(root, file).replaceAll("\\", "/"),
         missing: [`canonical non presente in sitemap: ${canonical}`],
