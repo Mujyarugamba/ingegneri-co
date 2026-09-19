@@ -91,6 +91,23 @@ for (const file of files) {
     missing.push("meta robots noindex inatteso");
   }
 
+  const images = [...html.matchAll(/<img\b[^>]*>/gi)].map((match) => match[0]);
+  const imagesWithoutAlt = images.filter((tag) => !/\balt=["'][^"']*["']/i.test(tag));
+  if (imagesWithoutAlt.length) {
+    missing.push(`immagini senza alt=${imagesWithoutAlt.length}`);
+  }
+
+  const blankTargets = [...html.matchAll(/<a\b[^>]*target=["']_blank["'][^>]*>/gi)].map(
+    (match) => match[0]
+  );
+  const unsafeBlankTargets = blankTargets.filter((tag) => {
+    const rel = tag.match(/\brel=["']([^"']*)["']/i)?.[1] ?? "";
+    return !/\bnoopener\b/i.test(rel);
+  });
+  if (unsafeBlankTargets.length) {
+    missing.push(`link target=_blank senza noopener=${unsafeBlankTargets.length}`);
+  }
+
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
   if (title) {
     const previous = titles.get(title);
