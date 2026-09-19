@@ -69,6 +69,16 @@ for (const file of files) {
     else canonicals.set(canonical, rel);
   }
 
+  const jsonLdBlocks = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+  for (const block of jsonLdBlocks) {
+    try {
+      JSON.parse(block[1]);
+    } catch {
+      missing.push("JSON-LD non valido");
+      break;
+    }
+  }
+
   const hrefs = [...html.matchAll(/href=["']([^"']+)["']/gi)].map((match) => match[1]);
   const brokenLinks = new Set();
 
