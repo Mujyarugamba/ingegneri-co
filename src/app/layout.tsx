@@ -91,6 +91,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
+      <head>
+        <meta property="og:image" content={`${siteConfig.url}/opengraph-image.png`} />
+      </head>
       <body>
         <a
           href="#contenuto-principale"
