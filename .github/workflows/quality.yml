@@ -44,3 +44,8 @@ jobs:
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
         continue-on-error: true
+
+      - name: Notify IndexNow
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npm run submit:indexnow
+        continue-on-error: true
