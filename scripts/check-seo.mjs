@@ -162,6 +162,27 @@ if (!fs.existsSync(sitemapPath)) {
   }
 }
 
+
+const llmsPath = path.join(root, "llms.txt");
+if (!fs.existsSync(llmsPath)) {
+  failures.push({ file: "llms.txt", missing: ["file non trovato"] });
+} else {
+  const llms = fs.readFileSync(llmsPath, "utf8");
+  const llmsChecks = [
+    ["H1 Ingegneri & Co", /^# Ingegneri & Co/m.test(llms)],
+    ["sezione servizi", /^## Servizi principali/m.test(llms)],
+    ["link servizi", /https:\/\/ingegnerieco\.it\/servizi\//.test(llms)],
+    ["link approfondimenti", /https:\/\/ingegnerieco\.it\/approfondimenti/.test(llms)],
+    ["link progetti", /https:\/\/ingegnerieco\.it\/progetti/.test(llms)],
+    ["link contatti", /https:\/\/ingegnerieco\.it\/contatti/.test(llms)],
+  ];
+
+  const missingLlms = llmsChecks.filter(([, ok]) => !ok).map(([name]) => name);
+  if (missingLlms.length) {
+    failures.push({ file: "llms.txt", missing: missingLlms });
+  }
+}
+
 const assetBudgets = [
   { file: "imagine.webp", maxBytes: 300 * 1024 },
   { file: "logo.webp", maxBytes: 300 * 1024 },
