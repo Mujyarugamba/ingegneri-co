@@ -7,12 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "check:seo": "node scripts/check-seo.mjs"
+    "check:seo": "node scripts/check-seo.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "postinstall": "npm run optimize:images",
+    "predev": "npm run optimize:images",
+    "prebuild": "npm run optimize:images"
   },
   "dependencies": {
     "next": "16.3.3",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

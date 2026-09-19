@@ -4,7 +4,7 @@ export default function HeroVisual() {
   return (
     <div className="w-full min-w-0 max-w-full overflow-hidden rounded-2xl border border-white/10 bg-anthracite-soft p-2 sm:p-3 lg:p-3.5">
       <Image
-        src="/imagine.png"
+        src="/imagine.webp"
         alt="Ingegneria, energia e innovazione per edifici e imprese"
         width={1536}
         height={1024}

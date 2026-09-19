@@ -17,8 +17,8 @@ export const siteConfig = {
 } as const;
 
 export const siteImages = {
-  logo: "/logo.png",
-  hero: "/imagine.png",
+  logo: "/logo.webp",
+  hero: "/imagine.webp",
 } as const;
 
 export const mainNav = [

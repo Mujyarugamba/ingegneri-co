@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated optimized images
+/public/imagine.webp
+/public/logo.webp
