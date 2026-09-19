@@ -52,6 +52,14 @@ const organizationJsonLd = {
   logo: `${siteConfig.url}${siteImages.logo}`,
   description: siteConfig.description,
   email: siteConfig.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.address.streetAddress,
+    postalCode: siteConfig.address.postalCode,
+    addressLocality: siteConfig.address.addressLocality,
+    addressRegion: siteConfig.address.addressRegion,
+    addressCountry: siteConfig.address.addressCountry,
+  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+39 339 434 0891",
