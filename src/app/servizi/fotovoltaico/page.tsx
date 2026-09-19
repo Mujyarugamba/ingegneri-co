@@ -25,7 +25,7 @@ export default function Page() {
         { title: "Dimensionamento", text: "Definiamo potenza, configurazione e ruolo dell'eventuale accumulo in funzione degli obiettivi e dei dati disponibili." },
         { title: "Integrazione", text: "Coordiniamo il fotovoltaico con distribuzione elettrica, accumulo e nuovi carichi previsti." },
       ]}
-      relatedServices={[{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"},{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"}]}
+      relatedServices={[{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"},{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"},{label:"Nuovo Piano Transizione 5.0",href:"/servizi/transizione-5-0"}]}
       faqs={[
         { question: "Un impianto più grande è sempre migliore?", answer: "Non necessariamente. Il dimensionamento va valutato rispetto a consumi, superfici, profili di utilizzo, impianto elettrico e obiettivi del cliente." },
         { question: "L'accumulo è sempre necessario?", answer: "No. Va valutato caso per caso in funzione del profilo di consumo, della produzione attesa e degli obiettivi di autoconsumo e gestione energetica." },
