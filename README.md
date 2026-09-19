@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ingegneri & Co
 
-## Getting Started
+Sito istituzionale di **Ingegneri & Co**, rete tecnica multidisciplinare per edilizia, energia, impianti, automazione, digitalizzazione e intelligenza artificiale applicata alle PMI.
 
-First, run the development server:
+**Sito ufficiale:** https://ingegnerieco.it
+
+## Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Static export
+- Vercel
+- Sharp per l'ottimizzazione automatica delle immagini
+
+## Sviluppo
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Verifiche
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run build
+npm run check:seo
+```
 
-## Learn More
+Il controllo SEO viene eseguito anche in CI e verifica, tra gli altri elementi:
 
-To learn more about Next.js, take a look at the following resources:
+- metadata, canonical e H1;
+- Open Graph e Twitter metadata;
+- JSON-LD valido;
+- link interni;
+- sitemap e robots.txt;
+- assenza di `noindex` accidentali;
+- accessibilità di base delle immagini e dei link esterni;
+- budget degli asset ottimizzati;
+- presenza di `llms.txt` e feed RSS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Indicizzazione e discovery
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Il sito pubblica:
 
-## Deploy on Vercel
+- `/sitemap.xml`
+- `/robots.txt`
+- `/feed.xml`
+- `/llms.txt`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Gli URL della sitemap vengono inoltre notificati a IndexNow dopo i push su `main`, senza rendere bloccante il deploy in caso di indisponibilità del servizio esterno.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Il branch `main` è collegato al deployment di produzione. Il workflow GitHub Actions esegue installazione pulita, lint, build, smoke test SEO e audit delle dipendenze di produzione.
