@@ -20,7 +20,7 @@ function collectHtml(dir) {
 
 const files = collectHtml(root).filter((file) => {
   const rel = path.relative(root, file).replaceAll("\\", "/");
-  return rel !== "404.html" && !rel.includes("_not-found");
+  return rel !== "404.html" && !rel.includes("_not-found") && !/^google[a-z0-9_-]+\.html$/i.test(rel);
 });
 
 const checks = [
