@@ -29,12 +29,18 @@ export default function ServiziPage() {
     ],
   };
 
-  const uniqueServices = serviceEcosystems
-    .flatMap((ecosystem) => ecosystem.services)
-    .filter(
-      (service, index, services) =>
-        services.findIndex((candidate) => candidate.href === service.href) === index,
-    );
+  const allServices: Array<{ label: string; href: string }> = serviceEcosystems.flatMap(
+    (ecosystem) =>
+      ecosystem.services.map((service) => ({
+        label: service.label,
+        href: service.href,
+      })),
+  );
+
+  const uniqueServices = allServices.filter(
+    (service, index, services) =>
+      services.findIndex((candidate) => candidate.href === service.href) === index,
+  );
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
