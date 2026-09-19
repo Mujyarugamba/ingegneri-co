@@ -35,12 +35,12 @@ export const articles: Article[] = [
     description:
       "Quando serve una SCIA? Guida tecnica su requisiti, documentazione e casi d'uso per privati, imprese e professionisti del settore edilizio.",
     publishedAt: "2026-01-15",
+    updatedAt: "2026-09-19",
     relatedServices: [
       { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
       { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
     ],
     sources: [
-      { label: "Normattiva — DPR 380/2001, art. 22 (SCIA)", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2001-06-06%3B380~art22%21vig=" },
       { label: "Gazzetta Ufficiale — DPR 380/2001, Testo unico edilizia", href: "https://www.gazzettaufficiale.it/eli/id/2001/10/20/001G0429/sg" },
     ],
     content: [
@@ -60,13 +60,12 @@ export const articles: Article[] = [
     description:
       "CILA, SCIA o Permesso di Costruire? Differenze, ambiti di applicazione e criteri di scelta spiegati in modo chiaro per committenti e professionisti.",
     publishedAt: "2026-01-22",
+    updatedAt: "2026-09-19",
     relatedServices: [
       { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
       { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
     ],
     sources: [
-      { label: "Normattiva — DPR 380/2001, art. 6-bis (CILA)", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.del.presidente.della.repubblica%3A2001-06-06%3B380~art6bis%21vig=" },
-      { label: "Normattiva — DPR 380/2001, art. 22 (SCIA)", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2001-06-06%3B380~art22%21vig=" },
       { label: "Gazzetta Ufficiale — DPR 380/2001, Testo unico edilizia", href: "https://www.gazzettaufficiale.it/eli/id/2001/10/20/001G0429/sg" },
     ],
     content: [
