@@ -30,7 +30,7 @@ export default function Page() {
         { title: "Disegno dell'integrazione", text: "Definiamo come devono viaggiare le informazioni, quali dati sono master e quali controlli servono sugli scambi." },
         { title: "Collegamento e verifica", text: "Implementiamo o coordiniamo le integrazioni e verifichiamo coerenza, tracciabilità e gestione degli errori." },
       ]}
-      relatedServices={[{label:"Digitalizzazione delle PMI",href:"/servizi/servizi-digitali-pmi"},{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Analisi documentale e assistenti AI",href:"/servizi/analisi-documentale-assistenti-ai"}]}
+      relatedServices={[{label:"Digitalizzazione delle PMI",href:"/servizi/servizi-digitali-pmi"},{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Analisi documentale e assistenti AI",href:"/servizi/analisi-documentale-assistenti-ai"},{label:"Portali e applicazioni web",href:"/servizi/portali-applicazioni-web"}]}
       faqs={[
         { question: "Serve sostituire i gestionali esistenti per integrarli?", answer: "Non necessariamente. Quando i sistemi dispongono di API, esportazioni strutturate o altri meccanismi compatibili, è spesso possibile collegarli mantenendo gli strumenti già utilizzati." },
         { question: "Perché l'integrazione dei dati viene prima di molte applicazioni AI?", answer: "Perché automazioni e AI diventano più affidabili quando lavorano su informazioni accessibili, coerenti e ben organizzate invece che su dati dispersi tra sistemi non collegati." },
