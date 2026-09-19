@@ -59,10 +59,6 @@ const organizationJsonLd = {
   logo: `${siteConfig.url}/logo.png`,
   description: siteConfig.description,
   email: siteConfig.email,
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "Lombardia" },
-    { "@type": "AdministrativeArea", name: "Piemonte" },
-  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+39 339 434 0891",
