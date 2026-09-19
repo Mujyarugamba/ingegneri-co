@@ -54,6 +54,19 @@ for (const file of files) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) missing.push(`H1 count=${h1Count}`);
 
+  const singletonTags = [
+    ["title", (html.match(/<title>[^<]*<\/title>/gi) || []).length],
+    ["meta description", (html.match(/<meta[^>]+name=["']description["'][^>]*>/gi) || []).length],
+    ["canonical", (html.match(/<link[^>]+rel=["']canonical["'][^>]*>/gi) || []).length],
+    ["og:title", (html.match(/<meta[^>]+property=["']og:title["'][^>]*>/gi) || []).length],
+    ["og:description", (html.match(/<meta[^>]+property=["']og:description["'][^>]*>/gi) || []).length],
+    ["twitter:card", (html.match(/<meta[^>]+name=["']twitter:card["'][^>]*>/gi) || []).length],
+  ];
+
+  for (const [name, count] of singletonTags) {
+    if (count !== 1) missing.push(`${name} count=${count}`);
+  }
+
   const normalizeSocialImageUrl = (value) => {
     try {
       const url = new URL(value);
