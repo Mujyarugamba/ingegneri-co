@@ -25,7 +25,7 @@ export default function Page() {
         { title: "Analisi energetica", text: "Ricostruiamo gli usi significativi e individuiamo inefficienze, anomalie e opportunità di intervento." },
         { title: "Scenari e priorità", text: "Confrontiamo gli interventi possibili e definiamo una sequenza di azioni tecnicamente motivata." },
       ]}
-      relatedServices={[{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"},{label:"Fotovoltaico",href:"/servizi/fotovoltaico"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"}]}
+      relatedServices={[{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"},{label:"Fotovoltaico",href:"/servizi/fotovoltaico"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"},{label:"Nuovo Piano Transizione 5.0",href:"/servizi/transizione-5-0"}]}
       faqs={[
         { question: "Diagnosi energetica ed efficientamento sono la stessa attività?", answer: "No. La diagnosi serve a capire dove e perché si consuma energia e a individuare le priorità; l'efficientamento sviluppa e coordina gli interventi scelti." },
       ]}
