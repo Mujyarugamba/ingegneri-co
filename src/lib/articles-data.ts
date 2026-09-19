@@ -321,6 +321,60 @@ export const articles: Article[] = [
     ],
   },
 
+  {
+    slug: "due-diligence-immobiliare-cosa-verificare",
+    title: "Due diligence immobiliare: cosa verificare prima di acquistare",
+    seoTitle: "Due diligence immobiliare: cosa verificare | Ingegneri & Co",
+    category: "Edilizia",
+    excerpt:
+      "Quali verifiche tecniche e documentali aiutano a conoscere un immobile prima di un acquisto, una vendita o un investimento.",
+    description:
+      "Due diligence immobiliare: verifiche urbanistiche, catastali, documentali e tecniche utili prima di acquistare o investire in un immobile.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Due diligence immobiliare", href: "/servizi/due-diligence-immobiliare" },
+      { label: "Conformità urbanistica e catastale", href: "/servizi/conformita-urbanistica-catastale" },
+      { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
+      { label: "APE e certificazione energetica", href: "/servizi/ape-certificazione-energetica" },
+    ],
+    sources: [
+      { label: "Normattiva — DPR 380/2001, art. 9-bis sullo stato legittimo", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3A2001%3B380~art9bis%21vig=" },
+      { label: "Agenzia delle Entrate — Guida all'acquisto della casa", href: "https://www1.agenziaentrate.gov.it/web_app_entrate/guida_acquisto_casa.html" },
+    ],
+    content: [
+      "Una due diligence immobiliare serve a costruire un quadro tecnico e documentale dell'immobile prima di assumere decisioni economiche rilevanti. Non coincide con una sola verifica: il perimetro può comprendere titoli edilizi, stato dei luoghi, documentazione catastale, dati ipotecari disponibili, impianti, prestazioni energetiche e altre informazioni pertinenti al caso concreto.",
+      "Sul piano urbanistico-edilizio, l'articolo 9-bis del DPR 380/2001 disciplina la documentazione amministrativa e lo stato legittimo degli immobili. Per questo la verifica non dovrebbe limitarsi alla planimetria catastale: occorre ricostruire i titoli e gli atti rilevanti e confrontarli, quando necessario, con lo stato effettivo dei luoghi.",
+      "Sul piano catastale e immobiliare, anche l'Agenzia delle Entrate raccomanda prima dell'acquisto di raccogliere informazioni sul bene e di verificare dati catastali e ipotecari. La conformità catastale e quella urbanistico-edilizia restano piani distinti e complementari, con finalità e fonti documentali diverse.",
+      "L'obiettivo della due diligence non è dichiarare in astratto che un immobile sia privo di qualunque rischio, ma far emergere documenti mancanti, difformità, aspetti da approfondire e possibili interventi prima che questi elementi incidano su acquisto, vendita, finanziamento o programma di ristrutturazione.",
+    ],
+  },
+  {
+    slug: "progetto-impianto-elettrico-quando-serve",
+    title: "Progetto dell'impianto elettrico: quando serve",
+    seoTitle: "Progetto impianto elettrico: quando serve | Ingegneri & Co",
+    category: "Energia",
+    excerpt:
+      "Cosa prevede il DM 37/2008 per la progettazione degli impianti e perché va distinto il progetto dell'impianto dalla sola esecuzione dei lavori.",
+    description:
+      "Progetto impianto elettrico e DM 37/2008: quando è previsto, chi può redigerlo e come si collega a installazione, trasformazione e ampliamento.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Progettazione e verifica impianti elettrici", href: "/servizi/impianti-elettrici" },
+      { label: "Fotovoltaico e sistemi di accumulo", href: "/servizi/fotovoltaico" },
+      { label: "Smart Building, Building Automation e IoT", href: "/servizi/smart-building-iot" },
+      { label: "Direzione lavori e supporto tecnico", href: "/servizi/direzione-lavori" },
+    ],
+    sources: [
+      { label: "Normattiva — DM 37/2008 sugli impianti negli edifici", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Aministero.sviluppo.economico%3Adecreto%3A2008-01-22%3B37%21vig=" },
+    ],
+    content: [
+      "Il DM 37/2008 disciplina gli impianti posti al servizio degli edifici e prevede, per l'installazione, la trasformazione e l'ampliamento degli impianti ricompresi nel suo ambito, la redazione di un progetto. Il progetto deve essere coerente con la destinazione d'uso, le caratteristiche dell'edificio e le prestazioni richieste all'impianto.",
+      "L'articolo 5 distingue i casi nei quali il progetto deve essere redatto da un professionista iscritto all'albo secondo la specifica competenza tecnica dagli altri casi nei quali il progetto può essere predisposto dal responsabile tecnico dell'impresa installatrice. Per stabilire quale disciplina si applichi occorre quindi inquadrare correttamente impianto, edificio e intervento.",
+      "Nel progetto elettrico rientrano, in funzione del caso, criteri di distribuzione, quadri, protezioni, sezionamento, caratteristiche dei circuiti e coordinamento con gli altri sistemi tecnici. In presenza di fotovoltaico, accumulo, pompe di calore, automazione o nuovi carichi è particolarmente importante valutare l'impianto nel suo insieme.",
+      "La progettazione non sostituisce la corretta esecuzione né la documentazione finale dell'installatore. Serve invece a definire in anticipo una soluzione tecnicamente coerente e a ridurre modifiche, incompatibilità e criticità durante i lavori e nella successiva gestione dell'impianto.",
+    ],
+  },
+
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
