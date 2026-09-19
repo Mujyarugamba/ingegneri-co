@@ -8,7 +8,7 @@ const canonicalUrl = `${siteConfig.url}/contatti`;
 export const metadata: Metadata = {
   title: "Contatti e consulenza tecnica | Ingegneri & Co",
   description:
-    "Contatta Ingegneri & Co per consulenze tecniche, informazioni sui servizi e supporto per progetti di edilizia, energia, impianti e innovazione.",
+    "Contatta Ingegneri & Co per consulenze tecniche in edilizia, energia, impianti e innovazione. Operatività tra Milano, Pavia, Verbania, Lombardia e Piemonte.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Contatti e consulenza tecnica | Ingegneri & Co",
@@ -68,11 +68,19 @@ export default function ContattiPage() {
               </a>
             </div>
 
-            <div className="mt-8 rounded-xl bg-gray-light p-5">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-xl bg-gray-light p-5">
+                <h3 className="font-bold text-anthracite">Area operativa</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-muted">
+                  Operiamo principalmente tra Milano, Pavia e Verbania, con attività in Lombardia e Piemonte in funzione del tipo di incarico.
+                </p>
+              </div>
+              <div className="rounded-xl bg-gray-light p-5">
               <h3 className="font-bold text-anthracite">Per inquadrare meglio la richiesta</h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-muted">
                 Se possibile indica località, tipo di immobile o attività, obiettivo, tempistiche e documentazione già disponibile. Per impianti o interventi esistenti sono utili anche fotografie e dati tecnici principali.
               </p>
+              </div>
             </div>
 
             <a href={siteConfig.whatsAppHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-8">
