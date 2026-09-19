@@ -106,6 +106,27 @@ for (const file of files) {
   }
 }
 
+const assetBudgets = [
+  { file: "imagine.webp", maxBytes: 300 * 1024 },
+  { file: "logo.webp", maxBytes: 300 * 1024 },
+];
+
+for (const budget of assetBudgets) {
+  const assetPath = path.join(root, budget.file);
+  if (!fs.existsSync(assetPath)) {
+    failures.push({ file: budget.file, missing: ["asset ottimizzato non trovato"] });
+    continue;
+  }
+
+  const size = fs.statSync(assetPath).size;
+  if (size > budget.maxBytes) {
+    failures.push({
+      file: budget.file,
+      missing: [`peso ${(size / 1024).toFixed(1)} KB oltre budget ${(budget.maxBytes / 1024).toFixed(0)} KB`],
+    });
+  }
+}
+
 if (failures.length) {
   console.error("SEO smoke test fallito:");
   for (const failure of failures) {
