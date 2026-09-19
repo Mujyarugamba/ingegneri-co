@@ -65,6 +65,10 @@ const organizationJsonLd = {
     contactType: "customer service",
     availableLanguage: ["Italian"],
   },
+  areaServed: siteConfig.serviceAreas.map((name) => ({
+    "@type": "AdministrativeArea",
+    name,
+  })),
 };
 
 const websiteJsonLd = {
