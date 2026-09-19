@@ -106,8 +106,8 @@ export const articles: Article[] = [
   },
   {
     slug: "efficientamento-energetico-edifici",
-    title: "Efficientamento energetico degli edifici",
-    seoTitle: "Efficientamento energetico edifici | Ingegneri & Co",
+    title: "Come migliorare l'efficienza energetica di un edificio",
+    seoTitle: "Come migliorare l'efficienza energetica di un edificio | Ingegneri & Co",
     category: "Energia",
     excerpt:
       "Strategie e interventi per ridurre i consumi, migliorare il comfort abitativo e valorizzare il patrimonio immobiliare.",
@@ -134,8 +134,8 @@ export const articles: Article[] = [
   },
   {
     slug: "automazione-smart-building",
-    title: "Automazione e Smart Building",
-    seoTitle: "Smart Building e automazione | Ingegneri & Co",
+    title: "Smart Building: cosa monitorare e automatizzare",
+    seoTitle: "Smart Building: cosa monitorare e automatizzare | Ingegneri & Co",
     category: "Innovazione",
     excerpt:
       "Come l'automazione e i sistemi intelligenti possono migliorare efficienza, sicurezza e gestione degli edifici moderni.",
