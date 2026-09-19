@@ -93,6 +93,11 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-sm text-white/75">
+                  {siteConfig.address.formatted}
+                </span>
+              </li>
+              <li>
+                <span className="text-sm text-white/75">
                   {siteConfig.professionals}
                 </span>
               </li>
