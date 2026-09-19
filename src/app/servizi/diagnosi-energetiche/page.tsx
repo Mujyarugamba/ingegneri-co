@@ -5,10 +5,10 @@ import { siteConfig } from "@/lib/site-config";
 const canonicalUrl = `${siteConfig.url}/servizi/diagnosi-energetiche`;
 
 export const metadata: Metadata = {
-  title: "Diagnosi energetiche | Ingegneri & Co",
-  description: "Diagnosi energetiche per edifici e imprese: analisi dei consumi, individuazione degli usi significativi e definizione degli interventi di miglioramento.",
+  title: "Diagnosi e audit energetici | Ingegneri & Co",
+  description: "Diagnosi e audit energetici per edifici, imprese e processi: analisi dei consumi, usi significativi e scenari di miglioramento tecnico-economico.",
   alternates: { canonical: canonicalUrl },
-  openGraph: { title: "Diagnosi energetiche | Ingegneri & Co", description: "Analisi dei consumi e individuazione degli interventi di miglioramento energetico.", url: canonicalUrl, type: "website" },
+  openGraph: { title: "Diagnosi e audit energetici | Ingegneri & Co", description: "Analisi dei consumi e individuazione degli interventi di miglioramento energetico.", url: canonicalUrl, type: "website" },
 };
 
 export default function Page() {
@@ -16,8 +16,8 @@ export default function Page() {
     <ServiceLanding
       eyebrow="Ingegneria, Edilizia & Energia"
       title="Diagnosi energetiche"
-      intro="Analizziamo come viene utilizzata l'energia in un edificio o in un'attività, ricostruiamo i principali consumi e individuiamo gli interventi che possono ridurre sprechi, inefficienze e costi operativi."
-      bullets={["Raccolta e analisi dei consumi", "Individuazione degli usi energetici significativi", "Analisi di impianti e profili di utilizzo", "Individuazione delle inefficienze", "Scenari di intervento", "Priorità tecnico-economiche"]}
+      intro="Svolgiamo diagnosi e audit energetici per capire come viene utilizzata l’energia in edifici, attività e processi, ricostruire i principali consumi e individuare interventi che possano ridurre sprechi, inefficienze e costi operativi."
+      bullets={["Raccolta e analisi dei consumi", "Individuazione degli usi energetici significativi", "Analisi di impianti e profili di utilizzo", "Individuazione delle inefficienze", "Scenari di intervento", "Studi di fattibilità tecnico-economica"]}
       outcomes={["Capire dove e come si consuma energia", "Individuare inefficienze concrete", "Costruire una roadmap di miglioramento"]}
       context={["Quando è necessario capire quali usi e impianti incidono maggiormente sui consumi di un edificio o di un'attività.", "Prima di definire un programma di efficientamento, per confrontare le priorità di intervento su basi tecniche e dati disponibili."]}
       process={[
