@@ -26,6 +26,10 @@ export default function Page() {
         { title: "Valutazione e attuazione", text: "Confrontiamo costi, benefici e vincoli tecnici e supportiamo il passaggio dalla scelta alla realizzazione." },
       ]}
       relatedServices={[{label:"Diagnosi energetiche",href:"/servizi/diagnosi-energetiche"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"},{label:"Fotovoltaico",href:"/servizi/fotovoltaico"},{label:"Relazione Legge 10",href:"/servizi/legge-10"}]}
+      faqs={[
+        { question: "Serve sempre una diagnosi energetica prima di un intervento di efficientamento?", answer: "Non sempre. Nei casi più semplici può essere sufficiente un'analisi mirata dei dati e degli impianti; per edifici o processi più complessi la diagnosi energetica consente di definire priorità e scenari di intervento con maggiore approfondimento." },
+        { question: "L'efficientamento energetico riguarda solo gli impianti?", answer: "No. Può coinvolgere involucro, impianti, regolazione, sistemi di controllo, produzione da fonti rinnovabili e modalità di utilizzo, valutando le interazioni tra i diversi elementi." },
+      ]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
     />
