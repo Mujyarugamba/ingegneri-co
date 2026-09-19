@@ -56,9 +56,9 @@ export const projects: Project[] = [
     features: [
       "Registrazione e gestione profili per committenti, imprese e professionisti",
       "Pubblicazione e gestione delle richieste di intervento",
-      "Sistema di preventivazione e comparazione delle offerte",
+      "Gestione delle richieste e accesso alle opportunità per imprese e professionisti",
       "Archivio documentale e gestione certificazioni",
-      "Dashboard operative e notifiche in tempo reale",
+      "Dashboard operative e notifiche di servizio",
       "Ottimizzazione SEO e visibilità online della piattaforma",
     ],
     relatedServices: [
