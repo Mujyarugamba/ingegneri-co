@@ -17,7 +17,7 @@ export default function Page() {
       eyebrow="Digitalizzazione, Automazione & AI"
       title="Automazione industriale e sistemi di controllo"
       intro="Progettiamo soluzioni di automazione e controllo per impianti e processi tecnici, integrando logiche PLC, supervisione, acquisizione dati e collegamento tra componenti hardware e software."
-      bullets={["PLC e logiche di controllo", "Sistemi di supervisione", "Acquisizione e storicizzazione dati", "Sensori e segnali di campo", "Controllo e monitoraggio remoto", "Integrazione hardware e software"]}
+      bullets={["PLC e logiche di controllo", "Sistemi di supervisione", "Acquisizione e storicizzazione dati", "Sensori e segnali di campo", "Diagnostica e analisi dei segnali", "Controllo e monitoraggio remoto", "Integrazione hardware e software"]}
       outcomes={["Aumentare visibilità e controllo sui processi tecnici", "Ridurre passaggi manuali dove l'automazione è appropriata", "Integrare dati di impianto e sistemi digitali"]}
       context={["Impianti e processi tecnici che richiedono logiche di controllo, supervisione o acquisizione strutturata dei dati.", "Quando segnali di campo, PLC, sistemi di supervisione e software devono essere integrati in un'architettura coerente."]}
       process={[
