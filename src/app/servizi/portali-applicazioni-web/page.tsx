@@ -31,6 +31,10 @@ export default function Page() {
         { title: "Sviluppo e verifica", text: "Realizziamo l'applicazione per fasi, testando funzioni e percorsi reali prima dell'estensione." },
       ]}
       relatedServices={[{label:"Digitalizzazione delle PMI",href:"/servizi/servizi-digitali-pmi"},{label:"Automazione dei processi e workflow",href:"/servizi/automazione-processi"},{label:"Integrazione software, API e dati",href:"/servizi/integrazione-software-dati"}]}
+      faqs={[
+        { question: "Quando serve un'applicazione web invece di un normale sito aziendale?", answer: "Quando gli utenti devono autenticarsi, inserire o consultare dati, seguire procedure, utilizzare strumenti operativi o interagire con processi aziendali. In questi casi il progetto va oltre la funzione informativa di un sito vetrina." },
+        { question: "Un portale può integrarsi con software e database già presenti in azienda?", answer: "Sì, quando i sistemi disponibili offrono interfacce o modalità di integrazione adeguate. L'architettura viene definita valutando API, database, flussi dati, sicurezza e responsabilità dei diversi sistemi." },
+      ]}
       ecosystemHref="/servizi/digitalizzazione-automazione-ai"
       ecosystemLabel="Digitalizzazione, Automazione & AI"
     />
