@@ -87,6 +87,7 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
+        <meta name="google-site-verification" content="rRv3PJlH9_tZimRGMglT17ZXD9RBUxBF97-C4tTWO-8" />
         <meta property="og:image" content={`${siteConfig.url}/opengraph-image.png`} />
         <meta name="twitter:image" content={`${siteConfig.url}/twitter-image.png`} />
         <link
