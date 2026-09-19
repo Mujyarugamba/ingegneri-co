@@ -30,7 +30,7 @@ export default function Page() {
         { title: "Priorità e architettura", text: "Definiamo quali problemi affrontare prima e quali strumenti o integrazioni possono produrre un beneficio concreto." },
         { title: "Percorso di evoluzione", text: "Costruiamo una sequenza di interventi sostenibile, collegando digitalizzazione, automazione, integrazione e AI quando servono davvero." },
       ]}
-      relatedServices={[{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Integrazione software, API e dati",href:"/servizi/integrazione-software-dati"},{label:"Intelligenza artificiale per PMI",href:"/servizi/intelligenza-artificiale-pmi"}]}
+      relatedServices={[{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Integrazione software, API e dati",href:"/servizi/integrazione-software-dati"},{label:"Intelligenza artificiale per PMI",href:"/servizi/intelligenza-artificiale-pmi"},{label:"Portali e applicazioni web",href:"/servizi/portali-applicazioni-web"}]}
       faqs={[
         { question: "Digitalizzare significa sostituire tutti i software già in uso?", answer: "No. Il punto di partenza è capire cosa funziona già e dove esistono frammentazioni o passaggi manuali. Spesso il percorso migliore consiste nel collegare e razionalizzare gli strumenti esistenti." },
         { question: "Da dove si parte se l'impresa usa molti file, email e applicazioni diverse?", answer: "Dalla mappatura dei processi e dei flussi informativi. Solo dopo si definiscono priorità, integrazioni e strumenti da introdurre." },
