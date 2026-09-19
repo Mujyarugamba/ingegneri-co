@@ -267,6 +267,60 @@ export const articles: Article[] = [
       "Prima di una compravendita, di una ristrutturazione o della presentazione di una nuova pratica è quindi utile confrontare stato dei luoghi, documentazione comunale e dati catastali. Se emergono scostamenti, occorre identificarne natura e origine prima di valutare eventuali aggiornamenti catastali, pratiche edilizie o percorsi di regolarizzazione ammessi dalla disciplina vigente.",
     ],
   }
+  {
+    slug: "csp-cse-quando-servono-cantiere",
+    title: "CSP e CSE: quando servono in cantiere",
+    seoTitle: "CSP e CSE: quando servono in cantiere | Ingegneri & Co",
+    category: "Edilizia",
+    excerpt:
+      "Quando entrano in gioco il coordinatore per la progettazione e il coordinatore per l'esecuzione e come si collegano a PSC, POS e organizzazione del cantiere.",
+    description:
+      "CSP e CSE nei cantieri: quando sono previsti, quali sono i principali compiti e come si coordinano con PSC, POS e direzione lavori.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Sicurezza cantieri e coordinamento CSP/CSE", href: "/servizi/sicurezza-cantieri" },
+      { label: "Direzione lavori e supporto tecnico", href: "/servizi/direzione-lavori" },
+      { label: "Pratiche edilizie", href: "/servizi/pratiche-edilizie" },
+    ],
+    sources: [
+      { label: "Normattiva — D.Lgs. 81/2008, art. 90", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2008-04-09%3B81~art90%21vig=" },
+      { label: "Normattiva — D.Lgs. 81/2008, art. 92", href: "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2008-04-09%3B81~art92%21vig=" },
+    ],
+    content: [
+      "CSP e CSE sono due funzioni distinte previste dalla disciplina dei cantieri temporanei o mobili. Il coordinatore per la progettazione opera nella fase progettuale, mentre il coordinatore per l'esecuzione svolge i compiti di coordinamento e controllo previsti durante la realizzazione dell'opera.",
+      "L'articolo 90 del D.Lgs. 81/2008 collega la designazione dei coordinatori, con le condizioni e le eccezioni previste dalla norma, alla presenza di più imprese esecutrici anche non contemporanea. La disciplina considera anche il caso in cui, dopo un affidamento iniziale a una sola impresa, nell'esecuzione intervengano ulteriori imprese. Per questo il corretto inquadramento va effettuato sulla configurazione effettiva del cantiere e non soltanto sulla sua dimensione.",
+      "Nella fase di esecuzione il CSE verifica, attraverso le attività di coordinamento e controllo previste dall'incarico, l'applicazione delle disposizioni pertinenti del Piano di Sicurezza e Coordinamento quando previsto, verifica l'idoneità e la coerenza dei POS rispetto al PSC e coordina cooperazione e informazione tra i soggetti coinvolti secondo quanto stabilito dall'articolo 92.",
+      "Coordinamento della sicurezza e direzione lavori restano ruoli differenti, anche quando sono affidati allo stesso professionista nei casi consentiti. Il primo riguarda gli obblighi specifici di sicurezza previsti dalla disciplina dei cantieri; la direzione lavori riguarda il controllo tecnico dell'esecuzione rispetto al progetto e all'incarico. Una chiara definizione dei ruoli evita sovrapposizioni e vuoti organizzativi.",
+    ],
+  },
+  {
+    slug: "digitalizzazione-pmi-da-dove-partire",
+    title: "Digitalizzazione PMI: da dove partire",
+    seoTitle: "Digitalizzazione PMI: da dove partire | Ingegneri & Co",
+    category: "Innovazione",
+    excerpt:
+      "Un percorso pratico per digitalizzare processi, dati e strumenti senza partire dal software e senza moltiplicare applicazioni scollegate.",
+    description:
+      "Digitalizzazione PMI: come partire da processi, dati e priorità per scegliere workflow, integrazioni e applicazioni realmente utili.",
+    publishedAt: "2026-09-19",
+    relatedServices: [
+      { label: "Digitalizzazione delle PMI", href: "/servizi/servizi-digitali-pmi" },
+      { label: "Automazione dei processi e workflow", href: "/servizi/automazione-processi" },
+      { label: "Integrazione software, API e dati", href: "/servizi/integrazione-software-dati" },
+      { label: "Portali e applicazioni web", href: "/servizi/portali-applicazioni-web" },
+    ],
+    sources: [
+      { label: "Commissione europea — Relazione Italia, Decennio Digitale 2026", href: "https://digital-strategy.ec.europa.eu/it/factpages/italys-2026-digital-decade-country-report" },
+      { label: "Commissione europea — Digital Decade Policy Programme", href: "https://digital-strategy.ec.europa.eu/en/library/digital-decade-policy-programme-europes-vision-connectivity-and-innovation" },
+    ],
+    content: [
+      "Digitalizzare una PMI non significa acquistare il maggior numero possibile di software. Il punto di partenza è capire come circolano oggi informazioni e documenti, quali attività vengono ripetute manualmente, dove si generano errori e quali dati servono realmente per prendere decisioni e svolgere il lavoro quotidiano.",
+      "Un'analisi iniziale dei processi consente di distinguere problemi diversi: un passaggio ripetitivo può richiedere un workflow automatico; dati duplicati tra più applicazioni possono richiedere un'integrazione; una procedura specifica può giustificare un portale o un'applicazione dedicata. Partire direttamente dalla tecnologia rischia invece di digitalizzare inefficienze già presenti.",
+      "La Commissione europea, nel quadro del Decennio Digitale, monitora la trasformazione delle imprese attraverso indicatori relativi a intensità digitale, cloud, dati e intelligenza artificiale. Il rapporto 2026 per l'Italia segnala progressi nella digitalizzazione delle PMI e nell'adozione di tecnologie avanzate, insieme alla necessità di continuare a rafforzare competenze e capacità di adozione.",
+      "Per una PMI è spesso più sostenibile procedere per fasi: mappare il processo, definire un risultato misurabile, collegare o razionalizzare gli strumenti esistenti, automatizzare solo i passaggi adatti e verificare l'effetto prima di estendere la soluzione. In questo modo portali, integrazioni, automazioni e AI diventano componenti di un percorso coerente invece di progetti isolati.",
+    ],
+  },
+
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
