@@ -26,6 +26,10 @@ export default function Page() {
         { title: "Coordinamento impiantistico", text: "Verifichiamo l'integrazione con impianto elettrico, fotovoltaico, sistemi di controllo e altre discipline coinvolte." },
       ]}
       relatedServices={[{label:"Relazione Legge 10",href:"/servizi/legge-10"},{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"},{label:"Fotovoltaico",href:"/servizi/fotovoltaico"},{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"}]}
+      faqs={[
+        { question: "Come viene definita la potenza di un impianto di climatizzazione o di una pompa di calore?", answer: "La potenza viene valutata in funzione dei fabbisogni dell'edificio, della destinazione d'uso, delle condizioni di esercizio, dell'impianto esistente e degli obiettivi prestazionali; la sola superficie non è sufficiente per un dimensionamento tecnico." },
+        { question: "È possibile integrare pompe di calore e climatizzazione con il fotovoltaico?", answer: "Sì. L'integrazione può essere valutata insieme all'impianto elettrico, ai profili di utilizzo e ai sistemi di regolazione, così da coordinare produzione, consumi e gestione energetica." },
+      ]}
       ecosystemHref="/servizi/ingegneria-edilizia-energia"
       ecosystemLabel="Ingegneria, Edilizia & Energia"
     />
