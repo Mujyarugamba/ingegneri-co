@@ -93,7 +93,7 @@ export default function ContattiPage() {
             <p className="section-label text-white/80">Orientamento</p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight">Non sai da quale servizio partire?</h2>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
-              Consulta i due ecosistemi oppure inviaci direttamente il problema da risolvere: l'inquadramento del servizio viene dopo l'analisi dell'esigenza.
+              Consulta i due ecosistemi oppure inviaci direttamente il problema da risolvere: l&apos;inquadramento del servizio viene dopo l&apos;analisi dell&apos;esigenza.
             </p>
             <div className="mt-7 flex flex-col gap-3">
               <Link href="/servizi/ingegneria-edilizia-energia" className="btn-outline-light">
