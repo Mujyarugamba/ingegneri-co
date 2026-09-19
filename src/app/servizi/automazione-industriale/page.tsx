@@ -25,7 +25,7 @@ export default function Page() {
         { title: "Architettura di controllo", text: "Definiamo logiche PLC, supervisione, acquisizione dati e interfacce tra componenti hardware e software." },
         { title: "Integrazione e verifica", text: "Coordiniamo l'integrazione dei sistemi e le verifiche funzionali necessarie alla soluzione prevista." },
       ]}
-      relatedServices={[{label:"Smart Building, IoT e monitoraggio",href:"/servizi/smart-building-iot"},{label:"Integrazione software e dati",href:"/servizi/integrazione-software-dati"},{label:"Automazione dei processi aziendali",href:"/servizi/automazione-processi"}]}
+      relatedServices={[{label:"Smart Building, IoT e monitoraggio",href:"/servizi/smart-building-iot"},{label:"Integrazione software e dati",href:"/servizi/integrazione-software-dati"},{label:"Automazione dei processi aziendali",href:"/servizi/automazione-processi"},{label:"Nuovo Piano Transizione 5.0",href:"/servizi/transizione-5-0"}]}
       faqs={[
         { question: "Quando conviene intervenire su un sistema di automazione esistente?", answer: "Quando il processo richiede maggiore visibilità, raccolta dati, supervisione o riduzione di passaggi manuali. L'analisi parte dall'architettura esistente per capire quali componenti possono essere mantenuti, integrati o aggiornati." },
         { question: "Un progetto di automazione richiede sempre la sostituzione di PLC e componenti esistenti?", answer: "Non necessariamente. La soluzione viene definita valutando compatibilità, affidabilità, interfacce disponibili e obiettivi del progetto, privilegiando l'integrazione dei componenti esistenti quando tecnicamente appropriato." },
