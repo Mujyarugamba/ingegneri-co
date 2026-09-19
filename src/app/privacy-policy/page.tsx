@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
             Ing. Augustin Mujyarugamba
           </strong>
         </p>
-        <p>Viale Monte Nero 68, 20135 Milano</p>
+        <p>{siteConfig.address.formatted}</p>
         <p>P. IVA: 11835750156</p>
         <p>
           Email:{" "}
