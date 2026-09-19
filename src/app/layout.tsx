@@ -24,23 +24,11 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} | Ingegneria, energia e innovazione`,
     description: siteConfig.description,
     url: siteConfig.url,
-    images: [
-      {
-        url: "/opengraph-image.png",
-        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | Ingegneria, energia e innovazione`,
     description: siteConfig.description,
-    images: [
-      {
-        url: "/twitter-image.png",
-        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
-      },
-    ],
   },
   robots: {
     index: true,
@@ -99,6 +87,8 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
+        <meta property="og:image" content={`${siteConfig.url}/opengraph-image.png`} />
+        <meta name="twitter:image" content={`${siteConfig.url}/twitter-image.png`} />
         <link
           rel="alternate"
           type="application/rss+xml"
