@@ -266,7 +266,7 @@ export const articles: Article[] = [
       "Sul piano catastale, per gli atti di trasferimento di unità immobiliari urbane la normativa richiede il riferimento alle planimetrie depositate e la dichiarazione di conformità allo stato di fatto dei dati catastali e delle planimetrie, dichiarazione che può essere sostituita nei casi previsti da un'attestazione di un tecnico abilitato. Questa verifica non sostituisce la ricostruzione urbanistico-edilizia.",
       "Prima di una compravendita, di una ristrutturazione o della presentazione di una nuova pratica è quindi utile confrontare stato dei luoghi, documentazione comunale e dati catastali. Se emergono scostamenti, occorre identificarne natura e origine prima di valutare eventuali aggiornamenti catastali, pratiche edilizie o percorsi di regolarizzazione ammessi dalla disciplina vigente.",
     ],
-  }
+  },
   {
     slug: "csp-cse-quando-servono-cantiere",
     title: "CSP e CSE: quando servono in cantiere",
