@@ -185,7 +185,7 @@ export const articles: Article[] = [
       "L'introduzione di soluzioni basate su IA richiede attenzione a qualità dei dati, affidabilità degli algoritmi, conformità normativa e integrazione con i sistemi esistenti. Un approccio graduale e verificabile può ridurre i rischi e aiutare a valutare concretamente benefici e limiti dell'investimento.",
       "Ingegneri & Co esplora e implementa soluzioni digitali che coniugano rigore tecnico, innovazione e utilità operativa, affiancando imprese e professionisti nell'adozione consapevole delle nuove tecnologie.",
     ],
-  },,
+  },
   {
     slug: "ape-quando-serve-validita",
     title: "APE: quando serve e quanto dura",
