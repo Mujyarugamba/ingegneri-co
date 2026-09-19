@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve("out");
+const canonicalOrigin = "https://www.ingegnerieco.it";
 
 if (!fs.existsSync(root)) {
   console.error("SEO check: cartella out non trovata. Eseguire prima npm run build.");
@@ -194,8 +195,8 @@ if (!fs.existsSync(sitemapPath)) {
 } else {
   const sitemap = fs.readFileSync(sitemapPath, "utf8");
   const normalizeUrl = (value) =>
-    value === "https://ingegnerieco.it/"
-      ? "https://ingegnerieco.it"
+    value === `${canonicalOrigin}/`
+      ? canonicalOrigin
       : value.replace(/\/$/, "");
 
   const sitemapUrls = new Set(
@@ -219,7 +220,7 @@ if (!fs.existsSync(sitemapPath)) {
   }
 
   for (const url of sitemapUrls) {
-    if (!url.startsWith("https://ingegnerieco.it/") && url !== "https://ingegnerieco.it") {
+    if (!url.startsWith(`${canonicalOrigin}/`) && url !== canonicalOrigin) {
       failures.push({ file: "sitemap.xml", missing: [`URL fuori dominio canonico: ${url}`] });
       continue;
     }
