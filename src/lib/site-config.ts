@@ -23,7 +23,7 @@ export const siteImages = {
 
 export const mainNav = [
   { label: "Home", href: "/" },
-  { label: "Chi siamo", href: "/#chi-siamo" },
+  { label: "Chi siamo", href: "/chi-siamo" },
   { label: "Servizi", href: "/servizi" },
   { label: "Aree di competenza", href: "/#competenze" },
   { label: "Progetti", href: "/progetti" },
