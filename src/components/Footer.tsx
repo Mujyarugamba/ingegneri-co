@@ -92,9 +92,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-sm text-white/75">
+                <Link
+                  href="/milano"
+                  className="text-sm text-white/75 transition-colors hover:text-white"
+                >
                   {siteConfig.address.formatted}
-                </span>
+                </Link>
               </li>
               <li>
                 <span className="text-sm text-white/75">
