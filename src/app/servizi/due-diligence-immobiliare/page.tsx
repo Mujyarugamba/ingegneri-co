@@ -31,6 +31,7 @@ export default function Page() {
         { title: "Quadro decisionale", text: "Restituiamo una sintesi tecnica delle criticità e degli approfondimenti o interventi da valutare prima della decisione." },
       ]}
       relatedServices={[{label:"Conformità urbanistica e catastale",href:"/servizi/conformita-urbanistica-catastale"},{label:"Pratiche edilizie",href:"/servizi/pratiche-edilizie"},{label:"APE e certificazione energetica",href:"/servizi/ape-certificazione-energetica"}]}
+      relatedArticles={[{label:"Due diligence immobiliare: cosa verificare prima di acquistare",href:"/approfondimenti/due-diligence-immobiliare-cosa-verificare"},{label:"Conformità urbanistica e catastale: le differenze",href:"/approfondimenti/conformita-urbanistica-catastale-differenze"}]}
       faqs={[
         { question: "La due diligence coincide con la sola verifica urbanistica?", answer: "No. La verifica urbanistica può essere una parte della due diligence, che può includere anche aspetti catastali, documentali, impiantistici, energetici e tecnici in funzione dell'immobile e dell'incarico." },
         { question: "Quando conviene svolgerla?", answer: "È particolarmente utile prima di assumere impegni economici rilevanti, quando conoscere in anticipo criticità e documenti mancanti può incidere sulle decisioni successive." },
