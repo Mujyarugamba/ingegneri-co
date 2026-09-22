@@ -26,6 +26,7 @@ export default function Page() {
         { title: "Attestato", text: "Predisponiamo l'APE e completiamo gli adempimenti previsti dalla procedura applicabile." },
       ]}
       relatedServices={[{label:"Relazione Legge 10",href:"/servizi/legge-10"},{label:"Diagnosi energetiche",href:"/servizi/diagnosi-energetiche"},{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"}]}
+      relatedArticles={[{label:"APE: quando serve e quanto dura",href:"/approfondimenti/ape-quando-serve-validita"},{label:"Come migliorare l’efficienza energetica di un edificio",href:"/approfondimenti/efficientamento-energetico-edifici"}]}
       faqs={[
         { question: "APE e diagnosi energetica sono la stessa cosa?", answer: "No. L'APE sintetizza la prestazione energetica e la classe dell'immobile; la diagnosi energetica approfondisce consumi, usi e possibili interventi di miglioramento." },
       ]}
