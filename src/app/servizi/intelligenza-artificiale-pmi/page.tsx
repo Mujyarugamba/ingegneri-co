@@ -26,6 +26,7 @@ export default function Page() {
         { title: "Integrazione nel processo", text: "Colleghiamo l'AI a documenti, dati e workflow definendo controlli umani, gestione degli errori e responsabilità operative." },
       ]}
       relatedServices={[{label:"Analisi documentale e assistenti AI",href:"/servizi/analisi-documentale-assistenti-ai"},{label:"Automazione dei processi",href:"/servizi/automazione-processi"},{label:"Integrazione software, API e dati",href:"/servizi/integrazione-software-dati"}]}
+      relatedArticles={[{label:"Intelligenza Artificiale applicata all’ingegneria",href:"/approfondimenti/intelligenza-artificiale-applicata-ingegneria"},{label:"Digitalizzazione PMI: da dove partire",href:"/approfondimenti/digitalizzazione-pmi-da-dove-partire"}]}
       faqs={[
         { question: "Da quale applicazione AI conviene partire?", answer: "Da un problema concreto e misurabile: ricerca di informazioni, classificazione di documenti, assistenza agli operatori o preparazione di bozze. La tecnologia viene scelta dopo aver definito il caso d'uso." },
         { question: "L'AI può lavorare sui dati aziendali già esistenti?", answer: "Sì, quando dati e permessi possono essere organizzati in modo coerente. In molti progetti la qualità dell'integrazione e delle fonti informative è importante quanto il modello AI utilizzato." },
