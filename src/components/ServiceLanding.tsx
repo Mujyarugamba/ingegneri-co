@@ -43,6 +43,12 @@ export function ServiceLanding({
     provider: {
       "@id": `${siteConfig.url}/#organization`,
     },
+    areaServed: siteConfig.serviceAreas.map((name) => ({
+      "@type": ["Milano", "Pavia", "Verbania"].includes(name)
+        ? "City"
+        : "AdministrativeArea",
+      name,
+    })),
   };
   const faqJsonLd = faqs.length ? {
     "@context": "https://schema.org", "@type": "FAQPage",
