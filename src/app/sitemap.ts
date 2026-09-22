@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${siteConfig.url}/`, lastModified: servicesLastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${siteConfig.url}/chi-siamo`, changeFrequency: "yearly", priority: 0.8 },
+    { url: `${siteConfig.url}/milano`, lastModified: "2026-09-22", changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteConfig.url}/servizi`, lastModified: servicesLastModified, changeFrequency: "monthly", priority: 0.95 },
     { url: `${siteConfig.url}/servizi/ingegneria-edilizia-energia`, lastModified: servicesLastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${siteConfig.url}/servizi/pratiche-edilizie`, lastModified: servicesLastModified, changeFrequency: "monthly", priority: 0.85 },
