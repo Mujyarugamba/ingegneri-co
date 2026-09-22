@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 
 type RelatedService = { label: string; href: string };
+type RelatedArticle = { label: string; href: string };
 type FaqItem = { question: string; answer: string };
 type ProcessStep = { title: string; text: string };
 
@@ -18,12 +19,13 @@ type ServiceLandingProps = {
   processTitle?: string;
   process?: ProcessStep[];
   relatedServices?: RelatedService[];
+  relatedArticles?: RelatedArticle[];
   faqs?: FaqItem[];
 };
 
 export function ServiceLanding({
   eyebrow, title, intro, bullets, outcomes, ecosystemHref, ecosystemLabel,
-  contextTitle = "Quando può essere utile", context = [], processTitle = "Come lavoriamo", process = [], relatedServices = [], faqs = [],
+  contextTitle = "Quando può essere utile", context = [], processTitle = "Come lavoriamo", process = [], relatedServices = [], relatedArticles = [], faqs = [],
 }: ServiceLandingProps) {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -95,6 +97,8 @@ export function ServiceLanding({
       {process.length > 0 && <section className="border-t border-gray-border bg-white"><div className="page-container section-padding"><p className="section-label">Metodo</p><h2 className="section-title">{processTitle}</h2><ol className="mt-7 grid gap-4 md:grid-cols-3">{process.map((step, index) => <li key={`${step.title}-${index}`} className="rounded-2xl border border-gray-border bg-gray-light p-5"><span className="text-sm font-bold text-tech-blue">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-3 text-lg font-bold text-anthracite">{step.title}</h3><p className="mt-2 text-sm leading-relaxed text-anthracite-soft">{step.text}</p></li>)}</ol></div></section>}
 
       {relatedServices.length > 0 && <section className="border-t border-gray-border bg-white"><div className="page-container section-padding"><p className="section-label">Competenze integrate</p><h2 className="section-title">Servizi collegati</h2><div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{relatedServices.map(service => <Link key={service.href} href={service.href} className="group rounded-2xl border border-gray-border bg-white p-5 transition hover:-translate-y-0.5 hover:border-tech-blue/40 hover:shadow-md"><span className="font-semibold text-anthracite group-hover:text-tech-blue">{service.label}</span><span className="mt-3 block text-sm font-semibold text-tech-blue">Approfondisci →</span></Link>)}</div></div></section>}
+
+      {relatedArticles.length > 0 && <section className="border-t border-gray-border bg-gray-light"><div className="page-container section-padding"><p className="section-label">Guide tecniche</p><h2 className="section-title">Approfondimenti collegati</h2><div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{relatedArticles.map(article => <Link key={article.href} href={article.href} className="group rounded-2xl border border-gray-border bg-white p-5 transition hover:-translate-y-0.5 hover:border-tech-blue/40 hover:shadow-md"><span className="font-semibold text-anthracite group-hover:text-tech-blue">{article.label}</span><span className="mt-3 block text-sm font-semibold text-tech-blue">Leggi la guida →</span></Link>)}</div></div></section>}
 
       {faqs.length > 0 && <section className="border-t border-gray-border bg-gray-light"><div className="page-container section-padding"><p className="section-label">Domande frequenti</p><h2 className="section-title">FAQ</h2><div className="mt-7 grid gap-4">{faqs.map(faq => <details key={faq.question} className="rounded-2xl border border-gray-border bg-white p-5"><summary className="cursor-pointer font-semibold text-anthracite">{faq.question}</summary><p className="mt-3 leading-relaxed text-anthracite-soft">{faq.answer}</p></details>)}</div></div></section>}
 
