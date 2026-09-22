@@ -134,7 +134,7 @@ export default function MilanoPage() {
           <p className="section-label">Servizi a Milano</p>
           <h2 className="section-title">Competenze tecniche per edifici, imprese e professionisti</h2>
           <p className="mt-5 max-w-4xl leading-relaxed text-anthracite-soft">
-            Il punto di partenza è l'esigenza concreta: una pratica edilizia, una verifica prima dell'acquisto, un intervento energetico o impiantistico, un cantiere da coordinare oppure un progetto di automazione e digitalizzazione. Organizziamo il lavoro coinvolgendo le competenze utili al caso specifico.
+            Il punto di partenza è l&apos;esigenza concreta: una pratica edilizia, una verifica prima dell&apos;acquisto, un intervento energetico o impiantistico, un cantiere da coordinare oppure un progetto di automazione e digitalizzazione. Organizziamo il lavoro coinvolgendo le competenze utili al caso specifico.
           </p>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -160,7 +160,7 @@ export default function MilanoPage() {
               La sede indicata per Ingegneri & Co è <strong>{siteConfig.address.formatted}</strong>. Per gli incarichi che richiedono verifica diretta organizziamo sopralluoghi e attività sul posto; per analisi documentali, progettazione e coordinamento utilizziamo anche strumenti digitali per rendere più fluido lo scambio di informazioni.
             </p>
             <p className="mt-4 leading-relaxed text-anthracite-soft">
-              Operiamo principalmente a Milano e nell'area metropolitana e, in funzione del tipo di incarico, anche a Pavia, Verbania, in Lombardia e Piemonte.
+              Operiamo principalmente a Milano e nell&apos;area metropolitana e, in funzione del tipo di incarico, anche a Pavia, Verbania, in Lombardia e Piemonte.
             </p>
           </div>
 
