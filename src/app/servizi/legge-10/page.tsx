@@ -26,6 +26,7 @@ export default function Page() {
         { title: "Relazione tecnica", text: "Predisponiamo la relazione energetica da coordinare con il progetto e con la pratica edilizia." },
       ]}
       relatedServices={[{label:"APE e certificazione energetica",href:"/servizi/ape-certificazione-energetica"},{label:"Impianti termici e climatizzazione",href:"/servizi/impianti-termici-climatizzazione"},{label:"Efficientamento energetico",href:"/servizi/efficientamento-energetico"}]}
+      relatedArticles={[{label:"Relazione Legge 10: quando serve",href:"/approfondimenti/relazione-legge-10-quando-serve"},{label:"APE: quando serve e quanto dura",href:"/approfondimenti/ape-quando-serve-validita"}]}
       faqs={[
         { question: "La Relazione Legge 10 e l'APE sono la stessa cosa?", answer: "No. La relazione energetica accompagna il progetto nei casi previsti, mentre l'APE descrive la prestazione energetica dell'edificio o dell'unità immobiliare secondo la procedura applicabile." },
       ]}
