@@ -45,13 +45,14 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.name,
   url: siteConfig.url,
   logo: `${siteConfig.url}${siteImages.logo}`,
   description: siteConfig.description,
   email: siteConfig.email,
+  telephone: "+39 339 434 0891",
   address: {
     "@type": "PostalAddress",
     streetAddress: siteConfig.address.streetAddress,
