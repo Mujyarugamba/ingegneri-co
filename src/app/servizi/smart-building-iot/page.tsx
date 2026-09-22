@@ -31,6 +31,7 @@ export default function Page() {
         { title: "Monitoraggio e utilizzo", text: "Organizziamo i dati per controllo operativo, analisi energetica, manutenzione e successive automazioni." },
       ]}
       relatedServices={[{label:"Automazione industriale e sistemi di controllo",href:"/servizi/automazione-industriale"},{label:"Impianti elettrici",href:"/servizi/impianti-elettrici"},{label:"Diagnosi energetiche",href:"/servizi/diagnosi-energetiche"},{label:"Integrazione software, API e dati",href:"/servizi/integrazione-software-dati"}]}
+      relatedArticles={[{label:"Smart Building: cosa monitorare e automatizzare",href:"/approfondimenti/automazione-smart-building"},{label:"Come migliorare l’efficienza energetica di un edificio",href:"/approfondimenti/efficientamento-energetico-edifici"}]}
       faqs={[
         { question: "Smart Building e automazione industriale sono la stessa cosa?", answer: "No. Lo Smart Building riguarda l'edificio e i suoi impianti; l'automazione industriale riguarda macchine, linee e processi produttivi. Tecnologie e competenze possono sovrapporsi, ma il contesto applicativo è diverso." },
       ]}
