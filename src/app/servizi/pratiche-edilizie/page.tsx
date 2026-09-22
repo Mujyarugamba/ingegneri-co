@@ -31,6 +31,7 @@ export default function Page() {
         { title: "Gestione dell'iter", text: "Seguiamo il percorso della pratica e coordiniamo eventuali integrazioni o adempimenti tecnici collegati." },
       ]}
       relatedServices={[{label:"Conformità urbanistica e catastale",href:"/servizi/conformita-urbanistica-catastale"},{label:"Due diligence immobiliare",href:"/servizi/due-diligence-immobiliare"},{label:"Direzione lavori",href:"/servizi/direzione-lavori"}]}
+      relatedArticles={[{label:"Quando serve una SCIA?",href:"/approfondimenti/quando-serve-una-scia"},{label:"Differenze tra CILA, SCIA e Permesso di Costruire",href:"/approfondimenti/differenze-cila-scia-permesso-costruire"},{label:"Conformità urbanistica e catastale: le differenze",href:"/approfondimenti/conformita-urbanistica-catastale-differenze"}]}
       faqs={[
         { question: "Prima di presentare una pratica edilizia è sempre utile verificare lo stato dell'immobile?", answer: "Quando la documentazione disponibile o lo stato dei luoghi presentano dubbi, una verifica preliminare aiuta a evitare che la nuova pratica si sovrapponga a criticità pregresse non chiarite." },
         { question: "Pratica edilizia e verifica di conformità sono lo stesso servizio?", answer: "No. La verifica di conformità ricostruisce e confronta lo stato documentale e reale dell'immobile; la pratica edilizia riguarda il procedimento necessario per un nuovo intervento o, quando possibile, per una regolarizzazione." },
